@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btekbldar2xj0"
+path="res://.godot/imported/instrumental-background-loop-148930.mp3-392c73fc1d3e1af74e8072bde3ccc542.mp3str"
+
+[deps]
+
+source_file="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/instrumental-background-loop-148930.mp3"
+dest_files=["res://.godot/imported/instrumental-background-loop-148930.mp3-392c73fc1d3e1af74e8072bde3ccc542.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

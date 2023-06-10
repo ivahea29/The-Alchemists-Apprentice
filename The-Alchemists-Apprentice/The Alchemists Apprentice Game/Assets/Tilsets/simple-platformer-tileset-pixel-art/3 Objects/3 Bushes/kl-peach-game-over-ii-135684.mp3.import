@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ceqotvk47g0up"
+path="res://.godot/imported/kl-peach-game-over-ii-135684.mp3-aa211e653a8137de35939a3c32f4cdb0.mp3str"
+
+[deps]
+
+source_file="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/kl-peach-game-over-ii-135684.mp3"
+dest_files=["res://.godot/imported/kl-peach-game-over-ii-135684.mp3-aa211e653a8137de35939a3c32f4cdb0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
