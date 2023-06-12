@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=3 uid="uid://bhknlkf01gy2e"]
+[gd_scene load_steps=112 format=3 uid="uid://bhknlkf01gy2e"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_0xk1k"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_b5oed"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://moyyc8231qa7" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/1 Tiles/Tileset_Simple.png" id="2_qj28n"]
 [ext_resource type="Texture2D" uid="uid://j04ahvm25olq" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/1 Tileset/Tile_16.png" id="3_4uq63"]
 [ext_resource type="Texture2D" uid="uid://belsbwy2marmn" path="res://Assets/Characters/magic-assets-pack-pixel-art/3 Objects/House.png" id="3_07luf"]
+[ext_resource type="PackedScene" path="res://Characters/PlayerV2/player_v_2.tscn" id="3_20r73"]
 [ext_resource type="Texture2D" uid="uid://vtkphw01s5fo" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/House.png" id="5_dypyk"]
 [ext_resource type="Texture2D" uid="uid://r6xxy8hka05" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/2 Trees/5.png" id="6_03o0w"]
 [ext_resource type="Texture2D" uid="uid://qwyed55cw1a6" path="res://Assets/Buildings/blacksmith-craft-asset-pixel-art-pack/2 Objects/House.png" id="6_uj8cj"]
@@ -2050,6 +2051,10 @@ position = Vector2(384, 128)
 scale = Vector2(1.63117, 1.63117)
 texture = ExtResource("1_w8cak")
 metadata/_edit_lock_ = true
+
+[node name="PlayerV2" parent="." instance=ExtResource("3_20r73")]
+position = Vector2(224, 143)
+scale = Vector2(1.2619, 1.14646)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1

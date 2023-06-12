@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4iawhvgvaaqy"]
+
+[ext_resource type="Texture2D" uid="uid://c0ruwtqcm72h5" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/3 Objects/Stones/8.png" id="1_ahhl4"]
+[ext_resource type="Script" path="res://Characters/PlayerV2/Projectile.gd" id="1_gxim3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ft7c0"]
+radius = 5.0
+
+[node name="Projectile" type="Area2D"]
+script = ExtResource("1_gxim3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -3)
+scale = Vector2(0.359375, 0.387019)
+texture = ExtResource("1_ahhl4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ft7c0")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
