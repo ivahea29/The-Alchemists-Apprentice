@@ -67,3 +67,7 @@ esc={
 2d_physics/layer_2="platform"
 2d_physics/layer_3="enemy"
 2d_physics/layer_4="item"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

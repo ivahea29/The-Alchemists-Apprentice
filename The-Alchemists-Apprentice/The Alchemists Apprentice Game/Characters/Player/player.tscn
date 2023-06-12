@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://dwqv8087cn8es"]
+[gd_scene load_steps=67 format=3 uid="uid://dwqv8087cn8es"]
 
 [ext_resource type="Script" path="res://Characters/Player/player.gd" id="1_q5fjt"]
 [ext_resource type="Texture2D" uid="uid://ctb4oytl61nud" path="res://newAssets/woodcutter/woodcutter_attack_1/frame1.png" id="2_l5whd"]
@@ -387,160 +387,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5f73v"]
-radius = 19.2
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ckj20"]
 radius = 8.0
 height = 40.0
-
-[sub_resource type="Animation" id="Animation_bi2so"]
-resource_name = "attack"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.3, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [1, 2, 3, 4, 5, 2, 1, 0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"woodcutter_attack_1"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("attack_player/axe_hitbox:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.5, 0.6, 0.8, 0.9, 1, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [true, true, true, false, false, false, true, true]
-}
-
-[sub_resource type="Animation" id="Animation_pnlnd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"woodcutter_attack_1"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("attack_player/axe_hitbox:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ke0x"]
-_data = {
-"RESET": SubResource("Animation_pnlnd"),
-"attack": SubResource("Animation_bi2so")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cole0"]
-size = Vector2(12, 27.5)
-
-[sub_resource type="Animation" id="Animation_5asni"]
-resource_name = "jump_player"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 4, 5, 0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"woodcutter_jump"]
-}
-
-[sub_resource type="Animation" id="Animation_k62om"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"woodcutter_attack_1"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wy24v"]
-_data = {
-"RESET": SubResource("Animation_k62om"),
-"jump_player": SubResource("Animation_5asni")
-}
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(64, 96)
@@ -555,36 +404,10 @@ animation = &"woodcutter_attack_1"
 autoplay = "woodcutter_idle"
 metadata/_edit_group_ = true
 
-[node name="player_hitbox" type="Area2D" parent="AnimatedSprite2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/player_hitbox"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AnimatedSprite2D"]
 visible = false
-position = Vector2(0.800018, 8.8)
-shape = SubResource("CircleShape2D_5f73v")
-disabled = true
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-13, -40)
+position = Vector2(0.800003, 8)
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CapsuleShape2D_ckj20")
 
-[node name="attack_player" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_6ke0x")
-}
-
-[node name="axe_hitbox" type="CollisionShape2D" parent="attack_player"]
-visible = false
-position = Vector2(71, 60.25)
-shape = SubResource("RectangleShape2D_cole0")
-disabled = true
-
 [node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="player_jump_player" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_wy24v")
-}
-
-[connection signal="body_entered" from="AnimatedSprite2D/player_hitbox" to="." method="_on_player_hitbox_body_entered"]
-[connection signal="body_exited" from="AnimatedSprite2D/player_hitbox" to="." method="_on_player_hitbox_body_exited"]
