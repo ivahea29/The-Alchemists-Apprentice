@@ -2033,6 +2033,13 @@ scale = Vector2(1.63117, 1.63117)
 texture = ExtResource("1_w8cak")
 metadata/_edit_lock_ = true
 
+<<<<<<< HEAD
+[node name="PlayerV2" parent="." instance=ExtResource("3_20r73")]
+position = Vector2(395, 222)
+scale = Vector2(1.2619, 1.14646)
+
+=======
+>>>>>>> ff6f4501c138c5fdee26434c8fe411d23d2c76f9
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 tile_set = SubResource("TileSet_gace7")
