@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://dhv7j1otspnb0"]
+[gd_scene load_steps=125 format=3 uid="uid://dhv7j1otspnb0"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_2.gd" id="1_0tfyh"]
 [ext_resource type="Texture2D" uid="uid://eodse3yb0k68" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_82c75"]
@@ -87,6 +87,26 @@
 [ext_resource type="Texture2D" uid="uid://b0c7xaroqo84k" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Foliage side/6.png" id="84_2be83"]
 [ext_resource type="Texture2D" uid="uid://bmiro0pphe473" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Foliage side/5.png" id="85_lpenv"]
 [ext_resource type="Texture2D" uid="uid://d0mrk4dfiktjo" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/4.png" id="86_wf1e3"]
+[ext_resource type="Texture2D" uid="uid://dwvduwvmwo2g5" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/8 Pointers/3.png" id="88_1isci"]
+[ext_resource type="Texture2D" uid="uid://ptju3dxhk73j" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/7 Grass/9.png" id="89_t3yam"]
+[ext_resource type="Texture2D" uid="uid://dqaxfoppklp6v" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/7 Grass/8.png" id="90_8jiqc"]
+[ext_resource type="Texture2D" uid="uid://pwr07ag7ny7t" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/3 Objects/Ruins/2.png" id="91_36tjk"]
+[ext_resource type="Texture2D" uid="uid://bxjiev64rlptx" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/3 Objects/Ruins/10.png" id="92_r3ugy"]
+[ext_resource type="Texture2D" uid="uid://c43kn1frmnprt" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/3 Objects/Ruins/14.png" id="93_l1bi5"]
+[ext_resource type="Texture2D" uid="uid://clfrhit7i0aij" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Foliage front/2.png" id="94_oi4cf"]
+[ext_resource type="Texture2D" uid="uid://diprpcja0nlx6" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Foliage front/6.png" id="95_d6732"]
+[ext_resource type="Texture2D" uid="uid://b3e8tl61ttayy" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Foliage front/5.png" id="96_0pnyf"]
+[ext_resource type="Texture2D" uid="uid://b6b5eosyl853k" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Foliage front/4.png" id="97_pfvd3"]
+[ext_resource type="Texture2D" uid="uid://ce0mvxpv4t02k" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Foliage front/1.png" id="98_s5vfk"]
+[ext_resource type="Texture2D" uid="uid://b7lr6ads1ve80" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Chimney/3.png" id="99_iavt3"]
+[ext_resource type="Texture2D" uid="uid://dubuv70bxm7an" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Pointer.png" id="100_5ham6"]
+[ext_resource type="Texture2D" uid="uid://ce5vw6vbkcfm1" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/3 Objects/Bushes/8.png" id="101_lplut"]
+[ext_resource type="Texture2D" uid="uid://dfubcp7yccvf8" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/3 Objects/Grass/9.png" id="102_jpk6e"]
+[ext_resource type="Texture2D" uid="uid://fqsp87n1g626" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/3 Objects/Grass/8.png" id="103_0gx6n"]
+[ext_resource type="Texture2D" uid="uid://1eacx06s75ff" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/3 Objects/Grass/4.png" id="104_b74h2"]
+[ext_resource type="Texture2D" uid="uid://bfxa4ur0fg52u" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/3 Objects/Grass/1.png" id="105_0pkpk"]
+[ext_resource type="Texture2D" uid="uid://c0v6l6xkwjcen" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/3 Objects/Grass/6.png" id="106_lg52o"]
+[ext_resource type="Texture2D" uid="uid://cj6xv6vmsjla2" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/3 Objects/Grass/3.png" id="107_wv14p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73kei"]
 texture = ExtResource("1_82c75")
@@ -2635,6 +2655,361 @@ texture = ExtResource("14_oxs62")
 [node name="74" type="Sprite2D" parent="Misc"]
 position = Vector2(4952, 489)
 texture = ExtResource("84_2be83")
+
+[node name="90" type="Sprite2D" parent="Misc"]
+modulate = Color(0.615686, 0.615686, 0.615686, 1)
+z_index = -6
+position = Vector2(6043, 256)
+texture = ExtResource("28_xo3bd")
+flip_h = true
+
+[node name="91" type="Sprite2D" parent="Misc"]
+modulate = Color(0.584314, 0.584314, 0.584314, 1)
+z_index = -6
+position = Vector2(6144, 284)
+texture = ExtResource("67_lmogt")
+
+[node name="92" type="Sprite2D" parent="Misc"]
+modulate = Color(0.662745, 0.662745, 0.662745, 1)
+z_index = -6
+position = Vector2(5939, 236)
+texture = ExtResource("14_oxs62")
+flip_h = true
+
+[node name="93" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5932, 336)
+texture = ExtResource("18_xfsam")
+
+[node name="94" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5969, 344)
+texture = ExtResource("19_d8s64")
+
+[node name="95" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5887, 329)
+texture = ExtResource("86_wf1e3")
+
+[node name="96" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(6045, 304)
+texture = ExtResource("17_8ljoq")
+
+[node name="97" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(6147, 336)
+texture = ExtResource("18_xfsam")
+
+[node name="98" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5922, 341)
+texture = ExtResource("88_1isci")
+
+[node name="99" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5195, 501)
+texture = ExtResource("88_1isci")
+
+[node name="100" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5724, 377)
+texture = ExtResource("14_73fp5")
+
+[node name="101" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5738, 378)
+texture = ExtResource("18_ddqml")
+
+[node name="102" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5781, 377)
+texture = ExtResource("15_vfxvl")
+
+[node name="103" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5768, 377)
+texture = ExtResource("19_kb0ah")
+
+[node name="104" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5754, 377)
+texture = ExtResource("89_t3yam")
+
+[node name="105" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5712, 377)
+texture = ExtResource("19_kb0ah")
+
+[node name="106" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5760, 376)
+texture = ExtResource("21_odl3o")
+
+[node name="107" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5883, 345)
+texture = ExtResource("18_ddqml")
+
+[node name="108" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5974, 345)
+texture = ExtResource("15_vfxvl")
+
+[node name="109" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5835, 345)
+texture = ExtResource("21_odl3o")
+
+[node name="110" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5851, 344)
+texture = ExtResource("90_8jiqc")
+
+[node name="111" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5866, 344)
+texture = ExtResource("17_3pj6m")
+
+[node name="112" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5902, 345)
+texture = ExtResource("14_73fp5")
+
+[node name="113" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5935, 345)
+texture = ExtResource("89_t3yam")
+
+[node name="114" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5950, 345)
+texture = ExtResource("18_ddqml")
+
+[node name="115" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(6032, 312)
+texture = ExtResource("20_stv7h")
+
+[node name="116" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(6050, 312)
+texture = ExtResource("15_vfxvl")
+
+[node name="117" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(6129, 345)
+texture = ExtResource("21_odl3o")
+
+[node name="118" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(6137, 345)
+texture = ExtResource("19_kb0ah")
+
+[node name="119" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(6151, 345)
+texture = ExtResource("17_3pj6m")
+
+[node name="120" type="Sprite2D" parent="Misc"]
+modulate = Color(0.478431, 0.478431, 0.478431, 1)
+z_index = -6
+position = Vector2(6048, 306)
+texture = ExtResource("77_3frbo")
+
+[node name="121" type="Sprite2D" parent="Misc"]
+modulate = Color(0.603922, 0.603922, 0.603922, 1)
+z_index = -6
+position = Vector2(5881, 323)
+texture = ExtResource("91_36tjk")
+
+[node name="122" type="Sprite2D" parent="Misc"]
+modulate = Color(0.501961, 0.501961, 0.501961, 1)
+z_index = -6
+position = Vector2(6098, 324)
+texture = ExtResource("92_r3ugy")
+
+[node name="123" type="Sprite2D" parent="Misc"]
+modulate = Color(0.498039, 0.498039, 0.498039, 1)
+z_index = -6
+position = Vector2(5983, 340)
+texture = ExtResource("93_l1bi5")
+
+[node name="124" type="Sprite2D" parent="Misc"]
+modulate = Color(0.552941, 0.552941, 0.552941, 1)
+z_index = -6
+position = Vector2(5928, 326)
+texture = ExtResource("76_jrnsd")
+
+[node name="125" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(6105, 310)
+texture = ExtResource("94_oi4cf")
+
+[node name="126" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5909, 314)
+texture = ExtResource("95_d6732")
+
+[node name="127" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(6112, 340)
+texture = ExtResource("96_0pnyf")
+
+[node name="128" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(6073, 306)
+texture = ExtResource("97_pfvd3")
+
+[node name="129" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5992, 343)
+texture = ExtResource("98_s5vfk")
+
+[node name="130" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(4850, 457)
+texture = ExtResource("99_iavt3")
+
+[node name="Pointer" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(4818, 457)
+texture = ExtResource("100_5ham6")
+
+[node name="131" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(4818, 458)
+texture = ExtResource("82_hcsog")
+
+[node name="132" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(4838, 458)
+texture = ExtResource("85_lpenv")
+
+[node name="133" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(4964, 475)
+texture = ExtResource("84_2be83")
+
+[node name="134" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(5742, 371)
+texture = ExtResource("101_lplut")
+
+[node name="135" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(176, 502)
+texture = ExtResource("68_t475u")
+
+[node name="136" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(213, 502)
+texture = ExtResource("69_4lilq")
+
+[node name="137" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(328, 502)
+texture = ExtResource("68_t475u")
+
+[node name="138" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(364, 503)
+texture = ExtResource("69_4lilq")
+
+[node name="139" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2342, 466)
+texture = ExtResource("51_7qhk0")
+
+[node name="140" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2512, 474)
+texture = ExtResource("72_d7gra")
+
+[node name="141" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2499, 476)
+texture = ExtResource("102_jpk6e")
+
+[node name="142" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2486, 478)
+texture = ExtResource("103_0gx6n")
+
+[node name="143" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2586, 506)
+texture = ExtResource("72_d7gra")
+
+[node name="144" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2611, 507)
+texture = ExtResource("104_b74h2")
+
+[node name="145" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2599, 510)
+texture = ExtResource("103_0gx6n")
+
+[node name="146" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2628, 508)
+texture = ExtResource("105_0pkpk")
+
+[node name="147" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2737, 540)
+texture = ExtResource("106_lg52o")
+
+[node name="148" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2797, 573)
+texture = ExtResource("105_0pkpk")
+
+[node name="149" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2812, 573)
+texture = ExtResource("73_eo06l")
+
+[node name="150" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2827, 572)
+texture = ExtResource("105_0pkpk")
+
+[node name="151" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2063, 445)
+texture = ExtResource("107_wv14p")
+
+[node name="152" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2048, 444)
+texture = ExtResource("105_0pkpk")
+
+[node name="153" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2024, 444)
+texture = ExtResource("102_jpk6e")
+
+[node name="154" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2924, 606)
+texture = ExtResource("106_lg52o")
+
+[node name="155" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2840, 572)
+texture = ExtResource("71_jmy8v")
+
+[node name="156" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(2728, 540)
+texture = ExtResource("104_b74h2")
+
+[node name="157" type="Sprite2D" parent="Misc"]
+z_index = -6
+position = Vector2(3167, 604)
+texture = ExtResource("102_jpk6e")
 
 [node name="Fallzone" type="Area2D" parent="."]
 position = Vector2(3518, 668)
