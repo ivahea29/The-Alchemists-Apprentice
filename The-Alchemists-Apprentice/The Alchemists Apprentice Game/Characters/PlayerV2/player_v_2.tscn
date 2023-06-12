@@ -293,7 +293,6 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tvgvw"]
-height = 40.0
 
 [node name="PlayerV2" type="CharacterBody2D"]
 script = ExtResource("1_u7fbs")
