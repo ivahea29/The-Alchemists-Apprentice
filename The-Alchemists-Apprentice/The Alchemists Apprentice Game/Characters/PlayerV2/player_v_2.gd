@@ -66,6 +66,5 @@ func shoot() -> void:
 		$Marker2D.position.x = -12
 		instance.direction = -1
 
-
 func _on_animated_sprite_2d_animation_finished():
 	animation_locked = false

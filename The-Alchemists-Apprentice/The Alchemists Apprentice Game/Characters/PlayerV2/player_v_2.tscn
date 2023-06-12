@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ctb4oytl61nud" path="res://newAssets/woodcutter/woodcutter_attack_1/frame1.png" id="1_dk855"]
 [ext_resource type="Script" path="res://Characters/PlayerV2/player_v_2.gd" id="1_u7fbs"]
-[ext_resource type="PackedScene" path="res://Characters/PlayerV2/Projectile.tscn" id="2_64va1"]
+[ext_resource type="PackedScene" uid="uid://b4iawhvgvaaqy" path="res://Characters/PlayerV2/Projectile.tscn" id="2_64va1"]
 [ext_resource type="Texture2D" uid="uid://nnkcvn3vji4q" path="res://newAssets/woodcutter/woodcutter_attack_1/frame2.png" id="2_g3nuc"]
 [ext_resource type="Texture2D" uid="uid://cctwpm6v1qj80" path="res://newAssets/woodcutter/woodcutter_attack_1/frame3.png" id="3_ppv1x"]
 [ext_resource type="Texture2D" uid="uid://dpxttmkbirubb" path="res://newAssets/woodcutter/woodcutter_attack_1/frame4.png" id="4_n2d3r"]
