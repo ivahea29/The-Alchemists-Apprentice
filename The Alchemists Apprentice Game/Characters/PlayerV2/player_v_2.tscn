@@ -1,0 +1,319 @@
+[gd_scene load_steps=54 format=3 uid="uid://cjgw1btmoack4"]
+
+[ext_resource type="Texture2D" uid="uid://ctb4oytl61nud" path="res://newAssets/woodcutter/woodcutter_attack_1/frame1.png" id="1_dk855"]
+[ext_resource type="Script" path="res://Characters/PlayerV2/player_v_2.gd" id="1_u7fbs"]
+[ext_resource type="PackedScene" uid="uid://cvjl86ssnqxtk" path="res://Characters/PlayerV2/Projectile.tscn" id="2_64va1"]
+[ext_resource type="Texture2D" uid="uid://nnkcvn3vji4q" path="res://newAssets/woodcutter/woodcutter_attack_1/frame2.png" id="2_g3nuc"]
+[ext_resource type="Texture2D" uid="uid://cctwpm6v1qj80" path="res://newAssets/woodcutter/woodcutter_attack_1/frame3.png" id="3_ppv1x"]
+[ext_resource type="Texture2D" uid="uid://dpxttmkbirubb" path="res://newAssets/woodcutter/woodcutter_attack_1/frame4.png" id="4_n2d3r"]
+[ext_resource type="Texture2D" uid="uid://cxu2ktajf0m4l" path="res://newAssets/woodcutter/woodcutter_attack_1/frame5.png" id="5_ible3"]
+[ext_resource type="Texture2D" uid="uid://bknidpapof2f8" path="res://newAssets/woodcutter/woodcutter_attack_1/frame6.png" id="6_g6f30"]
+[ext_resource type="Texture2D" uid="uid://bxpygigyw5ao7" path="res://Assets/Characters/character-sprite-sheets-pixel-art/1 Woodcutter/Woodcutter_death.png" id="7_g84yp"]
+[ext_resource type="Texture2D" uid="uid://prfgnuc3hr3g" path="res://Assets/Characters/character-sprite-sheets-pixel-art/1 Woodcutter/Woodcutter_hurt.png" id="8_g2eqc"]
+[ext_resource type="Texture2D" uid="uid://csrgb64sp5gy1" path="res://Assets/Characters/character-sprite-sheets-pixel-art/1 Woodcutter/Woodcutter_idle.png" id="9_ysceg"]
+[ext_resource type="Texture2D" uid="uid://bwhkwnumqnkw4" path="res://newAssets/woodcutter/woodcutter_jump/frame1 (6).png" id="10_eii3f"]
+[ext_resource type="Texture2D" uid="uid://brs48yskiqxd7" path="res://newAssets/woodcutter/woodcutter_jump/frame2.png" id="11_2rb76"]
+[ext_resource type="Texture2D" uid="uid://dl0lmerete41n" path="res://newAssets/woodcutter/woodcutter_jump/frame3 (6).png" id="12_cn4ii"]
+[ext_resource type="Texture2D" uid="uid://gwt5xsydiuap" path="res://newAssets/woodcutter/woodcutter_jump/frame4 (6).png" id="13_iq3qx"]
+[ext_resource type="Texture2D" uid="uid://c8hf0rsjgs6ht" path="res://newAssets/woodcutter/woodcutter_jump/frame5 (6).png" id="14_rjsnc"]
+[ext_resource type="Texture2D" uid="uid://7eoacaljagr0" path="res://newAssets/woodcutter/woodcutter_jump/frame6 (6).png" id="15_eo5lt"]
+[ext_resource type="Texture2D" uid="uid://dy1jk7vbltnxb" path="res://newAssets/woodcutter/woodcutter_run/frame1 (4).png" id="16_plg1d"]
+[ext_resource type="Texture2D" uid="uid://cu2iix1kjss0f" path="res://newAssets/woodcutter/woodcutter_run/frame2 (4).png" id="17_ip56x"]
+[ext_resource type="Texture2D" uid="uid://d2nvunlkmdxjr" path="res://newAssets/woodcutter/woodcutter_run/frame3 (4).png" id="18_1iltt"]
+[ext_resource type="Texture2D" uid="uid://b46l4n43vpgb2" path="res://newAssets/woodcutter/woodcutter_run/frame4 (4).png" id="19_uq6qy"]
+[ext_resource type="Texture2D" uid="uid://dny0ke5tgb76w" path="res://newAssets/woodcutter/woodcutter_run/frame5 (4).png" id="20_tmnjv"]
+[ext_resource type="Texture2D" uid="uid://dyimrhik2t3tp" path="res://newAssets/woodcutter/woodcutter_run/frame6 (4).png" id="21_1npo2"]
+[ext_resource type="Texture2D" uid="uid://b3hwbu5jtqi74" path="res://Assets/Characters/character-sprite-sheets-pixel-art/1 Woodcutter/Woodcutter.png" id="22_qxlqw"]
+[ext_resource type="Texture2D" uid="uid://bbtnxrhtppf1u" path="res://newAssets/woodcutter/woodcutter_walk/frame1 (5).png" id="23_wbdud"]
+[ext_resource type="Texture2D" uid="uid://dbedqd7ww0d5" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/3 Character animation/Woodcutter_throw.png" id="24_760vd"]
+[ext_resource type="Texture2D" uid="uid://i5gahk5l6jt7" path="res://newAssets/woodcutter/woodcutter_walk/frame2 (5).png" id="24_qan67"]
+[ext_resource type="Texture2D" uid="uid://biu4niepql312" path="res://newAssets/woodcutter/woodcutter_walk/frame3 (5).png" id="25_j64l3"]
+[ext_resource type="Texture2D" uid="uid://b1rpqquii51es" path="res://newAssets/woodcutter/woodcutter_walk/frame4 (5).png" id="26_3d81x"]
+[ext_resource type="Texture2D" uid="uid://msby3qh5ed43" path="res://newAssets/woodcutter/woodcutter_walk/frame5 (5).png" id="27_kjw6e"]
+[ext_resource type="Texture2D" uid="uid://b5utucmhsmnit" path="res://newAssets/woodcutter/woodcutter_walk/frame6 (5).png" id="28_6igif"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg7ad"]
+atlas = ExtResource("7_g84yp")
+region = Rect2(0, 0, 29, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xj2j"]
+atlas = ExtResource("7_g84yp")
+region = Rect2(50, 0, 28, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f20p8"]
+atlas = ExtResource("7_g84yp")
+region = Rect2(100, 0, 28, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liqfr"]
+atlas = ExtResource("7_g84yp")
+region = Rect2(150, 0, 28, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxvi1"]
+atlas = ExtResource("7_g84yp")
+region = Rect2(198, 0, 29, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5f8d"]
+atlas = ExtResource("7_g84yp")
+region = Rect2(247, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mpkd"]
+atlas = ExtResource("8_g2eqc")
+region = Rect2(0, 0, 29, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxnp0"]
+atlas = ExtResource("8_g2eqc")
+region = Rect2(49, 0, 29, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jy4k"]
+atlas = ExtResource("8_g2eqc")
+region = Rect2(96, 0, 29, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgt5e"]
+atlas = ExtResource("9_ysceg")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5aum4"]
+atlas = ExtResource("9_ysceg")
+region = Rect2(48, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrup2"]
+atlas = ExtResource("9_ysceg")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgs4p"]
+atlas = ExtResource("9_ysceg")
+region = Rect2(144, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phfv5"]
+atlas = ExtResource("22_qxlqw")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5fyt"]
+atlas = ExtResource("24_760vd")
+region = Rect2(6, 0, 23, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52cdp"]
+atlas = ExtResource("24_760vd")
+region = Rect2(53, 0, 23, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqt3o"]
+atlas = ExtResource("24_760vd")
+region = Rect2(101, 0, 23, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nye2o"]
+atlas = ExtResource("24_760vd")
+region = Rect2(151, 0, 23, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwv5t"]
+atlas = ExtResource("24_760vd")
+region = Rect2(199, 0, 23, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpctv"]
+atlas = ExtResource("24_760vd")
+region = Rect2(247, 0, 23, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uoyj7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dk855")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g3nuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ppv1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n2d3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ible3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g6f30")
+}],
+"loop": false,
+"name": &"woodcutter_attack_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg7ad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xj2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f20p8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liqfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxvi1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5f8d")
+}],
+"loop": false,
+"name": &"woodcutter_death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mpkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxnp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jy4k")
+}],
+"loop": false,
+"name": &"woodcutter_hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgt5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5aum4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrup2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgs4p")
+}],
+"loop": true,
+"name": &"woodcutter_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_eii3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2rb76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cn4ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_iq3qx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rjsnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_eo5lt")
+}],
+"loop": false,
+"name": &"woodcutter_jump",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_plg1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ip56x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1iltt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_uq6qy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_tmnjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1npo2")
+}],
+"loop": true,
+"name": &"woodcutter_run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phfv5")
+}],
+"loop": false,
+"name": &"woodcutter_static",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5fyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52cdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqt3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nye2o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwv5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpctv")
+}],
+"loop": false,
+"name": &"woodcutter_throw",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_wbdud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_qan67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_j64l3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_3d81x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_kjw6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_6igif")
+}],
+"loop": true,
+"name": &"woodcutter_walk",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tvgvw"]
+height = 40.0
+
+[node name="PlayerV2" type="CharacterBody2D"]
+collision_mask = 17
+script = ExtResource("1_u7fbs")
+projectile = ExtResource("2_64va1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_uoyj7")
+animation = &"woodcutter_throw"
+autoplay = "woodcutter_idle"
+frame = 5
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
+shape = SubResource("CapsuleShape2D_tvgvw")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(12, -7)
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

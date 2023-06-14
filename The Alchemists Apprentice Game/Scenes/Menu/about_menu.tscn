@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://dv77xytbuoj3d"]
+
+[ext_resource type="Texture2D" uid="uid://bqnyqt4rphhhs" path="res://Assets/Hud/5 Logo/Logo.png" id="1_3riq5"]
+[ext_resource type="Script" path="res://Scenes/Menu/about_menu.gd" id="1_age8a"]
+[ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="2_yp3tn"]
+[ext_resource type="Texture2D" uid="uid://ft8fe5rjqgbh" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/2 Background/desktop-wallpaper-firewatch-games-artist-digital-art-k-firewatch-digital-mountain-art.jpg" id="3_rn16x"]
+[ext_resource type="AudioStream" uid="uid://bwg4mt2kruqgn" path="res://Assets/Sounds/Music/instrumental-background-loop-148930.mp3" id="5_bgppu"]
+
+[node name="About_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_age8a")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 869.0
+offset_top = 1004.0
+offset_right = 1075.0
+offset_bottom = 1044.0
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Return_to_menu" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yp3tn")
+theme_override_font_sizes/font_size = 30
+text = "Return to Menu"
+
+[node name="MenuLogo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(948, 264)
+scale = Vector2(2.01887, 1.98177)
+texture = ExtResource("1_3riq5")
+
+[node name="Label" type="Label" parent="MenuLogo"]
+offset_left = -46.5608
+offset_top = 14.6334
+offset_right = 58.4392
+offset_bottom = 48.6334
+theme_override_fonts/font = ExtResource("2_yp3tn")
+theme_override_font_sizes/font_size = 30
+text = "Authors"
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -2
+texture_filter = 1
+position = Vector2(964, 535.5)
+scale = Vector2(2.25882, 2.22385)
+texture = ExtResource("3_rn16x")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Background"]
+texture_filter = 1
+offset_left = 278.906
+offset_top = 220.114
+offset_right = 525.906
+offset_bottom = 246.114
+theme_override_fonts/font = ExtResource("2_yp3tn")
+theme_override_font_sizes/font_size = 9
+text = "The Alchemists Apprentice V 1.0"
+
+[node name="AudioBackground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_bgppu")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Return_to_menu" to="." method="_on_return_to_menu_pressed"]

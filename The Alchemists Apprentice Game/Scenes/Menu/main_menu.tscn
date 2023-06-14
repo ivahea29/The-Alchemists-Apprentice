@@ -1,0 +1,106 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3ahvbjqidvqd"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/main_menu.gd" id="1_r0e7b"]
+[ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="2_clxkv"]
+[ext_resource type="Texture2D" uid="uid://bqnyqt4rphhhs" path="res://Assets/Hud/5 Logo/Logo.png" id="2_d0vfk"]
+[ext_resource type="Texture2D" uid="uid://ft8fe5rjqgbh" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/2 Background/desktop-wallpaper-firewatch-games-artist-digital-art-k-firewatch-digital-mountain-art.jpg" id="3_3erlk"]
+[ext_resource type="AudioStream" uid="uid://bwg4mt2kruqgn" path="res://Assets/Sounds/Music/instrumental-background-loop-148930.mp3" id="5_k2j8b"]
+
+[sub_resource type="FontVariation" id="FontVariation_0lbir"]
+base_font = ExtResource("2_clxkv")
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r0e7b")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 437.0
+offset_right = 1282.0
+offset_bottom = 819.0
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_clxkv")
+theme_override_font_sizes/font_size = 30
+text = "Play"
+
+[node name="About the Game" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_clxkv")
+theme_override_font_sizes/font_size = 30
+text = "About the Game"
+
+[node name="Controls" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_clxkv")
+theme_override_font_sizes/font_size = 30
+text = "Controls"
+
+[node name="Authors" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_clxkv")
+theme_override_font_sizes/font_size = 30
+text = "Authors"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_clxkv")
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[node name="MenuLogo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(948, 264)
+scale = Vector2(2.01887, 1.98177)
+texture = ExtResource("2_d0vfk")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="MenuLogo"]
+texture_filter = 1
+offset_left = -114.916
+offset_top = 18.6702
+offset_right = 162.084
+offset_bottom = 69.6702
+theme_override_fonts/font = SubResource("FontVariation_0lbir")
+theme_override_font_sizes/font_size = 21
+text = "The Alchemists Apprentice"
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -2
+texture_filter = 1
+position = Vector2(964, 535.5)
+scale = Vector2(2.25882, 2.22385)
+texture = ExtResource("3_3erlk")
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Background"]
+texture_filter = 1
+offset_left = 278.906
+offset_top = 220.114
+offset_right = 525.906
+offset_bottom = 246.114
+theme_override_fonts/font = ExtResource("2_clxkv")
+theme_override_font_sizes/font_size = 9
+text = "The Alchemists Apprentice V 1.0"
+
+[node name="AudioBackground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_k2j8b")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/About the Game" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Authors" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

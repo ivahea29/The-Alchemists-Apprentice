@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://8u605bc2q70m"]
+
+[ext_resource type="Script" path="res://Characters/testPlayer/test_player.gd" id="1_0lki1"]
+[ext_resource type="Texture2D" uid="uid://dvua6hdxbxcwa" path="res://Assets/Characters/character-sprite-sheets-pixel-art/2 GraveRobber/GraveRobber.png" id="1_ue1rm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15h6r"]
+
+[node name="testPlayer" type="CharacterBody2D"]
+script = ExtResource("1_0lki1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(4, -4)
+scale = Vector2(1.16667, 1.16667)
+texture = ExtResource("1_ue1rm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 14)
+shape = SubResource("RectangleShape2D_15h6r")
