@@ -1,0 +1,19 @@
+~ start
+
+Wizard: Im cold.. Wha.. What happened?
+Wizard: Is that you Dorian .. 
+Wizard: .. .. ..
+- Your body! Where has it gone?
+	Wizard: Its right.. Here? Where has my body gone! I dont remember anything from last night. I just woke up like this!
+- Is this another lesson?
+	Wizard: No time for your jokes, you need to help me! I believe i was poisoned and someone has stolen my things.
+Wizard: .. So .. tired ..
+- You can count on me, i will do what you ask.
+- I dont think im up to this, im only an apprentice!
+Wizard: You must help, your training has lead to this point .. You must gather what has been stolen .. My precious life studies.
+Wizard: My scrolls, you must find them Dorian. If they are taken by the wrong person all you know may be in peril ..
+Wizard: You must journey on, find the scrolls .. Find who stole them, and take back my power. If you fail, all will be lost.
+Wizard: You will find them scattered throughout the world. You must go now and find them ..
+Wizard: Good luck!
+
+=> END

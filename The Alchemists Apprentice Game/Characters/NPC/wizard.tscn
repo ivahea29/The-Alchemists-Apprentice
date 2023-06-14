@@ -1,21 +1,13 @@
-[gd_scene load_steps=52 format=3 uid="uid://htsaishq7ddu"]
+[gd_scene load_steps=44 format=3 uid="uid://htsaishq7ddu"]
 
-[ext_resource type="Texture2D" uid="uid://cyh1r4nrgecos" path="res://Sprites/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_attack.png" id="1_4msk3"]
-[ext_resource type="Texture2D" uid="uid://dxk4pj6d3h1n2" path="res://Sprites/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_cast.png" id="2_o80nr"]
-[ext_resource type="Texture2D" uid="uid://bkro413daa0um" path="res://Sprites/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_death.png" id="3_b23my"]
-[ext_resource type="Texture2D" uid="uid://bgkgv0koiwnec" path="res://Sprites/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_hurt.png" id="4_7613m"]
-[ext_resource type="Texture2D" uid="uid://b636vw26rku3b" path="res://Sprites/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_idle.png" id="5_4gmby"]
-[ext_resource type="Texture2D" uid="uid://bolapd01neycx" path="res://Sprites/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_read.png" id="6_2wd08"]
-[ext_resource type="Texture2D" uid="uid://bet52cv3g4vru" path="res://Sprites/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_walk.png" id="7_con44"]
-[ext_resource type="Texture2D" uid="uid://coauwr72dxcr0" path="res://Sprites/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tile_01.png" id="8_n22wu"]
-[ext_resource type="Texture2D" uid="uid://bmovybwfh0apt" path="res://Sprites/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tile_02.png" id="9_ry36n"]
-[ext_resource type="Texture2D" uid="uid://pb4qieybwel5" path="res://Sprites/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tile_03.png" id="10_ik5sp"]
-[ext_resource type="Texture2D" uid="uid://daqs3en4p0qc" path="res://Hud/2 Bars/Healthbar_full.png" id="11_a0g5g"]
-[ext_resource type="Texture2D" uid="uid://cka01lmmivk62" path="res://Sprites/Characters/portraits-pixel-art-assets-pack/1 Portraits/Icons_01.png" id="12_y7kt4"]
-[ext_resource type="Texture2D" uid="uid://ca0duwcbby523" path="res://Hud/2 Bars/Circle.png" id="13_eiyym"]
-[ext_resource type="Texture2D" uid="uid://kw4vxa5ebik8" path="res://Hud/2 Bars/gem_emerald.png" id="14_sflrt"]
-[ext_resource type="Texture2D" uid="uid://dhkle314xl01o" path="res://Hud/2 Bars/gem_ruby.png" id="15_vusqm"]
-[ext_resource type="Texture2D" uid="uid://bwd0pdoipjony" path="res://Hud/2 Bars/gem_sapphire.png" id="16_bwdni"]
+[ext_resource type="Texture2D" uid="uid://cyh1r4nrgecos" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_attack.png" id="1_4msk3"]
+[ext_resource type="Script" path="res://Characters/NPC/wizard.gd" id="1_cqqgq"]
+[ext_resource type="Texture2D" uid="uid://dxk4pj6d3h1n2" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_cast.png" id="2_o80nr"]
+[ext_resource type="Texture2D" uid="uid://bkro413daa0um" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_death.png" id="3_b23my"]
+[ext_resource type="Texture2D" uid="uid://bgkgv0koiwnec" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_hurt.png" id="4_7613m"]
+[ext_resource type="Texture2D" uid="uid://b636vw26rku3b" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_idle.png" id="5_4gmby"]
+[ext_resource type="Texture2D" uid="uid://bolapd01neycx" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_read.png" id="6_2wd08"]
+[ext_resource type="Texture2D" uid="uid://bet52cv3g4vru" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_walk.png" id="7_con44"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84kag"]
 atlas = ExtResource("1_4msk3")
@@ -295,62 +287,12 @@ animations = [{
 
 [node name="Wizard" type="CharacterBody2D"]
 texture_filter = 1
+script = ExtResource("1_cqqgq")
 
 [node name="CharacterBody2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(263, 265)
+position = Vector2(251, 276.5)
+scale = Vector2(0.5, 0.520833)
 sprite_frames = SubResource("SpriteFrames_eavld")
-animation = &"wizard_walk"
-frame_progress = 0.517247
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
-[node name="Tile01" type="Sprite2D" parent="."]
-position = Vector2(224, 305)
-texture = ExtResource("8_n22wu")
-
-[node name="Tile02" type="Sprite2D" parent="."]
-position = Vector2(256, 305)
-texture = ExtResource("9_ry36n")
-
-[node name="Tile03" type="Sprite2D" parent="."]
-position = Vector2(288, 305)
-texture = ExtResource("10_ik5sp")
-
-[node name="HealthbarFull" type="Sprite2D" parent="."]
-position = Vector2(248, 159)
-texture = ExtResource("11_a0g5g")
-
-[node name="Icons01" type="Sprite2D" parent="."]
-position = Vector2(171, 171)
-texture = ExtResource("12_y7kt4")
-
-[node name="Circle" type="Sprite2D" parent="."]
-z_index = -2
-position = Vector2(171, 172)
-scale = Vector2(1.65, 1.51667)
-texture = ExtResource("13_eiyym")
-
-[node name="GemEmerald" type="Sprite2D" parent="."]
-position = Vector2(209, 184)
-scale = Vector2(0.0988372, 0.0495562)
-texture = ExtResource("14_sflrt")
-
-[node name="GemRuby" type="Sprite2D" parent="."]
-position = Vector2(216, 174)
-scale = Vector2(0.0649999, 0.0727424)
-texture = ExtResource("15_vusqm")
-
-[node name="GemSapphire" type="Sprite2D" parent="."]
-position = Vector2(225, 184)
-scale = Vector2(0.0647059, 0.0962145)
-texture = ExtResource("16_bwdni")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 234.0
-offset_top = 174.0
-offset_right = 258.0
-offset_bottom = 200.0
-theme_override_font_sizes/font_size = 12
-text = "X 3
-"
+animation = &"wizard_idle"
+autoplay = "wizard_idle"
