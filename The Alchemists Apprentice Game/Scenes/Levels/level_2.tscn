@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://eodse3yb0k68" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_82c75"]
 [ext_resource type="Texture2D" uid="uid://bb6xv560vv663" path="res://Assets/Buildings/fishing-game-assets-pixel-art-pack/3 Objects/Water.png" id="2_juobe"]
 [ext_resource type="Texture2D" uid="uid://dbfs5ws7cgv3t" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/2 Background/Background.png" id="4_8qa2s"]
-[ext_resource type="PackedScene" uid="uid://cjgw1btmoack4" path="res://Characters/PlayerV2/player_v_2.tscn" id="5_a5v4o"]
+[ext_resource type="PackedScene" uid="uid://187t26ihbc8n" path="res://Characters/PlayerV2/player_v_2.tscn" id="5_a5v4o"]
 [ext_resource type="Texture2D" uid="uid://8isrp0kcvkcg" path="res://Assets/Buildings/fishing-game-assets-pixel-art-pack/3 Objects/Fishing_hut.png" id="5_mmy3g"]
 [ext_resource type="Texture2D" uid="uid://k7y7i88yudlq" path="res://Assets/Buildings/herbalism-game-assets-pixel-art-pack/3 Objects/House1.png" id="6_373j5"]
 [ext_resource type="Texture2D" uid="uid://ci7rsbk0hu2no" path="res://Assets/Buildings/farming-pixel-art-game-assets-pack/2 Objects/Mill.png" id="6_dgjc2"]
@@ -1797,6 +1797,7 @@ position = Vector2(7279, 528)
 texture = ExtResource("12_6lq13")
 
 [node name="rightDirtDot3" type="Sprite2D" parent="BackgroundTiles"]
+z_index = -3
 texture_filter = 1
 position = Vector2(7343, 560)
 texture = ExtResource("12_6lq13")
@@ -4587,34 +4588,36 @@ visible = false
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_wgpax")
 
-[node name="192" type="StaticBody2D" parent="."]
+[node name="levelEndCollision" type="Node" parent="."]
+
+[node name="192" type="StaticBody2D" parent="levelEndCollision"]
 position = Vector2(8059, 465)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="192"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="levelEndCollision/192"]
 position = Vector2(14, -68)
 shape = SubResource("RectangleShape2D_eac4y")
 
-[node name="193" type="Sprite2D" parent="."]
+[node name="193" type="Sprite2D" parent="levelEndCollision"]
 position = Vector2(8090, 465)
 texture = ExtResource("61_7jion")
 
-[node name="194" type="Sprite2D" parent="."]
+[node name="194" type="Sprite2D" parent="levelEndCollision"]
 position = Vector2(8121, 465)
 texture = ExtResource("61_7jion")
 
-[node name="195" type="Sprite2D" parent="."]
+[node name="195" type="Sprite2D" parent="levelEndCollision"]
 position = Vector2(8152, 465)
 texture = ExtResource("61_7jion")
 
-[node name="196" type="Sprite2D" parent="."]
+[node name="196" type="Sprite2D" parent="levelEndCollision"]
 position = Vector2(8183, 465)
 texture = ExtResource("61_7jion")
 
-[node name="197" type="Sprite2D" parent="."]
+[node name="197" type="Sprite2D" parent="levelEndCollision"]
 position = Vector2(8214, 465)
 texture = ExtResource("61_7jion")
 
-[node name="198" type="Sprite2D" parent="."]
+[node name="198" type="Sprite2D" parent="levelEndCollision"]
 position = Vector2(8244, 465)
 texture = ExtResource("61_7jion")
 

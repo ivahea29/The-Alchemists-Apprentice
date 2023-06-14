@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cjgw1btmoack4"]
+[gd_scene load_steps=55 format=3 uid="uid://187t26ihbc8n"]
 
 [ext_resource type="Texture2D" uid="uid://ctb4oytl61nud" path="res://newAssets/woodcutter/woodcutter_attack_1/frame1.png" id="1_dk855"]
 [ext_resource type="Script" path="res://Characters/PlayerV2/player_v_2.gd" id="1_u7fbs"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://b1rpqquii51es" path="res://newAssets/woodcutter/woodcutter_walk/frame4 (5).png" id="26_3d81x"]
 [ext_resource type="Texture2D" uid="uid://msby3qh5ed43" path="res://newAssets/woodcutter/woodcutter_walk/frame5 (5).png" id="27_kjw6e"]
 [ext_resource type="Texture2D" uid="uid://b5utucmhsmnit" path="res://newAssets/woodcutter/woodcutter_walk/frame6 (5).png" id="28_6igif"]
+[ext_resource type="AudioStream" uid="uid://bolklvn2p1oad" path="res://Assets/Sounds/FX/run2.mp3" id="32_670nc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qg7ad"]
 atlas = ExtResource("7_g84yp")
@@ -315,5 +316,8 @@ shape = SubResource("CapsuleShape2D_tvgvw")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(12, -7)
+
+[node name="runFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("32_670nc")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

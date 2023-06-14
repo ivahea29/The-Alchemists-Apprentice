@@ -56,7 +56,12 @@ func _physics_process(delta):
 		animation_locked = true
 		shoot()
 	
-	#Level 1 interior spawn point
+	#Play runFX when moving
+	if is_on_floor() and velocity.x != 0:
+		if !$runFX.playing:
+			$runFX.play()
+	else:
+		$runFX.stop()
 	
 
 func shoot() -> void:
