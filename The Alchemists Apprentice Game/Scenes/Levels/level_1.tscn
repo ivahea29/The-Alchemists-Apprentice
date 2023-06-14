@@ -1,4 +1,4 @@
-[gd_scene load_steps=185 format=3 uid="uid://d0knbsqqp346r"]
+[gd_scene load_steps=202 format=3 uid="uid://d0knbsqqp346r"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_0xk1k"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_b5oed"]
@@ -94,6 +94,23 @@
 [ext_resource type="Texture2D" uid="uid://c2sfa4cfjup6" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/Fire3.png" id="91_pqrc2"]
 [ext_resource type="Texture2D" uid="uid://cjj08e2jroogv" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/1 Tileset/Tile_133.png" id="92_gy66d"]
 [ext_resource type="Texture2D" uid="uid://dh233lb4sworj" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/1 Tileset/Tile_147.png" id="93_120fb"]
+[ext_resource type="Texture2D" uid="uid://csjy2te4e3mup" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/treesv2/PNG/birch_1.png" id="95_2r7u7"]
+[ext_resource type="Texture2D" uid="uid://cig54bjg47qtw" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/treesv2/PNG/jungle_tree_4.png" id="96_huiea"]
+[ext_resource type="Texture2D" uid="uid://b4owsixhsif3l" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/treesv2/PNG/jungle_tree_1.png" id="97_6qyfr"]
+[ext_resource type="Texture2D" uid="uid://0pqk4u21fcid" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/7 Grass/5.png" id="98_1ogii"]
+[ext_resource type="Texture2D" uid="uid://c3otth43peok8" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/3 Objects/Willows/3.png" id="99_o6l1m"]
+[ext_resource type="Texture2D" uid="uid://d0aky8r5gf40h" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/3 Objects/Willows/2.png" id="100_mwlor"]
+[ext_resource type="Texture2D" uid="uid://38stwvc1s0mc" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/3 Objects/Grass/2.png" id="101_wixvi"]
+[ext_resource type="Texture2D" uid="uid://bb68lpclwhq62" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/3 Objects/Grass/3.png" id="102_o8y40"]
+[ext_resource type="Texture2D" uid="uid://coupaedbjaa3i" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/3 Objects/Grass/4.png" id="103_n2xcy"]
+[ext_resource type="Texture2D" uid="uid://d07abdlu5pxhf" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/3 Objects/Grass/7.png" id="104_2ren3"]
+[ext_resource type="Texture2D" uid="uid://cark0086um5wi" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/3 Objects/Grass/10.png" id="105_0l4n6"]
+[ext_resource type="Texture2D" uid="uid://b5yidaxb80lve" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/3 Objects/Grass/8.png" id="106_8nq2p"]
+[ext_resource type="Texture2D" uid="uid://derdl0iyslodj" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/3 Objects/Pillars/3.png" id="107_x71jm"]
+[ext_resource type="Texture2D" uid="uid://catadd16n1p75" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/treesv2/PNG/birch_5.png" id="108_w0dhc"]
+[ext_resource type="Texture2D" uid="uid://dsa5nc8pqdps2" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/treesv2/PNG/birch_7.png" id="109_m6sor"]
+[ext_resource type="Texture2D" uid="uid://c1g1djp5f6bq4" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/treesv2/PNG/birch_2.png" id="109_w8qoa"]
+[ext_resource type="Texture2D" uid="uid://8eeewfoacf6e" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/treesv2/PNG/birch_6.png" id="110_4u5be"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t5fgi"]
 texture = ExtResource("1_b5oed")
@@ -3003,6 +3020,107 @@ z_index = -4
 position = Vector2(2471, 377)
 texture = ExtResource("6_03o0w")
 
+[node name="Birch1" type="Sprite2D" parent="Buildings-Village"]
+modulate = Color(0.54902, 0.54902, 0.54902, 1)
+z_index = -6
+position = Vector2(1864, 294)
+texture = ExtResource("95_2r7u7")
+
+[node name="JungleTree4" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1277, 301)
+texture = ExtResource("96_huiea")
+
+[node name="JungleTree1" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1188, 287)
+texture = ExtResource("97_6qyfr")
+
+[node name="22" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(944, 337)
+texture = ExtResource("9_qdyqu")
+
+[node name="23" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(821, 273)
+texture = ExtResource("9_qdyqu")
+
+[node name="24" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(821, 273)
+texture = ExtResource("9_qdyqu")
+
+[node name="25" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1267, 377)
+texture = ExtResource("28_ym4xw")
+
+[node name="26" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1240, 377)
+texture = ExtResource("98_1ogii")
+
+[node name="27" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1258, 377)
+texture = ExtResource("26_7u8a2")
+
+[node name="28" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1074, 294)
+texture = ExtResource("99_o6l1m")
+
+[node name="29" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1047, 300)
+texture = ExtResource("100_mwlor")
+
+[node name="30" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1006, 376)
+texture = ExtResource("101_wixvi")
+
+[node name="31" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1058, 376)
+texture = ExtResource("102_o8y40")
+
+[node name="32" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1043, 378)
+texture = ExtResource("103_n2xcy")
+
+[node name="33" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1113, 377)
+texture = ExtResource("104_2ren3")
+
+[node name="34" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1132, 379)
+texture = ExtResource("105_0l4n6")
+
+[node name="35" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1106, 378)
+texture = ExtResource("106_8nq2p")
+
+[node name="36" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1027, 376)
+texture = ExtResource("28_ym4xw")
+
+[node name="37" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1121, 377)
+texture = ExtResource("98_1ogii")
+
+[node name="38" type="Sprite2D" parent="Buildings-Village"]
+z_index = -6
+position = Vector2(1227, 376)
+texture = ExtResource("22_blt3d")
+
 [node name="Villagers" type="Node" parent="."]
 
 [node name="Villager" type="AnimatedSprite2D" parent="Villagers"]
@@ -3133,6 +3251,16 @@ light_mask = 512
 visibility_layer = 512
 z_index = -3
 position = Vector2(2822, 348)
+sprite_frames = SubResource("SpriteFrames_4bxev")
+autoplay = "default"
+frame = 1
+frame_progress = 0.456092
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="Animated-buildings"]
+light_mask = 512
+visibility_layer = 512
+z_index = -3
+position = Vector2(745, 137)
 sprite_frames = SubResource("SpriteFrames_4bxev")
 autoplay = "default"
 frame = 1
@@ -3455,6 +3583,36 @@ scale = Vector2(0.75, 0.75)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerV2"]
 remote_path = NodePath("../../Camera2D")
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(745, 208)
+texture = ExtResource("107_x71jm")
+
+[node name="Birch5" type="Sprite2D" parent="."]
+position = Vector2(2567, 319)
+texture = ExtResource("108_w0dhc")
+
+[node name="Birch2" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(2999, 350)
+texture = ExtResource("109_w8qoa")
+
+[node name="Birch6" type="Sprite2D" parent="."]
+position = Vector2(2960, 412)
+texture = ExtResource("110_4u5be")
+
+[node name="Birch7" type="Sprite2D" parent="."]
+position = Vector2(3149, 397)
+texture = ExtResource("109_m6sor")
+
+[node name="Birch8" type="Sprite2D" parent="."]
+position = Vector2(3695, 192)
+texture = ExtResource("108_w0dhc")
+
+[node name="Birch1" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(3572, 250)
+texture = ExtResource("95_2r7u7")
 
 [connection signal="body_entered" from="outsideDoor" to="outsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="outsideDoor" to="outsideDoor" method="_on_body_exited"]
