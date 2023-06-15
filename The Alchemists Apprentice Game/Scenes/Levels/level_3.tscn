@@ -1,7 +1,7 @@
 [gd_scene load_steps=110 format=3 uid="uid://bcv36d55naeh3"]
 
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_yr4vk"]
-[ext_resource type="PackedScene" uid="uid://cjgw1btmoack4" path="res://Characters/PlayerV2/player_v_2.tscn" id="2_6ehrq"]
+[ext_resource type="PackedScene" uid="uid://187t26ihbc8n" path="res://Characters/PlayerV2/player_v_2.tscn" id="2_6ehrq"]
 [ext_resource type="Texture2D" uid="uid://c3wid4bqyn0gk" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tile_02.png" id="2_d1xoa"]
 [ext_resource type="Texture2D" uid="uid://cbcxlu1akco4h" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tile_12.png" id="3_45qt5"]
 [ext_resource type="Texture2D" uid="uid://b8mye83fl8xy5" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tile_47.png" id="4_y64l5"]

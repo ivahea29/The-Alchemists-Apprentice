@@ -291,8 +291,8 @@ script = ExtResource("1_cqqgq")
 
 [node name="CharacterBody2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(251, 276.5)
-scale = Vector2(0.5, 0.520833)
+position = Vector2(255.5, 269)
+scale = Vector2(0.6875, 0.833333)
 sprite_frames = SubResource("SpriteFrames_eavld")
 animation = &"wizard_idle"
 autoplay = "wizard_idle"

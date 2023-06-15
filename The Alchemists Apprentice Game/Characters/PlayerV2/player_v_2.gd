@@ -7,8 +7,12 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var projectile: PackedScene
+@onready var ActionableFinder: Area2D = $Direction/ActionableFinder
 var animation_locked = false
 var facing_right = true
+
+func ready():
+	pass
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -76,3 +80,24 @@ func shoot() -> void:
 
 func _on_animated_sprite_2d_animation_finished():
 	animation_locked = false
+
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interact"):
+		var actionables = ActionableFinder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			return
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+
+
