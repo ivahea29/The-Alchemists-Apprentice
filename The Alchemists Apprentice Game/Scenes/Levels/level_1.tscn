@@ -1,4 +1,4 @@
-[gd_scene load_steps=216 format=3 uid="uid://d0knbsqqp346r"]
+[gd_scene load_steps=223 format=3 uid="uid://d0knbsqqp346r"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_0xk1k"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_b5oed"]
@@ -120,6 +120,11 @@
 [ext_resource type="PackedScene" uid="uid://htsaishq7ddu" path="res://Characters/NPC/wizard.tscn" id="112_erc48"]
 [ext_resource type="PackedScene" uid="uid://ginobjttf172" path="res://Dialogue/actionable_1.tscn" id="113_k1amg"]
 [ext_resource type="Resource" uid="uid://db5bn7vrc0cue" path="res://Dialogue/WizardDialogue.dialogue" id="114_siuat"]
+[ext_resource type="Texture2D" uid="uid://d2mw8aufohbmo" path="res://Assets/Hud/speech_important.png" id="121_enixg"]
+[ext_resource type="Texture2D" uid="uid://dav0g3l1qgqxh" path="res://Assets/Hud/speech_important2.png" id="122_b47ub"]
+[ext_resource type="Texture2D" uid="uid://ds2n1q7clgmpb" path="res://Assets/Hud/speech_bubble.png" id="123_n1ywp"]
+[ext_resource type="Texture2D" uid="uid://dhes6kwcy5oh7" path="res://Assets/Hud/speech_bubble2.png" id="124_in6lh"]
+[ext_resource type="PackedScene" uid="uid://cw4keybc700ks" path="res://Scenes/Items/scroll.tscn" id="125_rye3w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t5fgi"]
 texture = ExtResource("1_b5oed")
@@ -2289,6 +2294,34 @@ fill_to = Vector2(0.963303, 0.490826)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hna1o"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_w5hfp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("121_enixg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_b47ub")
+}],
+"loop": true,
+"name": &"float",
+"speed": 1.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nvb5o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("123_n1ywp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_in6lh")
+}],
+"loop": true,
+"name": &"float",
+"speed": 1.0
+}]
+
 [node name="Level-1" type="Node2D"]
 script = ExtResource("1_0xk1k")
 
@@ -3710,7 +3743,7 @@ metadata/_edit_group_ = true
 remote_path = NodePath("../../Camera2D")
 
 [node name="Wizard" parent="." instance=ExtResource("112_erc48")]
-modulate = Color(1, 1, 0.407843, 0.356863)
+modulate = Color(1, 1, 1, 0.568627)
 position = Vector2(31, -32)
 metadata/_edit_group_ = true
 
@@ -3722,7 +3755,76 @@ visible = false
 position = Vector2(249, 273)
 shape = SubResource("CapsuleShape2D_hna1o")
 
+[node name="SpeechBubbles" type="Node" parent="."]
+
+[node name="speech_important" type="AnimatedSprite2D" parent="SpeechBubbles"]
+position = Vector2(294, 214)
+sprite_frames = SubResource("SpriteFrames_w5hfp")
+animation = &"float"
+autoplay = "float"
+frame_progress = 0.726699
+
+[node name="speech_important2" type="AnimatedSprite2D" parent="SpeechBubbles"]
+position = Vector2(2647, 416)
+sprite_frames = SubResource("SpriteFrames_w5hfp")
+animation = &"float"
+autoplay = "float"
+frame_progress = 0.714847
+
+[node name="speech_bubble" type="AnimatedSprite2D" parent="SpeechBubbles"]
+position = Vector2(1535, 471)
+sprite_frames = SubResource("SpriteFrames_nvb5o")
+animation = &"float"
+autoplay = "float"
+frame_progress = 0.996478
+
+[node name="speech_bubble2" type="AnimatedSprite2D" parent="SpeechBubbles"]
+position = Vector2(1822, 471)
+sprite_frames = SubResource("SpriteFrames_nvb5o")
+animation = &"float"
+autoplay = "float"
+frame_progress = 0.0810867
+
+[node name="speech_bubble3" type="AnimatedSprite2D" parent="SpeechBubbles"]
+position = Vector2(1857, 471)
+sprite_frames = SubResource("SpriteFrames_nvb5o")
+animation = &"float"
+autoplay = "float"
+frame_progress = 0.0625158
+flip_h = true
+
+[node name="speech_bubble4" type="AnimatedSprite2D" parent="SpeechBubbles"]
+position = Vector2(2058, 474)
+sprite_frames = SubResource("SpriteFrames_nvb5o")
+animation = &"float"
+autoplay = "float"
+frame_progress = 0.149936
+flip_h = true
+
+[node name="speech_bubble5" type="AnimatedSprite2D" parent="SpeechBubbles"]
+position = Vector2(3348, 344)
+sprite_frames = SubResource("SpriteFrames_nvb5o")
+animation = &"float"
+autoplay = "float"
+frame_progress = 0.149936
+flip_h = true
+
+[node name="speech_bubble6" type="AnimatedSprite2D" parent="SpeechBubbles"]
+position = Vector2(3320, 344)
+sprite_frames = SubResource("SpriteFrames_nvb5o")
+animation = &"float"
+autoplay = "float"
+frame_progress = 0.149936
+
+[node name="Scroll" parent="." instance=ExtResource("125_rye3w")]
+position = Vector2(4631, 336)
+
+[node name="scrollTimer" type="Timer" parent="."]
+wait_time = 2.0
+
 [connection signal="body_entered" from="outsideDoor" to="outsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="outsideDoor" to="outsideDoor" method="_on_body_exited"]
 [connection signal="body_entered" from="insideDoor" to="insideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="insideDoor" to="insideDoor" method="_on_body_exited"]
+[connection signal="scroll_collected" from="Scroll" to="." method="_on_scroll_scroll_collected"]
+[connection signal="timeout" from="scrollTimer" to="." method="_on_scroll_timer_timeout"]
