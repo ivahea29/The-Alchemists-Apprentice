@@ -1,4 +1,4 @@
-[gd_scene load_steps=233 format=3 uid="uid://bh322s2qv6os7"]
+[gd_scene load_steps=237 format=3 uid="uid://bh322s2qv6os7"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_2.gd" id="1_0tfyh"]
 [ext_resource type="Texture2D" uid="uid://eodse3yb0k68" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_82c75"]
@@ -174,6 +174,10 @@
 [ext_resource type="Script" path="res://Scenes/Levels/level2_insideDoor.gd" id="150_m6xu1"]
 [ext_resource type="Texture2D" uid="uid://chftmhe6peysp" path="res://Assets/Buildings/fishing-game-assets-pixel-art-pack/3 Objects/Boat2.png" id="152_g1h0y"]
 [ext_resource type="Texture2D" uid="uid://csjy2te4e3mup" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/treesv2/PNG/birch_1.png" id="161_5gfpa"]
+[ext_resource type="PackedScene" uid="uid://cw4keybc700ks" path="res://Scenes/Items/scroll.tscn" id="175_0je31"]
+[ext_resource type="PackedScene" uid="uid://b6eoa2xfgoe8m" path="res://Scenes/Items/red_gem.tscn" id="176_ckp48"]
+[ext_resource type="PackedScene" uid="uid://dvix3oit58tei" path="res://Scenes/Items/green_gem.tscn" id="177_ga0dh"]
+[ext_resource type="PackedScene" uid="uid://c7wqpgwsuqclf" path="res://Scenes/Items/blue_gem.tscn" id="178_kd31j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73kei"]
 texture = ExtResource("1_82c75")
@@ -4536,7 +4540,7 @@ position = Vector2(97.5, -21)
 shape = SubResource("RectangleShape2D_0whpr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(2859, 542)
+position = Vector2(395, 472)
 scale = Vector2(0.75, 0.75)
 zoom = Vector2(2, 2)
 limit_left = 0
@@ -4544,7 +4548,7 @@ limit_top = 0
 limit_bottom = 672
 
 [node name="PlayerV2" parent="." instance=ExtResource("5_a5v4o")]
-position = Vector2(2859, 542)
+position = Vector2(395, 472)
 scale = Vector2(0.75, 0.75)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerV2"]
@@ -4621,9 +4625,28 @@ texture = ExtResource("61_7jion")
 position = Vector2(8244, 465)
 texture = ExtResource("61_7jion")
 
+[node name="Scroll" parent="." instance=ExtResource("175_0je31")]
+position = Vector2(9225, 401)
+
+[node name="scrollTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Gems" type="Node" parent="."]
+
+[node name="redGem" parent="Gems" instance=ExtResource("176_ckp48")]
+position = Vector2(2054, 425)
+
+[node name="green_gem" parent="Gems" instance=ExtResource("177_ga0dh")]
+position = Vector2(2105, 424)
+
+[node name="blue_gem" parent="Gems" instance=ExtResource("178_kd31j")]
+position = Vector2(2154, 425)
+
 [connection signal="body_entered" from="waterFallzone" to="." method="_on_area_2d_body_entered"]
 [connection signal="resume_game" from="pause-menu" to="." method="_on_pausemenu_resume_game"]
 [connection signal="body_entered" from="outsideDoor" to="outsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="outsideDoor" to="outsideDoor" method="_on_body_exited"]
 [connection signal="body_entered" from="insideDoor" to="insideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="insideDoor" to="insideDoor" method="_on_body_exited"]
+[connection signal="scroll_collected" from="Scroll" to="." method="_on_scroll_scroll_collected"]
+[connection signal="timeout" from="scrollTimer" to="." method="_on_scroll_timer_timeout"]
