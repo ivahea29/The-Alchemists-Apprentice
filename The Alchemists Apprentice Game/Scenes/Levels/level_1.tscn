@@ -1,4 +1,4 @@
-[gd_scene load_steps=210 format=3 uid="uid://d0knbsqqp346r"]
+[gd_scene load_steps=216 format=3 uid="uid://d0knbsqqp346r"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_0xk1k"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_b5oed"]
@@ -72,8 +72,11 @@
 [ext_resource type="Texture2D" uid="uid://bien4jo5pg4qx" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/candle5.png" id="66_lpqh0"]
 [ext_resource type="Texture2D" uid="uid://3m0bjew4jut0" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/Hourglass.png" id="67_muy2c"]
 [ext_resource type="Texture2D" uid="uid://45fv3tis85ww" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Dishes4.png" id="68_0ot4y"]
+[ext_resource type="Texture2D" uid="uid://dwio1t6jraqxh" path="res://Assets/Characters/villagers-sprite-sheets-pixel-art/3 Man/Man_death.png" id="68_15e8k"]
+[ext_resource type="PackedScene" uid="uid://c5838bp2c2exs" path="res://hurt-villager.tscn" id="69_lb3tw"]
 [ext_resource type="Texture2D" uid="uid://hbce6kl5io16" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Dishes3.png" id="69_tbgny"]
 [ext_resource type="Texture2D" uid="uid://bphykn5tbwkav" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Dishes9.png" id="70_pfbyl"]
+[ext_resource type="Resource" uid="uid://cu1v1hf1lgw2f" path="res://Dialogue/hurt-villager-dialogue.dialogue" id="70_s5d5k"]
 [ext_resource type="Texture2D" uid="uid://c02c3u3svtfc3" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Dishes10.png" id="71_mgeej"]
 [ext_resource type="Texture2D" uid="uid://csqefxc6o2cw" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Food1.png" id="72_12r86"]
 [ext_resource type="Texture2D" uid="uid://dvpgjr2svq8ck" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Food3.png" id="73_dxf7l"]
@@ -1931,6 +1934,24 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_eusej"]
+atlas = ExtResource("68_15e8k")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ey24"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eusej")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jvqmh"]
+radius = 19.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_wrdvu"]
 atlas = ExtResource("48_nvc00")
 region = Rect2(0, 0, 64, 64)
@@ -3263,6 +3284,19 @@ dialogue_resource = ExtResource("63_74lff")
 visible = false
 position = Vector2(-12, 8)
 shape = SubResource("CapsuleShape2D_riw1y")
+
+[node name="HurtVillager" type="AnimatedSprite2D" parent="Villagers"]
+position = Vector2(2640, 425)
+sprite_frames = SubResource("SpriteFrames_4ey24")
+metadata/_edit_group_ = true
+
+[node name="hurt-villager" parent="Villagers/HurtVillager" instance=ExtResource("69_lb3tw")]
+dialogue_resource = ExtResource("70_s5d5k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/HurtVillager/hurt-villager"]
+visible = false
+position = Vector2(1, 21)
+shape = SubResource("CircleShape2D_jvqmh")
 
 [node name="Animated-buildings" type="Node" parent="."]
 

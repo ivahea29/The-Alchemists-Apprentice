@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://cu1v1hf1lgw2f"
+path="res://.godot/imported/hurt-villager-dialogue.dialogue-4c51c771b0ba48ee47add4367aee24d3.tres"
+
+[deps]
+
+source_file="res://Dialogue/hurt-villager-dialogue.dialogue"
+dest_files=["res://.godot/imported/hurt-villager-dialogue.dialogue-4c51c771b0ba48ee47add4367aee24d3.tres"]
+
+[params]
+
+defaults=true

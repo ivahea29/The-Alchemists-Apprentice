@@ -1,0 +1,10 @@
+~ HurtVillagerDialogueStart
+
+hurt-villager: Hel.. Help me.
+hurt-villager: Someone broke into my house last night
+- What happened?
+	hurt-villager: I was sleeping, someone broke in and stole my prized cloak. I must of hit my head while trying to scare them off. I think they may have dropped something inside.
+- Get up, you look silly.
+	hurt-villager: Please, im injured if you could just go inside and make sure everything is okay!
+hurt-villager: Thank you for listening and helping, be safe out there.
+=> END
