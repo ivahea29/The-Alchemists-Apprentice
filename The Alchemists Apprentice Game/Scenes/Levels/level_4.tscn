@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bngjkakkk0wql" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/2 Background/Background.png" id="1_iytm3"]
 [ext_resource type="Texture2D" uid="uid://kugef1oxvoq8" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/1 Tiles/Tile_10.png" id="2_7vnxn"]
-[ext_resource type="PackedScene" uid="uid://cjgw1btmoack4" path="res://Characters/PlayerV2/player_v_2.tscn" id="2_23g4c"]
+[ext_resource type="PackedScene" uid="uid://187t26ihbc8n" path="res://Characters/PlayerV2/player_v_2.tscn" id="2_23g4c"]
 [ext_resource type="Texture2D" uid="uid://d16pave2b7sf7" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/1 Tiles/Tileset.png" id="2_v0hrc"]
 [ext_resource type="Texture2D" uid="uid://b6tt6gu5n8sfj" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/1 Tiles/Tile_20.png" id="3_0sa7x"]
 [ext_resource type="Texture2D" uid="uid://c2utk35tg50xf" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/1 Tiles/Tile_30.png" id="4_f25v1"]

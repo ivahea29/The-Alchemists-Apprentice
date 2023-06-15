@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dft8dmkfppjxq"
+path="res://.godot/imported/VillagerDialogue.dialogue-e5656aa64c01c125d5474cc99ba3847f.tres"
+
+[deps]
+
+source_file="res://Dialogue/VillagerDialogue.dialogue"
+dest_files=["res://.godot/imported/VillagerDialogue.dialogue-e5656aa64c01c125d5474cc99ba3847f.tres"]
+
+[params]
+
+defaults=true
