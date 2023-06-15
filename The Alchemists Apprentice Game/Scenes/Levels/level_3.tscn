@@ -1,4 +1,4 @@
-[gd_scene load_steps=137 format=3 uid="uid://bcv36d55naeh3"]
+[gd_scene load_steps=142 format=3 uid="uid://bcv36d55naeh3"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_3.gd" id="1_le3i8"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_yr4vk"]
@@ -119,7 +119,10 @@
 [ext_resource type="Texture2D" uid="uid://bsg6leu8xi81n" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/3 Objects/Stones/6.png" id="113_1gvas"]
 [ext_resource type="Texture2D" uid="uid://cacqtql6rhpg4" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/6 Stones/4.png" id="114_q5cxc"]
 [ext_resource type="Texture2D" uid="uid://w03cgh04cvl5" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/6 Stones/6.png" id="115_8xl3k"]
+[ext_resource type="Texture2D" uid="uid://cs1acxgfovftj" path="res://Assets/Buildings/herbalism-game-assets-pixel-art-pack/3 Objects/Plant5.png" id="117_kvfvo"]
+[ext_resource type="Texture2D" uid="uid://cqqgpseinf7wx" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/3 Objects/Stones/7.png" id="118_6cvqi"]
 [ext_resource type="PackedScene" uid="uid://cw4keybc700ks" path="res://Scenes/Items/scroll.tscn" id="119_jjb8s"]
+[ext_resource type="Texture2D" uid="uid://bsbn7nkpv41a0" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/3 Objects/Stones/1.png" id="119_lbf13"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5agli"]
 texture = ExtResource("1_yr4vk")
@@ -2295,6 +2298,15 @@ size = Vector2(20, 152)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5q3r2"]
 size = Vector2(20, 362)
+
+[sub_resource type="Gradient" id="Gradient_nf8n4"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1g4da"]
+gradient = SubResource("Gradient_nf8n4")
+fill = 1
+fill_from = Vector2(0.509174, 0.504587)
+fill_to = Vector2(0.880734, 0.119266)
 
 [sub_resource type="Gradient" id="Gradient_aoksg"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -6008,6 +6020,12 @@ position = Vector2(8144, 544)
 texture = ExtResource("77_xv13a")
 flip_h = true
 
+[node name="97" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8822, 547)
+texture = ExtResource("77_xv13a")
+flip_h = true
+
 [node name="49" type="Sprite2D" parent="caveInterior/Decor"]
 z_index = -2
 position = Vector2(8145, 362)
@@ -6121,6 +6139,223 @@ position = Vector2(10107, 204)
 rotation = -2.03505
 texture = ExtResource("114_q5cxc")
 flip_h = true
+
+[node name="98" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -3
+position = Vector2(8903, 545)
+texture = ExtResource("115_8xl3k")
+
+[node name="99" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(9505, 443)
+texture = ExtResource("114_q5cxc")
+
+[node name="100" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(9247, 483)
+texture = ExtResource("77_xv13a")
+
+[node name="104" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8531, 544)
+texture = ExtResource("77_xv13a")
+
+[node name="101" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9915, 545)
+texture = ExtResource("94_ad7vd")
+
+[node name="102" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9823, 536)
+texture = ExtResource("23_tq0y1")
+
+[node name="109" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9841, 412)
+texture = ExtResource("23_tq0y1")
+
+[node name="103" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9380, 450)
+texture = ExtResource("19_tjef7")
+
+[node name="110" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9888, 419)
+texture = ExtResource("19_tjef7")
+
+[node name="Plant1" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9888, 553)
+texture = ExtResource("96_vp50i")
+
+[node name="Plant2" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9934, 546)
+texture = ExtResource("97_75wfa")
+
+[node name="Plant3" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9477, 442)
+texture = ExtResource("96_vp50i")
+
+[node name="Plant4" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9521, 438)
+texture = ExtResource("97_75wfa")
+
+[node name="Plant5" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9503, 459)
+texture = ExtResource("96_vp50i")
+flip_h = true
+
+[node name="Plant6" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9214, 479)
+texture = ExtResource("97_75wfa")
+
+[node name="Plant7" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9246, 480)
+texture = ExtResource("96_vp50i")
+
+[node name="Plant8" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9274, 491)
+texture = ExtResource("96_vp50i")
+flip_h = true
+
+[node name="Plant9" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9253, 460)
+texture = ExtResource("97_75wfa")
+flip_h = true
+
+[node name="Plant10" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8820, 524)
+texture = ExtResource("97_75wfa")
+
+[node name="Plant15" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8343, 553)
+texture = ExtResource("97_75wfa")
+
+[node name="Plant19" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8877, 553)
+texture = ExtResource("117_kvfvo")
+
+[node name="Plant11" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8517, 553)
+texture = ExtResource("96_vp50i")
+flip_h = true
+
+[node name="Plant16" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8357, 554)
+texture = ExtResource("96_vp50i")
+flip_h = true
+
+[node name="Plant12" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8647, 552)
+texture = ExtResource("97_75wfa")
+flip_h = true
+
+[node name="Plant13" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8521, 524)
+texture = ExtResource("97_75wfa")
+
+[node name="Plant14" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8869, 524)
+texture = ExtResource("96_vp50i")
+
+[node name="105" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8484, 545)
+texture = ExtResource("118_6cvqi")
+
+[node name="106" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8665, 546)
+texture = ExtResource("113_1gvas")
+
+[node name="Plant20" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9231, 464)
+texture = ExtResource("117_kvfvo")
+
+[node name="Plant21" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9500, 429)
+texture = ExtResource("117_kvfvo")
+
+[node name="107" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8934, 536)
+texture = ExtResource("22_0v70i")
+
+[node name="108" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8595, 543)
+texture = ExtResource("27_gdb3b")
+
+[node name="Plant17" type="Sprite2D" parent="caveInterior/Decor"]
+position = Vector2(8809, 552)
+texture = ExtResource("100_asp0t")
+
+[node name="Plant23" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(9901, 532)
+texture = ExtResource("100_asp0t")
+
+[node name="1" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8633, 529)
+texture = ExtResource("119_lbf13")
+
+[node name="Plant18" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8630, 533)
+texture = ExtResource("117_kvfvo")
+
+[node name="Lighting" type="Node" parent="caveInterior"]
+
+[node name="PointLight2D" type="PointLight2D" parent="caveInterior/Lighting"]
+position = Vector2(8630, 535)
+color = Color(0.45098, 0.784314, 1, 1)
+texture = SubResource("GradientTexture2D_1g4da")
+
+[node name="PointLight2D2" type="PointLight2D" parent="caveInterior/Lighting"]
+position = Vector2(8808, 550)
+color = Color(0.45098, 0.784314, 1, 1)
+texture = SubResource("GradientTexture2D_1g4da")
+
+[node name="PointLight2D3" type="PointLight2D" parent="caveInterior/Lighting"]
+position = Vector2(8876, 552)
+color = Color(0.45098, 0.784314, 1, 1)
+texture = SubResource("GradientTexture2D_1g4da")
+
+[node name="PointLight2D4" type="PointLight2D" parent="caveInterior/Lighting"]
+position = Vector2(9228, 465)
+color = Color(0.45098, 0.784314, 1, 1)
+texture = SubResource("GradientTexture2D_1g4da")
+
+[node name="PointLight2D5" type="PointLight2D" parent="caveInterior/Lighting"]
+position = Vector2(9497, 432)
+color = Color(0.45098, 0.784314, 1, 1)
+texture = SubResource("GradientTexture2D_1g4da")
+
+[node name="PointLight2D6" type="PointLight2D" parent="caveInterior/Lighting"]
+position = Vector2(9903, 531)
+color = Color(0.45098, 0.784314, 1, 1)
+texture = SubResource("GradientTexture2D_1g4da")
 
 [node name="PlayerV2" parent="." instance=ExtResource("2_6ehrq")]
 position = Vector2(123, 388)
