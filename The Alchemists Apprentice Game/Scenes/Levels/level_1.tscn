@@ -1,4 +1,4 @@
-[gd_scene load_steps=223 format=3 uid="uid://d0knbsqqp346r"]
+[gd_scene load_steps=232 format=3 uid="uid://d0knbsqqp346r"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_0xk1k"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_b5oed"]
@@ -73,7 +73,7 @@
 [ext_resource type="Texture2D" uid="uid://3m0bjew4jut0" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/Hourglass.png" id="67_muy2c"]
 [ext_resource type="Texture2D" uid="uid://45fv3tis85ww" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Dishes4.png" id="68_0ot4y"]
 [ext_resource type="Texture2D" uid="uid://dwio1t6jraqxh" path="res://Assets/Characters/villagers-sprite-sheets-pixel-art/3 Man/Man_death.png" id="68_15e8k"]
-[ext_resource type="PackedScene" uid="uid://c5838bp2c2exs" path="res://hurt-villager.tscn" id="69_lb3tw"]
+[ext_resource type="PackedScene" uid="uid://c5838bp2c2exs" path="res://Dialogue/hurt-villager.tscn" id="69_lb3tw"]
 [ext_resource type="Texture2D" uid="uid://hbce6kl5io16" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Dishes3.png" id="69_tbgny"]
 [ext_resource type="Texture2D" uid="uid://bphykn5tbwkav" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Dishes9.png" id="70_pfbyl"]
 [ext_resource type="Resource" uid="uid://cu1v1hf1lgw2f" path="res://Dialogue/hurt-villager-dialogue.dialogue" id="70_s5d5k"]
@@ -125,6 +125,9 @@
 [ext_resource type="Texture2D" uid="uid://ds2n1q7clgmpb" path="res://Assets/Hud/speech_bubble.png" id="123_n1ywp"]
 [ext_resource type="Texture2D" uid="uid://dhes6kwcy5oh7" path="res://Assets/Hud/speech_bubble2.png" id="124_in6lh"]
 [ext_resource type="PackedScene" uid="uid://cw4keybc700ks" path="res://Scenes/Items/scroll.tscn" id="125_rye3w"]
+[ext_resource type="Texture2D" uid="uid://bolapd01neycx" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_read.png" id="126_iq1fi"]
+[ext_resource type="PackedScene" uid="uid://cfkn4o2namku" path="res://Dialogue/wizard_progress_que.tscn" id="127_uy8tn"]
+[ext_resource type="Resource" uid="uid://debf53dltdqgh" path="res://Dialogue/WizardProgressDialogue.dialogue" id="128_u8nu0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t5fgi"]
 texture = ExtResource("1_b5oed")
@@ -2322,6 +2325,45 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2luu6"]
+atlas = ExtResource("126_iq1fi")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdsbx"]
+atlas = ExtResource("126_iq1fi")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdy6p"]
+atlas = ExtResource("126_iq1fi")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkxua"]
+atlas = ExtResource("126_iq1fi")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7gpgf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2luu6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdsbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdy6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkxua")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xfybf"]
+radius = 30.2655
+
 [node name="Level-1" type="Node2D"]
 script = ExtResource("1_0xk1k")
 
@@ -3207,10 +3249,6 @@ texture = ExtResource("110_4u5be")
 position = Vector2(3149, 397)
 texture = ExtResource("109_m6sor")
 
-[node name="Birch8" type="Sprite2D" parent="Buildings-Village"]
-position = Vector2(3695, 192)
-texture = ExtResource("108_w0dhc")
-
 [node name="Birch3" type="Sprite2D" parent="Buildings-Village"]
 z_index = -3
 position = Vector2(3572, 250)
@@ -3821,6 +3859,21 @@ position = Vector2(4631, 336)
 
 [node name="scrollTimer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="ProgressWizard" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.352941)
+position = Vector2(3696, 297)
+sprite_frames = SubResource("SpriteFrames_7gpgf")
+autoplay = "default"
+frame_progress = 0.935192
+flip_h = true
+
+[node name="Wizard-Progress-Que" parent="ProgressWizard" instance=ExtResource("127_uy8tn")]
+dialogue_resource = ExtResource("128_u8nu0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProgressWizard/Wizard-Progress-Que"]
+position = Vector2(9, 3)
+shape = SubResource("CircleShape2D_xfybf")
 
 [connection signal="body_entered" from="outsideDoor" to="outsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="outsideDoor" to="outsideDoor" method="_on_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=142 format=3 uid="uid://bcv36d55naeh3"]
+[gd_scene load_steps=151 format=3 uid="uid://bcv36d55naeh3"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_3.gd" id="1_le3i8"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_yr4vk"]
@@ -123,6 +123,9 @@
 [ext_resource type="Texture2D" uid="uid://cqqgpseinf7wx" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/3 Objects/Stones/7.png" id="118_6cvqi"]
 [ext_resource type="PackedScene" uid="uid://cw4keybc700ks" path="res://Scenes/Items/scroll.tscn" id="119_jjb8s"]
 [ext_resource type="Texture2D" uid="uid://bsbn7nkpv41a0" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/3 Objects/Stones/1.png" id="119_lbf13"]
+[ext_resource type="Texture2D" uid="uid://bolapd01neycx" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_read.png" id="124_u5lj5"]
+[ext_resource type="PackedScene" uid="uid://cfkn4o2namku" path="res://Dialogue/wizard_progress_que.tscn" id="125_7rrjg"]
+[ext_resource type="Resource" uid="uid://debf53dltdqgh" path="res://Dialogue/WizardProgressDialogue.dialogue" id="126_14pmw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5agli"]
 texture = ExtResource("1_yr4vk")
@@ -2330,6 +2333,45 @@ fill_to = Vector2(0.550459, 0.637615)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h10va"]
 size = Vector2(28, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2luu6"]
+atlas = ExtResource("124_u5lj5")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdsbx"]
+atlas = ExtResource("124_u5lj5")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdy6p"]
+atlas = ExtResource("124_u5lj5")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkxua"]
+atlas = ExtResource("124_u5lj5")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p2r8a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2luu6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdsbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdy6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkxua")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cv2np"]
+radius = 29.0172
 
 [node name="level3" type="Node2D"]
 script = ExtResource("1_le3i8")
@@ -6410,6 +6452,24 @@ position = Vector2(10017, 409)
 
 [node name="scrollTimer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="ProgressWizard" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.352941)
+position = Vector2(6658, 523)
+scale = Vector2(0.99774, 1)
+sprite_frames = SubResource("SpriteFrames_p2r8a")
+autoplay = "default"
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="Wizard-Progress-Que" parent="ProgressWizard" instance=ExtResource("125_7rrjg")]
+scale = Vector2(0.860737, 1)
+dialogue_resource = ExtResource("126_14pmw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProgressWizard/Wizard-Progress-Que"]
+visible = false
+position = Vector2(10, 5)
+shape = SubResource("CircleShape2D_cv2np")
 
 [connection signal="body_entered" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_exited"]
