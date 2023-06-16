@@ -1,4 +1,4 @@
-[gd_scene load_steps=246 format=3 uid="uid://bh322s2qv6os7"]
+[gd_scene load_steps=248 format=3 uid="uid://bh322s2qv6os7"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_2.gd" id="1_0tfyh"]
 [ext_resource type="Texture2D" uid="uid://eodse3yb0k68" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_82c75"]
@@ -181,6 +181,7 @@
 [ext_resource type="Texture2D" uid="uid://bolapd01neycx" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_read.png" id="179_d76jr"]
 [ext_resource type="PackedScene" uid="uid://cfkn4o2namku" path="res://Dialogue/wizard_progress_que.tscn" id="180_6vksv"]
 [ext_resource type="Resource" uid="uid://debf53dltdqgh" path="res://Dialogue/WizardProgressDialogue.dialogue" id="181_axsb7"]
+[ext_resource type="PackedScene" uid="uid://c3ojhcwkh5cfi" path="res://Characters/Enemies/wolf_enemy.tscn" id="182_f3nyg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73kei"]
 texture = ExtResource("1_82c75")
@@ -1540,6 +1541,9 @@ corner_radius_bottom_left = 25
 [sub_resource type="CircleShape2D" id="CircleShape2D_wgpax"]
 radius = 28.4429
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7kuu4"]
+size = Vector2(20, 126)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eac4y"]
 size = Vector2(31, 167)
 
@@ -1942,6 +1946,13 @@ texture_filter = 1
 position = Vector2(560, 393)
 texture = ExtResource("14_oxs62")
 
+[node name="31" type="Sprite2D" parent="Foliage"]
+z_index = -3
+texture_filter = 1
+position = Vector2(82, 396)
+texture = ExtResource("14_oxs62")
+flip_h = true
+
 [node name="3" type="Sprite2D" parent="Foliage"]
 z_index = -3
 texture_filter = 1
@@ -2008,6 +2019,11 @@ texture = ExtResource("33_t4kjd")
 [node name="FirTree1" type="Sprite2D" parent="Foliage"]
 z_index = -3
 position = Vector2(5577, 367)
+texture = ExtResource("34_51obn")
+
+[node name="FirTree3" type="Sprite2D" parent="Foliage"]
+z_index = -3
+position = Vector2(67, 450)
 texture = ExtResource("34_51obn")
 
 [node name="45" type="Sprite2D" parent="Foliage"]
@@ -2119,6 +2135,12 @@ texture = ExtResource("67_emgjv")
 z_index = -3
 position = Vector2(7410, 475)
 texture = ExtResource("161_5gfpa")
+
+[node name="Birch2" type="Sprite2D" parent="Foliage"]
+z_index = -3
+position = Vector2(42, 413)
+texture = ExtResource("161_5gfpa")
+flip_h = true
 
 [node name="47" type="Sprite2D" parent="Foliage"]
 z_index = -2
@@ -2260,6 +2282,17 @@ texture = ExtResource("53_nlhum")
 z_index = -3
 position = Vector2(2371, 465)
 texture = ExtResource("16_i8i5d")
+
+[node name="193" type="Sprite2D" parent="Misc"]
+z_index = -3
+position = Vector2(90, 496)
+texture = ExtResource("16_i8i5d")
+
+[node name="194" type="Sprite2D" parent="Misc"]
+z_index = -3
+position = Vector2(31, 497)
+texture = ExtResource("16_i8i5d")
+flip_h = true
 
 [node name="3" type="Sprite2D" parent="Misc"]
 z_index = -3
@@ -2451,6 +2484,12 @@ texture = ExtResource("18_ddqml")
 modulate = Color(0.568627, 0.568627, 0.568627, 1)
 z_index = -5
 position = Vector2(4112, 537)
+texture = ExtResource("67_lmogt")
+
+[node name="192" type="Sprite2D" parent="Misc"]
+modulate = Color(0.568627, 0.568627, 0.568627, 1)
+z_index = -5
+position = Vector2(48, 449)
 texture = ExtResource("67_lmogt")
 
 [node name="39" type="Sprite2D" parent="Misc"]
@@ -4582,7 +4621,7 @@ position = Vector2(97.5, -21)
 shape = SubResource("RectangleShape2D_0whpr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(395, 472)
+position = Vector2(137, 484)
 scale = Vector2(0.75, 0.75)
 zoom = Vector2(2, 2)
 limit_left = 0
@@ -4590,7 +4629,7 @@ limit_top = 0
 limit_bottom = 672
 
 [node name="PlayerV2" parent="." instance=ExtResource("5_a5v4o")]
-position = Vector2(395, 472)
+position = Vector2(137, 484)
 scale = Vector2(0.75, 0.75)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerV2"]
@@ -4633,6 +4672,14 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_p4p5l")
 visible = false
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_wgpax")
+
+[node name="levelStartCollision" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="levelStartCollision"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="levelStartCollision/StaticBody2D"]
+position = Vector2(17, 448)
+shape = SubResource("RectangleShape2D_7kuu4")
 
 [node name="levelEndCollision" type="Node" parent="."]
 
@@ -4684,6 +4731,9 @@ position = Vector2(2105, 424)
 [node name="blue_gem" parent="Gems" instance=ExtResource("178_kd31j")]
 position = Vector2(2154, 425)
 
+[node name="redGem2" parent="Gems" instance=ExtResource("176_ckp48")]
+position = Vector2(2197, 425)
+
 [node name="ProgressWizard" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.352941)
 position = Vector2(8352, 457)
@@ -4701,6 +4751,37 @@ dialogue_resource = ExtResource("181_axsb7")
 visible = false
 position = Vector2(10, 5)
 shape = SubResource("CircleShape2D_srw77")
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="wolfEnemy" parent="Enemies" instance=ExtResource("182_f3nyg")]
+position = Vector2(755, 488)
+max_distance = 200
+
+[node name="wolfEnemy2" parent="Enemies" instance=ExtResource("182_f3nyg")]
+position = Vector2(1309, 425)
+max_distance = 200
+
+[node name="wolfEnemy3" parent="Enemies" instance=ExtResource("182_f3nyg")]
+position = Vector2(1052, 456)
+max_distance = 75
+
+[node name="wolfEnemy4" parent="Enemies" instance=ExtResource("182_f3nyg")]
+position = Vector2(1660, 390)
+
+[node name="wolfEnemy5" parent="Enemies" instance=ExtResource("182_f3nyg")]
+position = Vector2(1839, 392)
+
+[node name="wolfEnemy6" parent="Enemies" instance=ExtResource("182_f3nyg")]
+position = Vector2(4776, 486)
+max_distance = 200
+
+[node name="wolfEnemy7" parent="Enemies" instance=ExtResource("182_f3nyg")]
+position = Vector2(5029, 486)
+
+[node name="wolfEnemy8" parent="Enemies" instance=ExtResource("182_f3nyg")]
+position = Vector2(5343, 488)
+max_distance = 200
 
 [connection signal="body_entered" from="waterFallzone" to="." method="_on_area_2d_body_entered"]
 [connection signal="resume_game" from="pause-menu" to="." method="_on_pausemenu_resume_game"]
