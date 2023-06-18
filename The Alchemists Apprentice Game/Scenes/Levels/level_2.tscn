@@ -1,4 +1,4 @@
-[gd_scene load_steps=248 format=3 uid="uid://bh322s2qv6os7"]
+[gd_scene load_steps=249 format=3 uid="uid://bh322s2qv6os7"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_2.gd" id="1_0tfyh"]
 [ext_resource type="Texture2D" uid="uid://eodse3yb0k68" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_82c75"]
@@ -182,6 +182,7 @@
 [ext_resource type="PackedScene" uid="uid://cfkn4o2namku" path="res://Dialogue/wizard_progress_que.tscn" id="180_6vksv"]
 [ext_resource type="Resource" uid="uid://debf53dltdqgh" path="res://Dialogue/WizardProgressDialogue.dialogue" id="181_axsb7"]
 [ext_resource type="PackedScene" uid="uid://c3ojhcwkh5cfi" path="res://Characters/Enemies/wolf_enemy.tscn" id="182_f3nyg"]
+[ext_resource type="AudioStream" uid="uid://cc5qpxhdqgdfr" path="res://Assets/Sounds/Music/celebration-of-the-battle-of-nein-150734.mp3" id="183_vcrrw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73kei"]
 texture = ExtResource("1_82c75")
@@ -4736,7 +4737,7 @@ position = Vector2(2197, 425)
 
 [node name="ProgressWizard" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.352941)
-position = Vector2(8352, 457)
+position = Vector2(8025, 456)
 scale = Vector2(0.99774, 1)
 sprite_frames = SubResource("SpriteFrames_xe4sx")
 autoplay = "default"
@@ -4782,6 +4783,11 @@ position = Vector2(5029, 486)
 [node name="wolfEnemy8" parent="Enemies" instance=ExtResource("182_f3nyg")]
 position = Vector2(5343, 488)
 max_distance = 200
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("183_vcrrw")
+volume_db = -14.991
+autoplay = true
 
 [connection signal="body_entered" from="waterFallzone" to="." method="_on_area_2d_body_entered"]
 [connection signal="resume_game" from="pause-menu" to="." method="_on_pausemenu_resume_game"]

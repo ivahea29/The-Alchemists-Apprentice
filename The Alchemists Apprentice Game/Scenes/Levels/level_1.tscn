@@ -1,4 +1,4 @@
-[gd_scene load_steps=232 format=3 uid="uid://d0knbsqqp346r"]
+[gd_scene load_steps=233 format=3 uid="uid://d0knbsqqp346r"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_0xk1k"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_b5oed"]
@@ -128,6 +128,7 @@
 [ext_resource type="Texture2D" uid="uid://bolapd01neycx" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_read.png" id="126_iq1fi"]
 [ext_resource type="PackedScene" uid="uid://cfkn4o2namku" path="res://Dialogue/wizard_progress_que.tscn" id="127_uy8tn"]
 [ext_resource type="Resource" uid="uid://debf53dltdqgh" path="res://Dialogue/WizardProgressDialogue.dialogue" id="128_u8nu0"]
+[ext_resource type="AudioStream" uid="uid://dbdhup0pknlgi" path="res://Assets/Sounds/Music/fantasy-classical-themes-132199.mp3" id="129_jwl80"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t5fgi"]
 texture = ExtResource("1_b5oed")
@@ -3874,6 +3875,11 @@ dialogue_resource = ExtResource("128_u8nu0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ProgressWizard/Wizard-Progress-Que"]
 position = Vector2(9, 3)
 shape = SubResource("CircleShape2D_xfybf")
+
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("129_jwl80")
+volume_db = -20.613
+autoplay = true
 
 [connection signal="body_entered" from="outsideDoor" to="outsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="outsideDoor" to="outsideDoor" method="_on_body_exited"]

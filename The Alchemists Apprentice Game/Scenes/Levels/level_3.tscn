@@ -1,4 +1,4 @@
-[gd_scene load_steps=152 format=3 uid="uid://bcv36d55naeh3"]
+[gd_scene load_steps=153 format=3 uid="uid://bcv36d55naeh3"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_3.gd" id="1_le3i8"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_yr4vk"]
@@ -127,6 +127,7 @@
 [ext_resource type="PackedScene" uid="uid://cfkn4o2namku" path="res://Dialogue/wizard_progress_que.tscn" id="125_7rrjg"]
 [ext_resource type="Resource" uid="uid://debf53dltdqgh" path="res://Dialogue/WizardProgressDialogue.dialogue" id="126_14pmw"]
 [ext_resource type="PackedScene" uid="uid://q17hscy5nvcb" path="res://Characters/Enemies/goblin_enemy.tscn" id="127_4jen0"]
+[ext_resource type="AudioStream" uid="uid://cvcay02y1oeay" path="res://Assets/Sounds/Music/dark-resonance-148675.mp3" id="128_bmxne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5agli"]
 texture = ExtResource("1_yr4vk")
@@ -6476,6 +6477,10 @@ shape = SubResource("CircleShape2D_cv2np")
 
 [node name="goblinEnemy" parent="Enemies" instance=ExtResource("127_4jen0")]
 position = Vector2(508, 392)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("128_bmxne")
+autoplay = true
 
 [connection signal="body_entered" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_exited"]
