@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
 
@@ -86,5 +87,4 @@ func _unhandled_input(_event: InputEvent) -> void:
 		if actionables.size() > 0:
 			actionables[0].action()
 			return
-
 
