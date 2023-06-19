@@ -1,4 +1,4 @@
-[gd_scene load_steps=250 format=3 uid="uid://bh322s2qv6os7"]
+[gd_scene load_steps=251 format=3 uid="uid://bh322s2qv6os7"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_2.gd" id="1_0tfyh"]
 [ext_resource type="Texture2D" uid="uid://eodse3yb0k68" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_82c75"]

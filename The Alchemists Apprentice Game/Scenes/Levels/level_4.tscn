@@ -58,7 +58,7 @@
 [ext_resource type="Texture2D" uid="uid://cmcyq0maigdx7" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/3 Objects/Cryslals/8.png" id="52_qfk4y"]
 [ext_resource type="Texture2D" uid="uid://cdbcuteyioryo" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Torch1.png" id="57_0eti4"]
 [ext_resource type="AudioStream" uid="uid://f54wuwaf1avw" path="res://Assets/Sounds/Music/the-fog-of-war-150738.mp3" id="57_ycnob"]
-[ext_resource type="PackedScene" uid="uid://ysqn7lnw8rwy" path="res://Characters/Enemies/boss_enemy.tscn" id="58_wdyqc"]
+[ext_resource type="PackedScene" path="res://Characters/Enemies/boss_enemy.tscn" id="58_wdyqc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5paa8"]
 texture = ExtResource("2_v0hrc")
