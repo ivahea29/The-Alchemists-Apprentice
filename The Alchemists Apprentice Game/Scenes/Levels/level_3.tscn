@@ -1,4 +1,4 @@
-[gd_scene load_steps=181 format=3 uid="uid://bcv36d55naeh3"]
+[gd_scene load_steps=190 format=3 uid="uid://bcv36d55naeh3"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_3.gd" id="1_le3i8"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_yr4vk"]
@@ -137,6 +137,9 @@
 [ext_resource type="Texture2D" uid="uid://cl0pdwfggawla" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/3 Animated objects/Fire.png" id="135_pbdql"]
 [ext_resource type="PackedScene" uid="uid://ivoqtu6hb2jw" path="res://Dialogue/human_dialogue.tscn" id="136_11st4"]
 [ext_resource type="Resource" uid="uid://bmfvovcadpwcr" path="res://Dialogue/Hutman.dialogue" id="137_j7oxc"]
+[ext_resource type="Texture2D" uid="uid://cosy5dc3uex7p" path="res://Assets/Characters/villagers-sprite-sheets-pixel-art/2 Old_woman/Old_woman_idle.png" id="138_24fii"]
+[ext_resource type="PackedScene" uid="uid://cb7qidkadslhp" path="res://Dialogue/old_lady_village.tscn" id="139_1fr2g"]
+[ext_resource type="Resource" uid="uid://b17imlwiu238v" path="res://Dialogue/old-lady-dialogue.dialogue" id="140_cp4ti"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5agli"]
 texture = ExtResource("1_yr4vk")
@@ -2499,6 +2502,45 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4gu2n"]
 radius = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8jpl"]
+atlas = ExtResource("138_24fii")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etb6r"]
+atlas = ExtResource("138_24fii")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5o66"]
+atlas = ExtResource("138_24fii")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_feff0"]
+atlas = ExtResource("138_24fii")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_doqhy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8jpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etb6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5o66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feff0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uamwj"]
+radius = 17.1172
 
 [node name="level3" type="Node2D"]
 script = ExtResource("1_le3i8")
@@ -7590,6 +7632,20 @@ dialogue_resource = ExtResource("137_j7oxc")
 visible = false
 position = Vector2(9.4126, 9.2308)
 shape = SubResource("CircleShape2D_4gu2n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4747, 361)
+sprite_frames = SubResource("SpriteFrames_doqhy")
+autoplay = "default"
+
+[node name="old-lady-village" parent="AnimatedSprite2D" instance=ExtResource("139_1fr2g")]
+dialogue_resource = ExtResource("140_cp4ti")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/old-lady-village"]
+visible = false
+light_mask = 32
+position = Vector2(-13, 8)
+shape = SubResource("CircleShape2D_uamwj")
 
 [connection signal="body_entered" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_exited"]
