@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bmfvovcadpwcr"
+path="res://.godot/imported/Hutman.dialogue-6616e779e263e96149b5d2fe79b10811.tres"
+
+[deps]
+
+source_file="res://Dialogue/Hutman.dialogue"
+dest_files=["res://.godot/imported/Hutman.dialogue-6616e779e263e96149b5d2fe79b10811.tres"]
+
+[params]
+
+defaults=true

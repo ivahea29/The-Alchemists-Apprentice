@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ivoqtu6hb2jw"]
+
+[ext_resource type="Script" path="res://Dialogue/human_dialogue.gd" id="1_70wv7"]
+
+[node name="Human-Dialogue" type="Area2D"]
+collision_layer = 32
+script = ExtResource("1_70wv7")

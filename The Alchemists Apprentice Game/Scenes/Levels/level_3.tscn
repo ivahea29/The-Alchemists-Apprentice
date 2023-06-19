@@ -1,4 +1,4 @@
-[gd_scene load_steps=161 format=3 uid="uid://bcv36d55naeh3"]
+[gd_scene load_steps=181 format=3 uid="uid://bcv36d55naeh3"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_3.gd" id="1_le3i8"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_yr4vk"]
@@ -132,6 +132,11 @@
 [ext_resource type="Resource" uid="uid://debf53dltdqgh" path="res://Dialogue/WizardProgressDialogue.dialogue" id="126_14pmw"]
 [ext_resource type="PackedScene" uid="uid://q17hscy5nvcb" path="res://Characters/Enemies/goblin_enemy.tscn" id="127_4jen0"]
 [ext_resource type="AudioStream" uid="uid://cvcay02y1oeay" path="res://Assets/Sounds/Music/dark-resonance-148675.mp3" id="128_bmxne"]
+[ext_resource type="Texture2D" uid="uid://dva6ueyc80ooo" path="res://Assets/Characters/underground-mine-character-spritesheets-pixel-art/6 Toadman_voodoo/voodoo_idle.png" id="133_687h6"]
+[ext_resource type="Texture2D" uid="uid://dwio1t6jraqxh" path="res://Assets/Characters/villagers-sprite-sheets-pixel-art/3 Man/Man_death.png" id="134_uawyf"]
+[ext_resource type="Texture2D" uid="uid://cl0pdwfggawla" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/3 Animated objects/Fire.png" id="135_pbdql"]
+[ext_resource type="PackedScene" uid="uid://ivoqtu6hb2jw" path="res://Dialogue/human_dialogue.tscn" id="136_11st4"]
+[ext_resource type="Resource" uid="uid://bmfvovcadpwcr" path="res://Dialogue/Hutman.dialogue" id="137_j7oxc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5agli"]
 texture = ExtResource("1_yr4vk")
@@ -1010,6 +1015,71 @@ gradient = SubResource("Gradient_atsi7")
 fill = 1
 fill_from = Vector2(0.495413, 0.522936)
 fill_to = Vector2(0.880734, 0.169725)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e75mt"]
+atlas = ExtResource("134_uawyf")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ucmuu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e75mt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy2rk"]
+atlas = ExtResource("135_pbdql")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xycyw"]
+atlas = ExtResource("135_pbdql")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gthv"]
+atlas = ExtResource("135_pbdql")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2omt"]
+atlas = ExtResource("135_pbdql")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rr1f"]
+atlas = ExtResource("135_pbdql")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1i4e"]
+atlas = ExtResource("135_pbdql")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ao1s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy2rk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xycyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gthv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2omt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rr1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1i4e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oriqi"]
 texture = ExtResource("109_cdqjr")
@@ -2390,6 +2460,45 @@ size = Vector2(20, 147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2abr3"]
 size = Vector2(13, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_783kr"]
+atlas = ExtResource("133_687h6")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nq2k"]
+atlas = ExtResource("133_687h6")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qivn7"]
+atlas = ExtResource("133_687h6")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7wlv"]
+atlas = ExtResource("133_687h6")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l14dc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_783kr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nq2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qivn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7wlv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4gu2n"]
+radius = 16.0
 
 [node name="level3" type="Node2D"]
 script = ExtResource("1_le3i8")
@@ -3980,6 +4089,463 @@ limit_right = 10136
 
 [node name="trees-background" type="Node" parent="."]
 
+[node name="112" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4510, 369)
+texture = ExtResource("88_10rq1")
+
+[node name="113" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4548, 369)
+texture = ExtResource("88_10rq1")
+
+[node name="114" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4628, 369)
+texture = ExtResource("88_10rq1")
+
+[node name="115" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4699, 369)
+texture = ExtResource("88_10rq1")
+
+[node name="116" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4790, 369)
+texture = ExtResource("88_10rq1")
+
+[node name="117" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4302, 393)
+texture = ExtResource("89_e1x6n")
+
+[node name="118" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4960, 393)
+texture = ExtResource("89_e1x6n")
+
+[node name="Birch3" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4369, 282)
+texture = ExtResource("55_jsk2n")
+
+[node name="Birch4" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4849, 285)
+texture = ExtResource("90_03gbw")
+
+[node name="Birch5" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -5
+position = Vector2(4704, 237)
+texture = ExtResource("55_jsk2n")
+
+[node name="Birch6" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(4591, 237)
+texture = ExtResource("90_03gbw")
+
+[node name="Birch7" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -3
+position = Vector2(4489, 262)
+texture = ExtResource("91_p67r5")
+
+[node name="119" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4407, 368)
+texture = ExtResource("21_yokem")
+
+[node name="120" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4852, 377)
+texture = ExtResource("20_752es")
+
+[node name="121" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4816, 360)
+texture = ExtResource("22_0v70i")
+
+[node name="FirTree17" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4234, 406)
+texture = ExtResource("32_p660c")
+
+[node name="JungleTree20" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4103, 304)
+texture = ExtResource("83_07mkf")
+
+[node name="JungleTree21" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4229, 304)
+texture = ExtResource("51_twafr")
+
+[node name="JungleTree22" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4047, 339)
+texture = ExtResource("92_k7clv")
+
+[node name="JungleTree23" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4083, 413)
+texture = ExtResource("10_dvstq")
+
+[node name="JungleTree24" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(4058, 433)
+texture = ExtResource("76_thvwl")
+
+[node name="MiddleLaneTree14" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(3779, 472)
+texture = ExtResource("54_8prxs")
+
+[node name="MiddleLaneTree15" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(3676, 531)
+texture = ExtResource("33_lc4j5")
+
+[node name="122" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(3621, 336)
+texture = ExtResource("21_yokem")
+
+[node name="123" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(3663, 346)
+texture = ExtResource("20_752es")
+
+[node name="124" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(3704, 337)
+texture = ExtResource("21_yokem")
+
+[node name="125" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(3822, 360)
+texture = ExtResource("23_tq0y1")
+
+[node name="JungleTree25" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+position = Vector2(3684, 234)
+texture = ExtResource("25_gusi6")
+
+[node name="Birch8" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(3846, 281)
+texture = ExtResource("55_jsk2n")
+flip_h = true
+
+[node name="House2" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6167, 519.5)
+texture = ExtResource("93_sjiia")
+
+[node name="126" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6026, 529)
+texture = ExtResource("94_ad7vd")
+
+[node name="127" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6010, 512)
+texture = ExtResource("95_06qv1")
+
+[node name="Plant1" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5996, 537)
+texture = ExtResource("96_vp50i")
+
+[node name="Plant2" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6016, 537)
+texture = ExtResource("96_vp50i")
+flip_h = true
+
+[node name="Plant3" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6036, 536)
+texture = ExtResource("97_75wfa")
+
+[node name="Plant14" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6151, 535.5)
+texture = ExtResource("98_fh3ls")
+
+[node name="Plant8" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6132, 537.5)
+texture = ExtResource("99_gad88")
+
+[node name="Plant6" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6200, 535.5)
+texture = ExtResource("100_asp0t")
+
+[node name="Plant4" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6220, 536.5)
+texture = ExtResource("96_vp50i")
+
+[node name="Plant5" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6112, 535.5)
+texture = ExtResource("101_qanwi")
+
+[node name="128" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6116, 528.5)
+texture = ExtResource("64_uue36")
+
+[node name="129" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6148, 527.5)
+texture = ExtResource("102_yihif")
+
+[node name="130" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6206, 528.5)
+texture = ExtResource("64_uue36")
+
+[node name="131" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6082, 528.5)
+texture = ExtResource("102_yihif")
+
+[node name="Birch9" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6352, 438)
+texture = ExtResource("55_jsk2n")
+
+[node name="JungleTree26" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6577, 432)
+texture = ExtResource("83_07mkf")
+
+[node name="JungleTree27" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -2
+position = Vector2(6491, 458)
+texture = ExtResource("18_723p2")
+
+[node name="JungleTree32" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -5
+position = Vector2(6073, 461)
+texture = ExtResource("18_723p2")
+
+[node name="132" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6427, 529)
+texture = ExtResource("19_tjef7")
+
+[node name="133" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -2
+position = Vector2(6472, 528)
+texture = ExtResource("21_yokem")
+
+[node name="134" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6556, 521)
+texture = ExtResource("23_tq0y1")
+
+[node name="135" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6632, 528)
+texture = ExtResource("19_tjef7")
+
+[node name="136" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6663, 529)
+texture = ExtResource("21_yokem")
+
+[node name="137" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6401, 520)
+texture = ExtResource("22_0v70i")
+
+[node name="138" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6278, 531)
+texture = ExtResource("21_yokem")
+
+[node name="139" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6367, 531)
+texture = ExtResource("19_tjef7")
+
+[node name="140" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(6440, 531)
+texture = ExtResource("21_yokem")
+
+[node name="141" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = 2
+position = Vector2(6341, 520)
+texture = ExtResource("23_tq0y1")
+
+[node name="JungleTree28" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5705, 485)
+texture = ExtResource("11_iyynk")
+
+[node name="JungleTree29" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5654, 510)
+texture = ExtResource("10_dvstq")
+
+[node name="JungleTree30" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5965, 425)
+texture = ExtResource("25_gusi6")
+
+[node name="JungleTree31" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = 2
+position = Vector2(5790, 443)
+texture = ExtResource("52_g5ipy")
+
+[node name="FirTree18" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5884, 532)
+texture = ExtResource("32_p660c")
+
+[node name="MiddleLaneTree2" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5568, 410)
+texture = ExtResource("103_goo1f")
+
+[node name="MiddleLaneTree20" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -5
+position = Vector2(6210, 410)
+texture = ExtResource("103_goo1f")
+
+[node name="MiddleLaneTree16" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5197, 353)
+texture = ExtResource("75_77rxk")
+
+[node name="MiddleLaneTree17" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5298, 342)
+texture = ExtResource("26_bppei")
+
+[node name="MiddleLaneTree18" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = 2
+position = Vector2(5455, 390)
+texture = ExtResource("14_gsrmd")
+
+[node name="MiddleLaneTree19" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5101, 322)
+texture = ExtResource("75_77rxk")
+
+[node name="142" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5089, 441)
+texture = ExtResource("20_752es")
+
+[node name="143" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = 2
+position = Vector2(5230, 458)
+texture = ExtResource("23_tq0y1")
+
+[node name="144" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5307, 464)
+texture = ExtResource("19_tjef7")
+
+[node name="145" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5411, 505)
+texture = ExtResource("20_752es")
+
+[node name="146" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5442, 497)
+texture = ExtResource("27_gdb3b")
+
+[node name="147" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5552, 536)
+texture = ExtResource("20_752es")
+
+[node name="148" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5596, 527)
+texture = ExtResource("21_yokem")
+
+[node name="149" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(5767, 529)
+texture = ExtResource("27_gdb3b")
+
+[node name="MiddleLaneTree4" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(635, 280)
+texture = ExtResource("26_bppei")
+
+[node name="MiddleLaneTree21" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -4
+position = Vector2(-62, 284)
+texture = ExtResource("26_bppei")
+
+[node name="107" type="Sprite2D" parent="trees-background"]
+modulate = Color(0.32549, 0.32549, 0.32549, 1)
+z_index = -1
+position = Vector2(6535, 496)
+texture = ExtResource("67_mrs4j")
+
 [node name="JungleTree8" type="Sprite2D" parent="trees-background"]
 modulate = Color(0.588235, 0.588235, 0.588235, 1)
 z_index = -5
@@ -4934,9 +5500,54 @@ position = Vector2(-5.99988, -7.00001)
 scale = Vector2(1.5, 1.39063)
 texture = SubResource("GradientTexture2D_1n5e0")
 
+[node name="PointLight2D2" type="PointLight2D" parent="trees-background/108"]
+position = Vector2(-94, -42)
+scale = Vector2(0.5625, 0.445315)
+texture = SubResource("GradientTexture2D_1n5e0")
+
+[node name="PointLight2D5" type="PointLight2D" parent="trees-background/108"]
+position = Vector2(-25, -41)
+scale = Vector2(0.5625, 0.445315)
+texture = SubResource("GradientTexture2D_1n5e0")
+
+[node name="PointLight2D6" type="PointLight2D" parent="trees-background/108"]
+position = Vector2(13, -30)
+scale = Vector2(0.5625, 0.445315)
+texture = SubResource("GradientTexture2D_1n5e0")
+
+[node name="PointLight2D7" type="PointLight2D" parent="trees-background/108"]
+position = Vector2(52, -63)
+scale = Vector2(0.5625, 0.445315)
+texture = SubResource("GradientTexture2D_1n5e0")
+
+[node name="PointLight2D8" type="PointLight2D" parent="trees-background/108"]
+position = Vector2(100, -40)
+scale = Vector2(0.5625, 0.445315)
+texture = SubResource("GradientTexture2D_1n5e0")
+
+[node name="PointLight2D12" type="PointLight2D" parent="trees-background/108"]
+position = Vector2(117, 19)
+scale = Vector2(0.5625, 0.445315)
+texture = SubResource("GradientTexture2D_1n5e0")
+
+[node name="PointLight2D11" type="PointLight2D" parent="trees-background/108"]
+position = Vector2(232, -5)
+scale = Vector2(0.5625, 0.445315)
+texture = SubResource("GradientTexture2D_1n5e0")
+
+[node name="PointLight2D3" type="PointLight2D" parent="trees-background/108"]
+position = Vector2(-62, -67)
+scale = Vector2(0.5625, 0.445315)
+texture = SubResource("GradientTexture2D_1n5e0")
+
+[node name="PointLight2D10" type="PointLight2D" parent="trees-background/108"]
+position = Vector2(176, -44)
+scale = Vector2(0.5625, 0.445315)
+texture = SubResource("GradientTexture2D_1n5e0")
+
 [node name="109" type="Sprite2D" parent="trees-background"]
 modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4682, 361)
+position = Vector2(4698, 366)
 texture = ExtResource("68_ur3mw")
 metadata/_edit_group_ = true
 
@@ -5029,467 +5640,92 @@ modulate = Color(0.588235, 0.588235, 0.588235, 1)
 position = Vector2(4452, 369)
 texture = ExtResource("88_10rq1")
 
-[node name="112" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4510, 369)
-texture = ExtResource("88_10rq1")
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4332, 392)
+sprite_frames = SubResource("SpriteFrames_ucmuu")
 
-[node name="113" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4548, 369)
-texture = ExtResource("88_10rq1")
-
-[node name="114" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4628, 369)
-texture = ExtResource("88_10rq1")
-
-[node name="115" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4699, 369)
-texture = ExtResource("88_10rq1")
-
-[node name="116" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4790, 369)
-texture = ExtResource("88_10rq1")
-
-[node name="117" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4302, 393)
-texture = ExtResource("89_e1x6n")
-
-[node name="118" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4960, 393)
-texture = ExtResource("89_e1x6n")
-
-[node name="Birch3" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4369, 282)
-texture = ExtResource("55_jsk2n")
-
-[node name="Birch4" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4849, 285)
-texture = ExtResource("90_03gbw")
-
-[node name="Birch5" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -5
-position = Vector2(4704, 237)
-texture = ExtResource("55_jsk2n")
-
-[node name="Birch6" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(4591, 237)
-texture = ExtResource("90_03gbw")
-
-[node name="Birch7" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -3
-position = Vector2(4489, 262)
-texture = ExtResource("91_p67r5")
-
-[node name="119" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4407, 368)
-texture = ExtResource("21_yokem")
-
-[node name="120" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4852, 377)
-texture = ExtResource("20_752es")
-
-[node name="121" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4816, 360)
-texture = ExtResource("22_0v70i")
-
-[node name="FirTree17" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4234, 406)
-texture = ExtResource("32_p660c")
-
-[node name="JungleTree20" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4103, 304)
-texture = ExtResource("83_07mkf")
-
-[node name="JungleTree21" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4229, 304)
-texture = ExtResource("51_twafr")
-
-[node name="JungleTree22" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4047, 339)
-texture = ExtResource("92_k7clv")
-
-[node name="JungleTree23" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4083, 413)
-texture = ExtResource("10_dvstq")
-
-[node name="JungleTree24" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4058, 433)
-texture = ExtResource("76_thvwl")
-
-[node name="MiddleLaneTree14" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(3779, 472)
-texture = ExtResource("54_8prxs")
-
-[node name="MiddleLaneTree15" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(3676, 531)
-texture = ExtResource("33_lc4j5")
-
-[node name="122" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(3621, 336)
-texture = ExtResource("21_yokem")
-
-[node name="123" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(3663, 346)
-texture = ExtResource("20_752es")
-
-[node name="124" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(3704, 337)
-texture = ExtResource("21_yokem")
-
-[node name="125" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(3822, 360)
-texture = ExtResource("23_tq0y1")
-
-[node name="JungleTree25" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(3684, 234)
-texture = ExtResource("25_gusi6")
-
-[node name="Birch8" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(3846, 281)
-texture = ExtResource("55_jsk2n")
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4592, 361)
+sprite_frames = SubResource("SpriteFrames_ucmuu")
 flip_h = true
 
-[node name="House2" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6167, 519.5)
-texture = ExtResource("93_sjiia")
+[node name="AnimatedSprite2D15" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4716, 361)
+sprite_frames = SubResource("SpriteFrames_ucmuu")
 
-[node name="126" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6026, 529)
-texture = ExtResource("94_ad7vd")
-
-[node name="127" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6010, 512)
-texture = ExtResource("95_06qv1")
-
-[node name="Plant1" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5996, 537)
-texture = ExtResource("96_vp50i")
-
-[node name="Plant2" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6016, 537)
-texture = ExtResource("96_vp50i")
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4758, 361)
+sprite_frames = SubResource("SpriteFrames_ucmuu")
 flip_h = true
 
-[node name="Plant3" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6036, 536)
-texture = ExtResource("97_75wfa")
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4517, 310)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
 
-[node name="Plant14" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6151, 535.5)
-texture = ExtResource("98_fh3ls")
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4482, 282)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
 
-[node name="Plant8" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6132, 537.5)
-texture = ExtResource("99_gad88")
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4558, 319)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
 
-[node name="Plant6" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6200, 535.5)
-texture = ExtResource("100_asp0t")
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4530, 368)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
 
-[node name="Plant4" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6220, 536.5)
-texture = ExtResource("96_vp50i")
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4452, 309)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
+frame_progress = 0.448943
 
-[node name="Plant5" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6112, 535.5)
-texture = ExtResource("101_qanwi")
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4661, 370)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
 
-[node name="128" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6116, 528.5)
-texture = ExtResource("64_uue36")
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4597, 284)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
 
-[node name="129" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6148, 527.5)
-texture = ExtResource("102_yihif")
+[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4645, 312)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
 
-[node name="130" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6206, 528.5)
-texture = ExtResource("64_uue36")
+[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4720, 303)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
 
-[node name="131" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6082, 528.5)
-texture = ExtResource("102_yihif")
-
-[node name="Birch9" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6352, 438)
-texture = ExtResource("55_jsk2n")
-
-[node name="JungleTree26" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.294118, 0.294118, 0.294118, 1)
-z_index = -2
-position = Vector2(6577, 432)
-texture = ExtResource("83_07mkf")
-
-[node name="JungleTree27" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -2
-position = Vector2(6491, 458)
-texture = ExtResource("18_723p2")
-
-[node name="JungleTree32" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -5
-position = Vector2(6073, 461)
-texture = ExtResource("18_723p2")
-
-[node name="132" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6427, 529)
-texture = ExtResource("19_tjef7")
-
-[node name="133" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -2
-position = Vector2(6472, 528)
-texture = ExtResource("21_yokem")
-
-[node name="134" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.294118, 0.294118, 0.294118, 1)
-z_index = -2
-position = Vector2(6556, 521)
-texture = ExtResource("23_tq0y1")
-
-[node name="135" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.294118, 0.294118, 0.294118, 1)
-z_index = -2
-position = Vector2(6632, 528)
-texture = ExtResource("19_tjef7")
-
-[node name="136" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.294118, 0.294118, 0.294118, 1)
-z_index = -2
-position = Vector2(6663, 529)
-texture = ExtResource("21_yokem")
-
-[node name="137" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6401, 520)
-texture = ExtResource("22_0v70i")
-
-[node name="138" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6278, 531)
-texture = ExtResource("21_yokem")
-
-[node name="139" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6367, 531)
-texture = ExtResource("19_tjef7")
-
-[node name="140" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(6440, 531)
-texture = ExtResource("21_yokem")
-
-[node name="141" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = 2
-position = Vector2(6341, 520)
-texture = ExtResource("23_tq0y1")
-
-[node name="JungleTree28" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5705, 485)
-texture = ExtResource("11_iyynk")
-
-[node name="JungleTree29" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5654, 510)
-texture = ExtResource("10_dvstq")
-
-[node name="JungleTree30" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5965, 425)
-texture = ExtResource("25_gusi6")
-
-[node name="JungleTree31" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = 2
-position = Vector2(5790, 443)
-texture = ExtResource("52_g5ipy")
-
-[node name="FirTree18" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5884, 532)
-texture = ExtResource("32_p660c")
-
-[node name="MiddleLaneTree2" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5568, 410)
-texture = ExtResource("103_goo1f")
-
-[node name="MiddleLaneTree20" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -5
-position = Vector2(6210, 410)
-texture = ExtResource("103_goo1f")
-
-[node name="MiddleLaneTree16" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5197, 353)
-texture = ExtResource("75_77rxk")
-
-[node name="MiddleLaneTree17" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5298, 342)
-texture = ExtResource("26_bppei")
-
-[node name="MiddleLaneTree18" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = 2
-position = Vector2(5455, 390)
-texture = ExtResource("14_gsrmd")
-
-[node name="MiddleLaneTree19" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5101, 322)
-texture = ExtResource("75_77rxk")
-
-[node name="142" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5089, 441)
-texture = ExtResource("20_752es")
-
-[node name="143" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = 2
-position = Vector2(5230, 458)
-texture = ExtResource("23_tq0y1")
-
-[node name="144" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5307, 464)
-texture = ExtResource("19_tjef7")
-
-[node name="145" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5411, 505)
-texture = ExtResource("20_752es")
-
-[node name="146" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5442, 497)
-texture = ExtResource("27_gdb3b")
-
-[node name="147" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5552, 536)
-texture = ExtResource("20_752es")
-
-[node name="148" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5596, 527)
-texture = ExtResource("21_yokem")
-
-[node name="149" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(5767, 529)
-texture = ExtResource("27_gdb3b")
-
-[node name="MiddleLaneTree4" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(635, 280)
-texture = ExtResource("26_bppei")
-
-[node name="MiddleLaneTree21" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.588235, 0.588235, 0.588235, 1)
-z_index = -4
-position = Vector2(-62, 284)
-texture = ExtResource("26_bppei")
-
-[node name="107" type="Sprite2D" parent="trees-background"]
-modulate = Color(0.32549, 0.32549, 0.32549, 1)
-z_index = -1
-position = Vector2(6535, 496)
-texture = ExtResource("67_mrs4j")
+[node name="AnimatedSprite2D14" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4778, 347)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
+frame_progress = 0.180316
 
 [node name="Blood" type="Node" parent="."]
 
 [node name="Blood1" type="Sprite2D" parent="Blood"]
 position = Vector2(4503, 330)
+texture = ExtResource("104_mxulm")
+
+[node name="Blood16" type="Sprite2D" parent="Blood"]
+position = Vector2(4529, 351)
+texture = ExtResource("104_mxulm")
+
+[node name="Blood17" type="Sprite2D" parent="Blood"]
+position = Vector2(4629, 327)
+texture = ExtResource("104_mxulm")
+
+[node name="Blood18" type="Sprite2D" parent="Blood"]
+position = Vector2(4661, 356)
 texture = ExtResource("104_mxulm")
 
 [node name="Blood2" type="Sprite2D" parent="Blood"]
@@ -7337,6 +7573,23 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hutArea"]
 position = Vector2(-12.5, -17)
 shape = SubResource("RectangleShape2D_2abr3")
+
+[node name="Hutman" type="AnimatedSprite2D" parent="."]
+light_mask = 32
+texture_filter = 1
+position = Vector2(6085, 506)
+scale = Vector2(1.0625, 1.625)
+sprite_frames = SubResource("SpriteFrames_l14dc")
+autoplay = "default"
+frame_progress = 0.841176
+
+[node name="Human-Dialogue" parent="Hutman" instance=ExtResource("136_11st4")]
+dialogue_resource = ExtResource("137_j7oxc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hutman/Human-Dialogue"]
+visible = false
+position = Vector2(9.4126, 9.2308)
+shape = SubResource("CircleShape2D_4gu2n")
 
 [connection signal="body_entered" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_exited"]
