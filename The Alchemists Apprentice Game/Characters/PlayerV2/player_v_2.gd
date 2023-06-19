@@ -87,4 +87,3 @@ func _unhandled_input(_event: InputEvent) -> void:
 		if actionables.size() > 0:
 			actionables[0].action()
 			return
-

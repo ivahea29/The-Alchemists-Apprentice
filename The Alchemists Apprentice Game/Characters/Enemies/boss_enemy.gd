@@ -3,7 +3,8 @@ extends CharacterBody2D
 enum {
 	WALK,
 	HURT,
-	ATTACK
+	ATTACK,
+	DEATH
 }
 
 var state = WALK
@@ -22,6 +23,11 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var hurt_timer = 0
 var hurt_duration = 1.0 #Adjust the duration as needed
 
+var death_timer = 0
+var death_duration = 1.0
+
+var bossHealth = 100
+
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -33,7 +39,10 @@ func _physics_process(delta):
 			anim.animation = "hurt"
 			hurt_timer += delta
 			if hurt_timer >= hurt_duration:
-				queue_free()
+				state = WALK
+				hurt_timer = 0
+			if bossHealth <= 0:
+				state = DEATH
 		WALK:
 			anim.animation = "walk"
 			if is_moving_left:
@@ -46,6 +55,12 @@ func _physics_process(delta):
 		ATTACK:
 			anim.animation = "attack"
 			velocity.x = 0
+		DEATH:
+			anim.animation = "death"
+			velocity.x = 0
+			death_timer += delta
+			if death_timer >= death_duration:
+				queue_free()
 			
 func update_distance(delta):
 	distance_traveled += abs(velocity.x) * delta
@@ -55,22 +70,24 @@ func check_distance_reached():
 		is_moving_left = !is_moving_left
 		distance_traveled = 0
 		scale.x = -scale.x
+		
+
+func _on_enemy_area_area_entered(area):
+	if area.name == "Projectile":
+		if state != HURT:
+			state = HURT
+			bossHealth -= 10
+			print("bossHealth - 10 :", bossHealth)
 
 
-func _on_area_2d_body_entered(body):
+func _on_enemy_area_body_entered(body):
 	if body.name == "PlayerV2":
 		if state != HURT:
 			state = ATTACK
 			GlobalScript._on_player_hit_enemy()
 
 
-func _on_area_2d_body_exited(body):
+func _on_enemy_area_body_exited(body):
 	if body.name == "PlayerV2":
 		if state != HURT:
 			state = WALK
-
-
-func _on_area_2d_area_entered(area):
-	if area.name == "Projectile":
-		if state != HURT:
-			state = HURT

@@ -13,11 +13,3 @@ func _input(event):
 		if get_overlapping_bodies().size() > 0:
 			var playerInside = get_parent().get_node("PlayerV2")
 			playerInside.position = Vector2(8361, 538)
-
-func _on_body_entered(body):
-	if body.name == "PlayerV2":
-		$PointLight2D.show()
-
-func _on_body_exited(body):
-	if get_overlapping_bodies().size() < 1:
-		$PointLight2D.hide()

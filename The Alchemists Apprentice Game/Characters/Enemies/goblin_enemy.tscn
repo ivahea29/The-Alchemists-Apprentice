@@ -113,12 +113,12 @@ frame_progress = 0.533153
 position = Vector2(0.5, 22)
 shape = SubResource("RectangleShape2D_ig16r")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="enemyArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemyArea"]
 position = Vector2(-4.5, 4)
 shape = SubResource("RectangleShape2D_v8dn3")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="area_entered" from="enemyArea" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="enemyArea" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="enemyArea" to="." method="_on_area_2d_body_exited"]

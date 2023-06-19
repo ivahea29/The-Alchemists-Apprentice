@@ -308,10 +308,8 @@ projectile = ExtResource("2_64va1")
 texture_filter = 1
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_uoyj7")
-animation = &"woodcutter_throw"
+animation = &"woodcutter_hurt"
 autoplay = "woodcutter_idle"
-frame = 5
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

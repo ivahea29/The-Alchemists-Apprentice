@@ -1,4 +1,4 @@
-[gd_scene load_steps=249 format=3 uid="uid://bh322s2qv6os7"]
+[gd_scene load_steps=250 format=3 uid="uid://bh322s2qv6os7"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_2.gd" id="1_0tfyh"]
 [ext_resource type="Texture2D" uid="uid://eodse3yb0k68" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_82c75"]
@@ -1183,11 +1183,11 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_73kei")
 sources/1 = SubResource("TileSetAtlasSource_rdlw2")
 
-[sub_resource type="Gradient" id="Gradient_tw4gj"]
+[sub_resource type="Gradient" id="Gradient_xbt3d"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_qdn6p"]
-gradient = SubResource("Gradient_tw4gj")
+gradient = SubResource("Gradient_xbt3d")
 fill = 1
 fill_from = Vector2(0.490826, 0.5)
 fill_to = Vector2(0.458716, 1)
@@ -1545,9 +1545,6 @@ radius = 28.4429
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7kuu4"]
 size = Vector2(20, 126)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eac4y"]
-size = Vector2(31, 167)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_2luu6"]
 atlas = ExtResource("179_d76jr")
 region = Rect2(48, 0, 48, 48)
@@ -1586,6 +1583,12 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_srw77"]
 radius = 29.0172
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eac4y"]
+size = Vector2(31, 167)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6w5b"]
+size = Vector2(26, 116)
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_0tfyh")
@@ -4622,7 +4625,7 @@ position = Vector2(97.5, -21)
 shape = SubResource("RectangleShape2D_0whpr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(137, 484)
+position = Vector2(74, 479)
 scale = Vector2(0.75, 0.75)
 zoom = Vector2(2, 2)
 limit_left = 0
@@ -4630,7 +4633,7 @@ limit_top = 0
 limit_bottom = 672
 
 [node name="PlayerV2" parent="." instance=ExtResource("5_a5v4o")]
-position = Vector2(137, 484)
+position = Vector2(74, 479)
 scale = Vector2(0.75, 0.75)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerV2"]
@@ -4684,12 +4687,39 @@ shape = SubResource("RectangleShape2D_7kuu4")
 
 [node name="levelEndCollision" type="Node" parent="."]
 
-[node name="192" type="StaticBody2D" parent="levelEndCollision"]
+[node name="ProgressWizard" type="AnimatedSprite2D" parent="levelEndCollision"]
+modulate = Color(1, 1, 1, 0.647059)
+z_index = -1
+position = Vector2(8025, 456)
+scale = Vector2(0.99774, 1)
+sprite_frames = SubResource("SpriteFrames_xe4sx")
+autoplay = "default"
+flip_h = true
+metadata/_edit_group_ = true
+
+[node name="Wizard-Progress-Que" parent="levelEndCollision/ProgressWizard" instance=ExtResource("180_6vksv")]
+scale = Vector2(0.860737, 1)
+dialogue_resource = ExtResource("181_axsb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="levelEndCollision/ProgressWizard/Wizard-Progress-Que"]
+visible = false
+position = Vector2(10, 5)
+shape = SubResource("CircleShape2D_srw77")
+
+[node name="endLevelBlock" type="StaticBody2D" parent="levelEndCollision"]
 position = Vector2(8059, 465)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="levelEndCollision/192"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="levelEndCollision/endLevelBlock"]
 position = Vector2(14, -68)
 shape = SubResource("RectangleShape2D_eac4y")
+
+[node name="changeSceneArea" type="Area2D" parent="levelEndCollision"]
+position = Vector2(8130, 437)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="levelEndCollision/changeSceneArea"]
+position = Vector2(-9, -15)
+shape = SubResource("RectangleShape2D_a6w5b")
 
 [node name="193" type="Sprite2D" parent="levelEndCollision"]
 position = Vector2(8090, 465)
@@ -4718,9 +4748,6 @@ texture = ExtResource("61_7jion")
 [node name="Scroll" parent="." instance=ExtResource("175_0je31")]
 position = Vector2(9225, 401)
 
-[node name="scrollTimer" type="Timer" parent="."]
-wait_time = 2.0
-
 [node name="Gems" type="Node" parent="."]
 
 [node name="redGem" parent="Gems" instance=ExtResource("176_ckp48")]
@@ -4734,24 +4761,6 @@ position = Vector2(2154, 425)
 
 [node name="redGem2" parent="Gems" instance=ExtResource("176_ckp48")]
 position = Vector2(2197, 425)
-
-[node name="ProgressWizard" type="AnimatedSprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.352941)
-position = Vector2(8025, 456)
-scale = Vector2(0.99774, 1)
-sprite_frames = SubResource("SpriteFrames_xe4sx")
-autoplay = "default"
-flip_h = true
-metadata/_edit_group_ = true
-
-[node name="Wizard-Progress-Que" parent="ProgressWizard" instance=ExtResource("180_6vksv")]
-scale = Vector2(0.860737, 1)
-dialogue_resource = ExtResource("181_axsb7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ProgressWizard/Wizard-Progress-Que"]
-visible = false
-position = Vector2(10, 5)
-shape = SubResource("CircleShape2D_srw77")
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -4795,5 +4804,5 @@ autoplay = true
 [connection signal="body_exited" from="outsideDoor" to="outsideDoor" method="_on_body_exited"]
 [connection signal="body_entered" from="insideDoor" to="insideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="insideDoor" to="insideDoor" method="_on_body_exited"]
+[connection signal="body_entered" from="levelEndCollision/changeSceneArea" to="." method="_on_change_scene_area_body_entered"]
 [connection signal="scroll_collected" from="Scroll" to="." method="_on_scroll_scroll_collected"]
-[connection signal="timeout" from="scrollTimer" to="." method="_on_scroll_timer_timeout"]

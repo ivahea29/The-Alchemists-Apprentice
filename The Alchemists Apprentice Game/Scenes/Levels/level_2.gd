@@ -16,7 +16,10 @@ func _on_pausemenu_resume_game():
 
 #Scroll pickup handling at basic level. No hud integration etc
 func _on_scroll_scroll_collected():
-	$scrollTimer.start()
+	$levelEndCollision/endLevelBlock.position.y = 0
+	$levelEndCollision/ProgressWizard.position.y = 0
 
-func _on_scroll_timer_timeout():
-	get_tree().change_scene_to_file("res://Scenes/Levels/level_3.tscn")
+
+func _on_change_scene_area_body_entered(body):
+	if body.name == "PlayerV2":
+		get_tree().change_scene_to_file("res://Scenes/Levels/level_3.tscn")
