@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.0", "Forward Plus")
 
 GlobalScript="*res://GlobalScripts/global_script.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Hud="*res://Scenes/Menu/hud.tscn"
 
 [editor_plugins]
 
