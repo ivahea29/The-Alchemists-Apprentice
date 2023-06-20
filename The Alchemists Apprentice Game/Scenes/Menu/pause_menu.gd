@@ -1,16 +1,16 @@
 extends Control
 
-signal resume_game
+@export var level_4 : GameManager
 
 func _ready():
 	hide()
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	level_4.connect("toggle_game_paused", _on_level_4_toggle_game_paused)
+	
+func _process(delta):
+	pass
 
-func _input(event):
-	if event.is_action_pressed("pause"):
-		resume()
-
-func resume():
-	emit_signal("resume_game")
-	hide()
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+func _on_level_4_toggle_game_paused(is_paused : bool):
+	if(is_paused):
+		show()
+	else:
+		hide()
