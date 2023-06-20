@@ -1,4 +1,4 @@
-[gd_scene load_steps=198 format=3 uid="uid://bcv36d55naeh3"]
+[gd_scene load_steps=199 format=3 uid="uid://bcv36d55naeh3"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_3.gd" id="1_le3i8"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_yr4vk"]
@@ -141,6 +141,7 @@
 [ext_resource type="Texture2D" uid="uid://cosy5dc3uex7p" path="res://Assets/Characters/villagers-sprite-sheets-pixel-art/2 Old_woman/Old_woman_idle.png" id="138_24fii"]
 [ext_resource type="PackedScene" uid="uid://cb7qidkadslhp" path="res://Dialogue/old_lady_village.tscn" id="139_1fr2g"]
 [ext_resource type="Resource" uid="uid://b17imlwiu238v" path="res://Dialogue/old-lady-dialogue.dialogue" id="140_cp4ti"]
+[ext_resource type="PackedScene" uid="uid://dvj0cw2q7tuc8" path="res://Scenes/Menu/hud.tscn" id="142_4q2ik"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5agli"]
 texture = ExtResource("1_yr4vk")
@@ -7788,19 +7789,21 @@ visible = false
 position = Vector2(9.4126, 9.2308)
 shape = SubResource("CircleShape2D_4gu2n")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="oldLadyVillager" type="AnimatedSprite2D" parent="."]
 position = Vector2(4747, 361)
 sprite_frames = SubResource("SpriteFrames_doqhy")
 autoplay = "default"
 
-[node name="old-lady-village" parent="AnimatedSprite2D" instance=ExtResource("139_1fr2g")]
+[node name="old-lady-village" parent="oldLadyVillager" instance=ExtResource("139_1fr2g")]
 dialogue_resource = ExtResource("140_cp4ti")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/old-lady-village"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="oldLadyVillager/old-lady-village"]
 visible = false
 light_mask = 32
 position = Vector2(-13, 8)
 shape = SubResource("CircleShape2D_uamwj")
+
+[node name="HUD" parent="." instance=ExtResource("142_4q2ik")]
 
 [connection signal="body_entered" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_exited"]

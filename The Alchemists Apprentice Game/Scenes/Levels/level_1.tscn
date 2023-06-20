@@ -1,4 +1,4 @@
-[gd_scene load_steps=244 format=3 uid="uid://d0knbsqqp346r"]
+[gd_scene load_steps=245 format=3 uid="uid://d0knbsqqp346r"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_0xk1k"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_b5oed"]
@@ -138,6 +138,7 @@
 [ext_resource type="PackedScene" uid="uid://b6eoa2xfgoe8m" path="res://Scenes/Items/red_gem.tscn" id="131_wxj48"]
 [ext_resource type="PackedScene" uid="uid://dvix3oit58tei" path="res://Scenes/Items/green_gem.tscn" id="132_kmagg"]
 [ext_resource type="PackedScene" uid="uid://c7wqpgwsuqclf" path="res://Scenes/Items/blue_gem.tscn" id="133_demux"]
+[ext_resource type="PackedScene" uid="uid://c3ojhcwkh5cfi" path="res://Characters/Enemies/wolf_enemy.tscn" id="139_4ocjy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t5fgi"]
 texture = ExtResource("1_b5oed")
@@ -4219,6 +4220,11 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="startLevelCollision/startLevelBlock"]
 position = Vector2(0, 20)
 shape = SubResource("RectangleShape2D_bvyrc")
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="wolfEnemy" parent="Enemies" instance=ExtResource("139_4ocjy")]
+position = Vector2(1232, 361)
 
 [connection signal="body_entered" from="outsideDoor" to="outsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="outsideDoor" to="outsideDoor" method="_on_body_exited"]

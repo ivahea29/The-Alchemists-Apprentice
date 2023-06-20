@@ -1,5 +1,6 @@
-[gd_scene load_steps=94 format=3 uid="uid://b8741lnhupdir"]
+[gd_scene load_steps=96 format=3 uid="uid://b8741lnhupdir"]
 
+[ext_resource type="Script" path="res://Scenes/Levels/level_4.gd" id="1_fl5sd"]
 [ext_resource type="Texture2D" uid="uid://bngjkakkk0wql" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/2 Background/Background.png" id="1_iytm3"]
 [ext_resource type="Texture2D" uid="uid://kugef1oxvoq8" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/1 Tiles/Tile_10.png" id="2_7vnxn"]
 [ext_resource type="PackedScene" uid="uid://187t26ihbc8n" path="res://Characters/PlayerV2/player_v_2.tscn" id="2_23g4c"]
@@ -59,6 +60,7 @@
 [ext_resource type="Texture2D" uid="uid://cdbcuteyioryo" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Torch1.png" id="57_0eti4"]
 [ext_resource type="AudioStream" uid="uid://f54wuwaf1avw" path="res://Assets/Sounds/Music/the-fog-of-war-150738.mp3" id="57_ycnob"]
 [ext_resource type="PackedScene" uid="uid://ysqn7lnw8rwy" path="res://Characters/Enemies/boss_enemy.tscn" id="58_wdyqc"]
+[ext_resource type="PackedScene" uid="uid://dvj0cw2q7tuc8" path="res://Scenes/Menu/hud.tscn" id="60_a87gk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5paa8"]
 texture = ExtResource("2_v0hrc")
@@ -1148,6 +1150,7 @@ fill_to = Vector2(0.522936, 0)
 size = Vector2(31, 167)
 
 [node name="level_4" type="Node2D"]
+script = ExtResource("1_fl5sd")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0.854902, 0.858824, 0.831373, 1)
@@ -2775,3 +2778,5 @@ autoplay = true
 [node name="Boss" parent="Enemies" instance=ExtResource("58_wdyqc")]
 position = Vector2(6213, 751)
 max_distance = 800
+
+[node name="HUD" parent="." instance=ExtResource("60_a87gk")]

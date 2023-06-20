@@ -6,7 +6,7 @@ func _on_scroll_scroll_collected():
 
 func _on_change_scene_area_body_entered(body):
 	if body.name == "PlayerV2":
-		get_tree().change_scene_to_file("res://Scenes/Levels/level_4.tscn")
+		SceneTransition.change_scene_to_file("res://Scenes/Levels/level_4.tscn")
 
 
 func _on_hut_area_body_entered(body):

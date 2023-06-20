@@ -35,6 +35,7 @@ func _physics_process(delta):
 			hurt_timer += delta
 			if hurt_timer >= hurt_duration:
 				queue_free()
+				GlobalScript.enemies_killed += 1
 		WALK:
 			anim.animation = "walk"
 			if is_moving_left:

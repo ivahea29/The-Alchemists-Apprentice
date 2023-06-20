@@ -60,7 +60,7 @@ func _physics_process(delta):
 			velocity.x = 0
 			death_timer += delta
 			if death_timer >= death_duration:
-				queue_free()
+				SceneTransition.change_scene_to_file("res://Scenes/EndScenes/end_scene_1.tscn")
 			
 func update_distance(delta):
 	distance_traveled += abs(velocity.x) * delta
@@ -84,7 +84,6 @@ func _on_enemy_area_body_entered(body):
 	if body.name == "PlayerV2":
 		if state != HURT:
 			state = ATTACK
-			GlobalScript._on_player_hit_enemy()
 
 
 func _on_enemy_area_body_exited(body):

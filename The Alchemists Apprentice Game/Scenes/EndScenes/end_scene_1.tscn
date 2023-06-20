@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://du1p1xsyckxui"]
+
+[ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="1_kyg4j"]
+[ext_resource type="Script" path="res://Scenes/EndScenes/end_scene_1.gd" id="1_o2foa"]
+
+[node name="EndScene1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o2foa")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1382.0
+offset_bottom = 863.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Victory!" type="Label" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 296.0
+offset_right = 971.0
+offset_bottom = 399.0
+theme_override_fonts/font = ExtResource("1_kyg4j")
+theme_override_font_sizes/font_size = 100
+text = "Victory!"
+horizontal_alignment = 1
+
+[node name="EndingStoryP2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 424.0
+offset_right = 1010.0
+offset_bottom = 596.0
+theme_override_fonts/font = ExtResource("1_kyg4j")
+theme_override_font_sizes/font_size = 40
+text = "As Dorian delivers the final blow, Lucifers lifeless body slumps to the ground."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="sceneChange" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="sceneChange" to="." method="_on_scene_change_timeout"]

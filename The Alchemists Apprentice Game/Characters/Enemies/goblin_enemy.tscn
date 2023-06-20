@@ -98,7 +98,7 @@ animations = [{
 size = Vector2(15, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8dn3"]
-size = Vector2(29, 28)
+size = Vector2(27, 28)
 
 [node name="goblinEnemy" type="CharacterBody2D"]
 script = ExtResource("1_sgvpk")
@@ -116,7 +116,7 @@ shape = SubResource("RectangleShape2D_ig16r")
 [node name="enemyArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemyArea"]
-position = Vector2(-4.5, 4)
+position = Vector2(-3.5, 4)
 shape = SubResource("RectangleShape2D_v8dn3")
 
 [connection signal="area_entered" from="enemyArea" to="." method="_on_area_2d_area_entered"]

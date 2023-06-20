@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=3 uid="uid://drvutncrx1s0v"]
+
+[ext_resource type="Script" path="res://Scenes/EndScenes/end_scene_2.gd" id="1_2opq8"]
+[ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="1_ioi8c"]
+[ext_resource type="Texture2D" uid="uid://b636vw26rku3b" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_idle.png" id="2_m00cj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkr0j"]
+atlas = ExtResource("2_m00cj")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie6p5"]
+atlas = ExtResource("2_m00cj")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jug23"]
+atlas = ExtResource("2_m00cj")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pi7jv"]
+atlas = ExtResource("2_m00cj")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nl6fe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkr0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie6p5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jug23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pi7jv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[node name="end_scene_2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2opq8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1384.0
+offset_bottom = 864.0
+color = Color(0, 0, 0, 1)
+
+[node name="story1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 256.0
+offset_right = 1234.0
+offset_bottom = 614.0
+theme_override_fonts/font = ExtResource("1_ioi8c")
+theme_override_font_sizes/font_size = 40
+text = "Thank you, Dorian.
+
+My death has been avenged, and my precious research remains out of the wrong hands.
+
+Peace reigns over the realm once again."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+texture_repeat = 1
+layout_mode = 0
+offset_left = 150.0
+offset_top = 154.0
+offset_right = 182.0
+offset_bottom = 207.0
+scale = Vector2(10, 10)
+texture = ExtResource("2_m00cj")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(416, 396)
+scale = Vector2(11.9167, 11.9167)
+sprite_frames = SubResource("SpriteFrames_nl6fe")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.19603
+
+[node name="sceneChange" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="sceneChange" to="." method="_on_scene_change_timeout"]

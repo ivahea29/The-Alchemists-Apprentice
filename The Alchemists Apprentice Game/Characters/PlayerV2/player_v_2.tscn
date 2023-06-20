@@ -311,15 +311,16 @@ projectile = ExtResource("2_64va1")
 texture_filter = 1
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_uoyj7")
-animation = &"woodcutter_hurt"
+animation = &"woodcutter_idle"
 autoplay = "woodcutter_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 11)
 shape = SubResource("CapsuleShape2D_tvgvw")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(12, -7)
+position = Vector2(12, 0)
 
 [node name="runFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("32_670nc")
@@ -331,12 +332,14 @@ collision_layer = 0
 collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
+visible = false
 position = Vector2(-1, 9)
 shape = SubResource("CircleShape2D_y11np")
 
 [node name="hurtBox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox"]
+visible = false
 position = Vector2(-1.5, 10)
 shape = SubResource("RectangleShape2D_m6mw3")
 

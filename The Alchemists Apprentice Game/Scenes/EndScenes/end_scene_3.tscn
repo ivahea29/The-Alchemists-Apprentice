@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=3 uid="uid://brkhpvleryfel"]
+
+[ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="1_0ly6n"]
+[ext_resource type="Script" path="res://Scenes/EndScenes/end_scene_3.gd" id="1_f82t5"]
+
+[node name="end_scene_3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f82t5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1382.0
+offset_bottom = 867.0
+color = Color(0, 0, 0, 1)
+
+[node name="Statistics" type="Label" parent="."]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 127.0
+offset_right = 890.0
+offset_bottom = 230.0
+theme_override_fonts/font = ExtResource("1_0ly6n")
+theme_override_font_sizes/font_size = 100
+text = "Statistics"
+
+[node name="GemsTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 292.0
+offset_right = 694.0
+offset_bottom = 336.0
+theme_override_fonts/font = ExtResource("1_0ly6n")
+theme_override_font_sizes/font_size = 40
+text = "Gems collected:"
+horizontal_alignment = 2
+
+[node name="gemsCollected" type="Label" parent="."]
+layout_mode = 0
+offset_left = 731.0
+offset_top = 293.0
+offset_right = 802.0
+offset_bottom = 337.0
+theme_override_fonts/font = ExtResource("1_0ly6n")
+theme_override_font_sizes/font_size = 40
+text = "##"
+
+[node name="EnemiesTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 353.0
+offset_right = 694.0
+offset_bottom = 397.0
+theme_override_fonts/font = ExtResource("1_0ly6n")
+theme_override_font_sizes/font_size = 40
+text = "Enemies killed:"
+horizontal_alignment = 2
+
+[node name="enemiesKilled" type="Label" parent="."]
+layout_mode = 0
+offset_left = 731.0
+offset_top = 354.0
+offset_right = 802.0
+offset_bottom = 398.0
+theme_override_fonts/font = ExtResource("1_0ly6n")
+theme_override_font_sizes/font_size = 40
+text = "##"
+
+[node name="DeathsTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 416.0
+offset_right = 695.0
+offset_bottom = 460.0
+theme_override_fonts/font = ExtResource("1_0ly6n")
+theme_override_font_sizes/font_size = 40
+text = "Number of Deaths:"
+horizontal_alignment = 2
+
+[node name="numDeaths" type="Label" parent="."]
+layout_mode = 0
+offset_left = 732.0
+offset_top = 417.0
+offset_right = 803.0
+offset_bottom = 461.0
+theme_override_fonts/font = ExtResource("1_0ly6n")
+theme_override_font_sizes/font_size = 40
+text = "##"
+
+[node name="sceneChange" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="sceneChange" to="." method="_on_scene_change_timeout"]

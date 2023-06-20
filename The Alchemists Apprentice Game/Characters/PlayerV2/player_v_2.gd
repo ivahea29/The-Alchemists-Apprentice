@@ -91,8 +91,11 @@ func _unhandled_input(_event: InputEvent) -> void:
 func _on_hurt_box_area_entered(area):
 	if area.name == "enemyArea":
 		GlobalScript._on_player_hit_enemy()
+		animation_locked = true
+		$AnimatedSprite2D.play("woodcutter_hurt")
 		
 		if GlobalScript.playerHealth <= 0:
 			queue_free()
 			get_tree().reload_current_scene()
 			GlobalScript.resetPlayerHealth()
+
