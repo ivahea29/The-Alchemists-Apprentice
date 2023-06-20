@@ -14,7 +14,16 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body.name == "PlayerV2":
+		$pickupFX.play()
 		emit_signal("gem_collected")
 		GlobalScript.num_gems += 1
 		print_debug(GlobalScript.num_gems)
-		queue_free()
+		$Sprite2D.visible = false
+		$Area2D.queue_free()
+		$Timer.wait_time = $pickupFX.stream.get_length()
+		$Timer.start()
+		set_process(true)
+
+
+func _on_timer_timeout():
+	queue_free()

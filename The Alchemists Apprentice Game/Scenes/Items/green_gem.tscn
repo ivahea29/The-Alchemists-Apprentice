@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvix3oit58tei"]
+[gd_scene load_steps=5 format=3 uid="uid://dvix3oit58tei"]
 
 [ext_resource type="Texture2D" uid="uid://kw4vxa5ebik8" path="res://Assets/Hud/2 Bars/gem_emerald.png" id="1_dynle"]
 [ext_resource type="Script" path="res://Scenes/Items/green_gem.gd" id="1_wh02e"]
+[ext_resource type="AudioStream" uid="uid://dlxjl6pvmnxwa" path="res://Assets/Sounds/FX/itempickupsound.mp3" id="3_ritu7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8vawy"]
 radius = 5.0
@@ -20,4 +21,10 @@ texture = ExtResource("1_dynle")
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_8vawy")
 
+[node name="pickupFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ritu7")
+
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

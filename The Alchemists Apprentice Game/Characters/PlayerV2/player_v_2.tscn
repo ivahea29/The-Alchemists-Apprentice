@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://187t26ihbc8n"]
+[gd_scene load_steps=58 format=3 uid="uid://187t26ihbc8n"]
 
 [ext_resource type="Texture2D" uid="uid://ctb4oytl61nud" path="res://newAssets/woodcutter/woodcutter_attack_1/frame1.png" id="1_dk855"]
 [ext_resource type="Script" path="res://Characters/PlayerV2/player_v_2.gd" id="1_u7fbs"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://msby3qh5ed43" path="res://newAssets/woodcutter/woodcutter_walk/frame5 (5).png" id="27_kjw6e"]
 [ext_resource type="Texture2D" uid="uid://b5utucmhsmnit" path="res://newAssets/woodcutter/woodcutter_walk/frame6 (5).png" id="28_6igif"]
 [ext_resource type="AudioStream" uid="uid://bolklvn2p1oad" path="res://Assets/Sounds/FX/run2.mp3" id="32_670nc"]
+[ext_resource type="AudioStream" uid="uid://c6wy5i1md0bps" path="res://Assets/Sounds/FX/hurtsound.mp3" id="33_fx1x8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qg7ad"]
 atlas = ExtResource("7_g84yp")
@@ -342,6 +343,10 @@ shape = SubResource("CircleShape2D_y11np")
 visible = false
 position = Vector2(-1.5, 10)
 shape = SubResource("RectangleShape2D_m6mw3")
+
+[node name="hurtFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("33_fx1x8")
+volume_db = -10.0
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="hurtBox" to="." method="_on_hurt_box_area_entered"]

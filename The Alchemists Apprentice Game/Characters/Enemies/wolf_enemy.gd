@@ -73,4 +73,6 @@ func _on_area_2d_body_exited(body):
 func _on_area_2d_area_entered(area):
 	if area.name == "Projectile":
 		if state != HURT:
+			$enemyArea.queue_free()
+			$CollisionShape2D.queue_free()
 			state = HURT

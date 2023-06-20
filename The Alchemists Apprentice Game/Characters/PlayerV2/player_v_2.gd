@@ -93,6 +93,7 @@ func _on_hurt_box_area_entered(area):
 		GlobalScript._on_player_hit_enemy()
 		animation_locked = true
 		$AnimatedSprite2D.play("woodcutter_hurt")
+		$hurtFX.play()
 		
 		if GlobalScript.playerHealth <= 0:
 			queue_free()

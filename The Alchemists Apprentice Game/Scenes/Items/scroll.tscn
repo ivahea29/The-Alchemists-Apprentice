@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cw4keybc700ks"]
+[gd_scene load_steps=5 format=3 uid="uid://cw4keybc700ks"]
 
 [ext_resource type="Script" path="res://Scenes/Items/Scroll.gd" id="1_amywr"]
 [ext_resource type="Texture2D" uid="uid://ca2hw1b00aqgf" path="res://Assets/Hud/2 Bars/scroll-removebg-preview 3.png" id="2_8fd8c"]
+[ext_resource type="AudioStream" uid="uid://g141ln0cdbv7" path="res://Assets/Sounds/FX/page-flip-01a.mp3" id="3_qfod7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cob20"]
 size = Vector2(12, 15)
@@ -18,4 +19,11 @@ texture = ExtResource("2_8fd8c")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_cob20")
 
+[node name="pageFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qfod7")
+volume_db = -5.0
+
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
