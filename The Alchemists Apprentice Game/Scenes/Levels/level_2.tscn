@@ -1,4 +1,4 @@
-[gd_scene load_steps=254 format=3 uid="uid://bh322s2qv6os7"]
+[gd_scene load_steps=275 format=3 uid="uid://bh322s2qv6os7"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_2.gd" id="1_0tfyh"]
 [ext_resource type="Texture2D" uid="uid://eodse3yb0k68" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_82c75"]
@@ -186,6 +186,14 @@
 [ext_resource type="Resource" uid="uid://debf53dltdqgh" path="res://Dialogue/WizardProgressDialogue.dialogue" id="181_axsb7"]
 [ext_resource type="PackedScene" uid="uid://c3ojhcwkh5cfi" path="res://Characters/Enemies/wolf_enemy.tscn" id="182_f3nyg"]
 [ext_resource type="AudioStream" uid="uid://cc5qpxhdqgdfr" path="res://Assets/Sounds/Music/celebration-of-the-battle-of-nein-150734.mp3" id="183_vcrrw"]
+[ext_resource type="Texture2D" uid="uid://b07dnhrjcwbc4" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/Table.png" id="187_0wsc0"]
+[ext_resource type="Texture2D" uid="uid://c8m03yeda7d53" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/Machine.png" id="188_kt6k8"]
+[ext_resource type="Texture2D" uid="uid://cyvsl8mwxx7cd" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/Smoke2.png" id="189_lqvrx"]
+[ext_resource type="Texture2D" uid="uid://byyqr4x17w8ev" path="res://Assets/Characters/magic-assets-pack-pixel-art/3 Objects/Healing.png" id="190_jw27u"]
+[ext_resource type="Texture2D" uid="uid://k01x2rsecuib" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/1 Alchemist/Alchemist_idle.png" id="191_wkhik"]
+[ext_resource type="Script" path="res://Characters/NPC/HealthMan.gd" id="192_05nc4"]
+[ext_resource type="Texture2D" uid="uid://bdqbtqusm2rlj" path="res://Assets/Hud/long_speech.png" id="193_hhnuv"]
+[ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="194_ento7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73kei"]
 texture = ExtResource("1_82c75")
@@ -1607,6 +1615,95 @@ size = Vector2(31, 167)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a6w5b"]
 size = Vector2(26, 116)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hhh2"]
+atlas = ExtResource("189_lqvrx")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlxjk"]
+atlas = ExtResource("189_lqvrx")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2oq4v"]
+atlas = ExtResource("189_lqvrx")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cc60t"]
+atlas = ExtResource("189_lqvrx")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qde7"]
+atlas = ExtResource("189_lqvrx")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2qnx"]
+atlas = ExtResource("189_lqvrx")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jbfv5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hhh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlxjk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2oq4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cc60t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qde7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2qnx")
+}],
+"loop": true,
+"name": &"smonk",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h682m"]
+atlas = ExtResource("191_wkhik")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uupl0"]
+atlas = ExtResource("191_wkhik")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wybfw"]
+atlas = ExtResource("191_wkhik")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ox3n8"]
+atlas = ExtResource("191_wkhik")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fqr8a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h682m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uupl0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ox3n8")
+}],
+"loop": true,
+"name": &"healthMan",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kwfcc"]
+radius = 18.1108
+
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_0tfyh")
 
@@ -1908,7 +2005,7 @@ position = Vector2(1080, 473)
 texture = ExtResource("17_3pj6m")
 
 [node name="5" type="Sprite2D" parent="Grasses"]
-z_index = -3
+z_index = -1
 texture_filter = 1
 position = Vector2(2081, 442)
 texture = ExtResource("18_ddqml")
@@ -2288,22 +2385,22 @@ frame_progress = 0.525125
 
 [node name="6" type="Sprite2D" parent="Misc"]
 z_index = -3
-position = Vector2(2301, 465)
+position = Vector2(2356, 466)
 texture = ExtResource("51_7qhk0")
 
 [node name="4" type="Sprite2D" parent="Misc"]
 z_index = -3
-position = Vector2(2373, 457)
+position = Vector2(2428, 458)
 texture = ExtResource("52_6v7co")
 
 [node name="2" type="Sprite2D" parent="Misc"]
 z_index = -4
-position = Vector2(2324, 449)
+position = Vector2(2379, 450)
 texture = ExtResource("53_nlhum")
 
 [node name="1" type="Sprite2D" parent="Misc"]
 z_index = -3
-position = Vector2(2371, 465)
+position = Vector2(2426, 466)
 texture = ExtResource("16_i8i5d")
 
 [node name="193" type="Sprite2D" parent="Misc"]
@@ -2319,26 +2416,26 @@ flip_h = true
 
 [node name="3" type="Sprite2D" parent="Misc"]
 z_index = -3
-position = Vector2(2298, 472)
+position = Vector2(2353, 473)
 texture = ExtResource("19_d8s64")
 
 [node name="7" type="Sprite2D" parent="Misc"]
 z_index = -3
-position = Vector2(2335, 465)
+position = Vector2(2390, 466)
 texture = ExtResource("17_8ljoq")
 
 [node name="Flagpole" type="Sprite2D" parent="Misc"]
-position = Vector2(2336, 402)
+position = Vector2(2391, 403)
 texture = ExtResource("54_6b5ck")
 
 [node name="flag" type="AnimatedSprite2D" parent="Misc"]
-position = Vector2(2336, 358)
+position = Vector2(2391, 359)
 sprite_frames = SubResource("SpriteFrames_wcpqt")
 autoplay = "default"
 frame_progress = 0.424094
 
 [node name="5" type="Sprite2D" parent="Misc"]
-position = Vector2(2407, 469)
+position = Vector2(2462, 470)
 texture = ExtResource("56_kl3fb")
 
 [node name="8" type="Sprite2D" parent="Misc"]
@@ -3179,7 +3276,7 @@ texture = ExtResource("69_4lilq")
 
 [node name="139" type="Sprite2D" parent="Misc"]
 z_index = -6
-position = Vector2(2342, 466)
+position = Vector2(2397, 467)
 texture = ExtResource("51_7qhk0")
 
 [node name="140" type="Sprite2D" parent="Misc"]
@@ -4777,16 +4874,19 @@ position = Vector2(9225, 401)
 [node name="Gems" type="Node" parent="."]
 
 [node name="redGem" parent="Gems" instance=ExtResource("176_ckp48")]
-position = Vector2(2054, 425)
+position = Vector2(389, 483)
 
 [node name="green_gem" parent="Gems" instance=ExtResource("177_ga0dh")]
-position = Vector2(2105, 424)
+position = Vector2(415, 481)
+
+[node name="green_gem2" parent="Gems" instance=ExtResource("177_ga0dh")]
+position = Vector2(363, 480)
 
 [node name="blue_gem" parent="Gems" instance=ExtResource("178_kd31j")]
-position = Vector2(2154, 425)
+position = Vector2(449, 482)
 
 [node name="redGem2" parent="Gems" instance=ExtResource("176_ckp48")]
-position = Vector2(2197, 425)
+position = Vector2(486, 486)
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -4823,6 +4923,80 @@ max_distance = 200
 stream = ExtResource("183_vcrrw")
 volume_db = -14.991
 autoplay = true
+
+[node name="healthPoint" type="Node" parent="."]
+
+[node name="Table" type="Sprite2D" parent="healthPoint"]
+z_index = -1
+position = Vector2(2109, 437)
+texture = ExtResource("187_0wsc0")
+
+[node name="Machine" type="Sprite2D" parent="healthPoint"]
+z_index = -1
+position = Vector2(2113, 427)
+scale = Vector2(0.574075, 0.574075)
+texture = ExtResource("188_kt6k8")
+
+[node name="smoke" type="AnimatedSprite2D" parent="healthPoint"]
+z_index = -1
+position = Vector2(2101, 413)
+scale = Vector2(0.520833, 0.520833)
+sprite_frames = SubResource("SpriteFrames_jbfv5")
+animation = &"smonk"
+autoplay = "smonk"
+
+[node name="Flagpole2" type="Sprite2D" parent="healthPoint"]
+z_index = -1
+position = Vector2(2074.5, 413.5)
+scale = Vector2(1.14583, 1.47917)
+texture = ExtResource("54_6b5ck")
+
+[node name="Pointer" type="Sprite2D" parent="healthPoint"]
+z_index = -1
+position = Vector2(2101.5, 399)
+scale = Vector2(0.9375, 0.9375)
+texture = ExtResource("100_5ham6")
+flip_h = true
+
+[node name="Healing" type="Sprite2D" parent="healthPoint"]
+z_index = -1
+position = Vector2(2103.5, 400)
+scale = Vector2(0.833347, 0.833347)
+texture = ExtResource("190_jw27u")
+
+[node name="HealthMan" type="AnimatedSprite2D" parent="healthPoint"]
+light_mask = 512
+visibility_layer = 512
+z_index = -1
+position = Vector2(2134, 425)
+sprite_frames = SubResource("SpriteFrames_fqr8a")
+animation = &"healthMan"
+autoplay = "healthMan"
+flip_h = true
+script = ExtResource("192_05nc4")
+
+[node name="Area2D" type="Area2D" parent="healthPoint/HealthMan"]
+z_index = -1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="healthPoint/HealthMan/Area2D"]
+z_index = -1
+position = Vector2(10, 6)
+shape = SubResource("CircleShape2D_kwfcc")
+
+[node name="LongSpeech" type="Sprite2D" parent="healthPoint"]
+position = Vector2(2193.5, 407)
+scale = Vector2(1.57812, 1.15625)
+texture = ExtResource("193_hhnuv")
+
+[node name="healthText" type="Label" parent="healthPoint"]
+offset_left = 2154.0
+offset_top = 400.0
+offset_right = 2224.0
+offset_bottom = 412.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("194_ento7")
+theme_override_font_sizes/font_size = 7
+text = "5 gems for full health!"
 
 [connection signal="body_entered" from="waterFallzone" to="." method="_on_area_2d_body_entered"]
 [connection signal="resume_game" from="pause-menu" to="." method="_on_pausemenu_resume_game"]

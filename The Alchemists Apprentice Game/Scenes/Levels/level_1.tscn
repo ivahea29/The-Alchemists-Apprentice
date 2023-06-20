@@ -1,4 +1,4 @@
-[gd_scene load_steps=245 format=3 uid="uid://d0knbsqqp346r"]
+[gd_scene load_steps=251 format=3 uid="uid://d0knbsqqp346r"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_0xk1k"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_b5oed"]
@@ -34,11 +34,13 @@
 [ext_resource type="Texture2D" uid="uid://2pdwuock8ovg" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/7 Grass/7.png" id="27_l7g5h"]
 [ext_resource type="Texture2D" uid="uid://8y2b7pyoning" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/7 Grass/2.png" id="28_ym4xw"]
 [ext_resource type="Texture2D" uid="uid://dc58mgces5n7p" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/5.png" id="31_4eibf"]
+[ext_resource type="Texture2D" uid="uid://k01x2rsecuib" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/1 Alchemist/Alchemist_idle.png" id="31_u7r2a"]
 [ext_resource type="Texture2D" uid="uid://ootdvhpty876" path="res://Assets/Characters/villagers-sprite-sheets-pixel-art/1 Old_man/Old_man_idle.png" id="33_i3fvp"]
 [ext_resource type="Texture2D" uid="uid://dxso5tntkn7a3" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/3 Character animation/GraveRobber_read.png" id="35_0i6pj"]
 [ext_resource type="Texture2D" uid="uid://c5acpjps30ktj" path="res://Assets/Buildings/blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_Sieve.png" id="36_74v07"]
 [ext_resource type="Texture2D" uid="uid://dgw166vf7xm67" path="res://Assets/Buildings/blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_hammer.png" id="37_rkmep"]
 [ext_resource type="Texture2D" uid="uid://brsiarmy160ic" path="res://Assets/Buildings/blacksmith-craft-asset-pixel-art-pack/2 Objects/Anvil.png" id="38_cblwo"]
+[ext_resource type="Texture2D" uid="uid://dmc2gna5ni4c7" path="res://Assets/Characters/villagers-sprite-sheets-pixel-art/5 Boy/Boy_idle.png" id="39_id7fb"]
 [ext_resource type="Texture2D" uid="uid://d0p6s78tsq85c" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/4 Animated objects/Flag.png" id="40_b7ssl"]
 [ext_resource type="Texture2D" uid="uid://ci7rsbk0hu2no" path="res://Assets/Buildings/farming-pixel-art-game-assets-pack/2 Objects/Mill.png" id="41_3aych"]
 [ext_resource type="Texture2D" uid="uid://bb2g4mad7bfod" path="res://Assets/Buildings/farming-pixel-art-game-assets-pack/2 Objects/Fence2.png" id="42_a6nc7"]
@@ -51,7 +53,6 @@
 [ext_resource type="Texture2D" uid="uid://d0mrk4dfiktjo" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/4.png" id="49_6rko5"]
 [ext_resource type="Texture2D" uid="uid://cl0pdwfggawla" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/3 Animated objects/Fire.png" id="49_satp4"]
 [ext_resource type="Texture2D" uid="uid://bqqgsdamcy1yn" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/2.png" id="50_jxuse"]
-[ext_resource type="Texture2D" uid="uid://dbfm322atx18g" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/1 Alchemist/Alchemist_fill.png" id="51_aoiv6"]
 [ext_resource type="Texture2D" uid="uid://dyjxe7sushdl7" path="res://Assets/Buildings/interiorTextures/interiorTextures/planks_birch.png" id="52_d7td8"]
 [ext_resource type="Texture2D" uid="uid://ddh8c7ld2yjqi" path="res://Assets/Buildings/interiorTextures/interiorTextures/planks_oak.png" id="53_2wefq"]
 [ext_resource type="Texture2D" uid="uid://b1o5sg8u0n708" path="res://Assets/Buildings/interiorTextures/interiorTextures/planks_spruce.png" id="54_bdakh"]
@@ -88,7 +89,9 @@
 [ext_resource type="Texture2D" uid="uid://ckq2wgtnik0hb" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Food6.png" id="74_jtxd8"]
 [ext_resource type="Texture2D" uid="uid://dclvw3stw0fpu" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Food8.png" id="75_chphx"]
 [ext_resource type="Texture2D" uid="uid://ddw1mlur4s4o6" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Food7.png" id="76_ni4xr"]
+[ext_resource type="Texture2D" uid="uid://dubuv70bxm7an" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Pointer.png" id="77_3b0l0"]
 [ext_resource type="Texture2D" uid="uid://b0226v16j2xoh" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Food2.png" id="77_xyik2"]
+[ext_resource type="Texture2D" uid="uid://byyqr4x17w8ev" path="res://Assets/Characters/magic-assets-pack-pixel-art/3 Objects/Healing.png" id="78_1n1a6"]
 [ext_resource type="Texture2D" uid="uid://cv4376uv5grii" path="res://Assets/Buildings/cookery-game-assets-pixel-art-pack/3 Objects/Pot2.png" id="78_4h68h"]
 [ext_resource type="Texture2D" uid="uid://cssubvpiuaeoc" path="res://Assets/Buildings/herbalism-game-assets-pixel-art-pack/3 Objects/Plant14.png" id="79_wrc73"]
 [ext_resource type="Texture2D" uid="uid://bhxg8mre80eek" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/flask2.png" id="80_cdgpt"]
@@ -1715,39 +1718,39 @@ size = Vector2(15, 30)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq4va"]
 size = Vector2(25, 52)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_366sn"]
-atlas = ExtResource("33_i3fvp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_h682m"]
+atlas = ExtResource("31_u7r2a")
 region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_if8p6"]
-atlas = ExtResource("33_i3fvp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_uupl0"]
+atlas = ExtResource("31_u7r2a")
 region = Rect2(48, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_23p5k"]
-atlas = ExtResource("33_i3fvp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wybfw"]
+atlas = ExtResource("31_u7r2a")
 region = Rect2(96, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o4gab"]
-atlas = ExtResource("33_i3fvp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ox3n8"]
+atlas = ExtResource("31_u7r2a")
 region = Rect2(144, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_41bjv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_366sn")
+"texture": SubResource("AtlasTexture_h682m")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_if8p6")
+"texture": SubResource("AtlasTexture_uupl0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_23p5k")
+"texture": SubResource("AtlasTexture_wybfw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o4gab")
+"texture": SubResource("AtlasTexture_ox3n8")
 }],
 "loop": true,
-"name": &"Villager - Idle",
+"name": &"healthMan",
 "speed": 3.0
 }]
 
@@ -1903,50 +1906,72 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yxtj0"]
-atlas = ExtResource("51_aoiv6")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fd6l"]
+atlas = ExtResource("33_i3fvp")
 region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xoyxp"]
-atlas = ExtResource("51_aoiv6")
+[sub_resource type="AtlasTexture" id="AtlasTexture_l43ol"]
+atlas = ExtResource("33_i3fvp")
 region = Rect2(48, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n40y1"]
-atlas = ExtResource("51_aoiv6")
+[sub_resource type="AtlasTexture" id="AtlasTexture_657or"]
+atlas = ExtResource("33_i3fvp")
 region = Rect2(96, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hbmjd"]
-atlas = ExtResource("51_aoiv6")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubrlu"]
+atlas = ExtResource("33_i3fvp")
 region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dx5u0"]
-atlas = ExtResource("51_aoiv6")
-region = Rect2(192, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xs455"]
-atlas = ExtResource("51_aoiv6")
-region = Rect2(240, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_38fdt"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yxtj0")
+"texture": SubResource("AtlasTexture_5fd6l")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xoyxp")
+"texture": SubResource("AtlasTexture_l43ol")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n40y1")
+"texture": SubResource("AtlasTexture_657or")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hbmjd")
+"texture": SubResource("AtlasTexture_ubrlu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_io3w8"]
+atlas = ExtResource("39_id7fb")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rklyx"]
+atlas = ExtResource("39_id7fb")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4jvk"]
+atlas = ExtResource("39_id7fb")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wq31"]
+atlas = ExtResource("39_id7fb")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x0ud3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_io3w8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dx5u0")
+"texture": SubResource("AtlasTexture_rklyx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xs455")
+"texture": SubResource("AtlasTexture_r4jvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wq31")
 }],
 "loop": true,
 "name": &"default",
@@ -2731,6 +2756,121 @@ light_mask = 512
 visibility_layer = 512
 position = Vector2(2917, 432)
 texture = ExtResource("11_xydag")
+
+[node name="Villagers" type="Node" parent="."]
+
+[node name="HealthMan" type="AnimatedSprite2D" parent="Villagers"]
+light_mask = 512
+visibility_layer = 512
+position = Vector2(1532, 488)
+sprite_frames = SubResource("SpriteFrames_41bjv")
+animation = &"healthMan"
+autoplay = "healthMan"
+flip_h = true
+script = ExtResource("61_72gkk")
+metadata/_edit_lock_ = true
+
+[node name="actionable-2" parent="Villagers/HealthMan" instance=ExtResource("62_r7od1")]
+dialogue_resource = ExtResource("63_74lff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/HealthMan/actionable-2"]
+visible = false
+position = Vector2(-12, 8)
+shape = SubResource("CapsuleShape2D_riw1y")
+
+[node name="villager2" type="AnimatedSprite2D" parent="Villagers"]
+light_mask = 512
+visibility_layer = 512
+position = Vector2(2067, 488)
+sprite_frames = SubResource("SpriteFrames_vewtm")
+autoplay = "default"
+frame_progress = 0.817725
+flip_h = true
+metadata/_edit_lock_ = true
+
+[node name="actionable-2" parent="Villagers/villager2" instance=ExtResource("62_r7od1")]
+dialogue_resource = ExtResource("63_74lff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/villager2/actionable-2"]
+visible = false
+position = Vector2(-12, 8)
+shape = SubResource("CapsuleShape2D_riw1y")
+
+[node name="villager3" type="AnimatedSprite2D" parent="Villagers"]
+light_mask = 512
+visibility_layer = 512
+position = Vector2(1813, 487)
+sprite_frames = SubResource("SpriteFrames_f23px")
+autoplay = "default"
+frame = 3
+frame_progress = 0.151377
+metadata/_edit_lock_ = true
+
+[node name="actionable-2" parent="Villagers/villager3" instance=ExtResource("62_r7od1")]
+dialogue_resource = ExtResource("63_74lff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/villager3/actionable-2"]
+visible = false
+position = Vector2(-12, 8)
+shape = SubResource("CapsuleShape2D_riw1y")
+
+[node name="villager4" type="AnimatedSprite2D" parent="Villagers"]
+light_mask = 512
+visibility_layer = 512
+position = Vector2(1864, 488)
+sprite_frames = SubResource("SpriteFrames_neax4")
+autoplay = "default"
+flip_h = true
+metadata/_edit_lock_ = true
+
+[node name="actionable-2" parent="Villagers/villager4" instance=ExtResource("62_r7od1")]
+dialogue_resource = ExtResource("63_74lff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/villager4/actionable-2"]
+visible = false
+position = Vector2(-12, 8)
+shape = SubResource("CapsuleShape2D_riw1y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Villagers"]
+position = Vector2(3312, 359.5)
+sprite_frames = SubResource("SpriteFrames_38fdt")
+autoplay = "default"
+frame_progress = 0.838564
+
+[node name="actionable-2" parent="Villagers/AnimatedSprite2D" instance=ExtResource("62_r7od1")]
+dialogue_resource = ExtResource("63_74lff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/AnimatedSprite2D/actionable-2"]
+visible = false
+position = Vector2(-12, 8)
+shape = SubResource("CapsuleShape2D_riw1y")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Villagers"]
+position = Vector2(3353, 359.5)
+sprite_frames = SubResource("SpriteFrames_x0ud3")
+autoplay = "default"
+flip_h = true
+
+[node name="actionable-2" parent="Villagers/AnimatedSprite2D2" instance=ExtResource("62_r7od1")]
+dialogue_resource = ExtResource("63_74lff")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/AnimatedSprite2D2/actionable-2"]
+visible = false
+position = Vector2(-12, 8)
+shape = SubResource("CapsuleShape2D_riw1y")
+
+[node name="HurtVillager" type="AnimatedSprite2D" parent="Villagers"]
+position = Vector2(2640, 425)
+sprite_frames = SubResource("SpriteFrames_4ey24")
+metadata/_edit_group_ = true
+
+[node name="hurt-villager" parent="Villagers/HurtVillager" instance=ExtResource("69_lb3tw")]
+dialogue_resource = ExtResource("70_s5d5k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/HurtVillager/hurt-villager"]
+visible = false
+position = Vector2(1, 21)
+shape = SubResource("CircleShape2D_jvqmh")
 
 [node name="Buildings-Village" type="Node" parent="."]
 
@@ -3546,120 +3686,17 @@ texture_filter = 1
 position = Vector2(4044, 318)
 texture = ExtResource("62_3wdfa")
 
-[node name="Villagers" type="Node" parent="."]
+[node name="Pointer" type="Sprite2D" parent="Buildings-Village"]
+z_index = -2
+position = Vector2(1520, 454.5)
+scale = Vector2(1, 1.03125)
+texture = ExtResource("77_3b0l0")
 
-[node name="Villager" type="AnimatedSprite2D" parent="Villagers"]
-light_mask = 512
-visibility_layer = 512
-position = Vector2(1532, 488)
-sprite_frames = SubResource("SpriteFrames_41bjv")
-animation = &"Villager - Idle"
-autoplay = "Villager - Idle"
-script = ExtResource("61_72gkk")
-metadata/_edit_lock_ = true
-
-[node name="actionable-2" parent="Villagers/Villager" instance=ExtResource("62_r7od1")]
-dialogue_resource = ExtResource("63_74lff")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/Villager/actionable-2"]
-visible = false
-position = Vector2(-12, 8)
-shape = SubResource("CapsuleShape2D_riw1y")
-
-[node name="villager2" type="AnimatedSprite2D" parent="Villagers"]
-light_mask = 512
-visibility_layer = 512
-position = Vector2(2067, 488)
-sprite_frames = SubResource("SpriteFrames_vewtm")
-autoplay = "default"
-frame_progress = 0.817725
-flip_h = true
-metadata/_edit_lock_ = true
-
-[node name="actionable-2" parent="Villagers/villager2" instance=ExtResource("62_r7od1")]
-dialogue_resource = ExtResource("63_74lff")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/villager2/actionable-2"]
-visible = false
-position = Vector2(-12, 8)
-shape = SubResource("CapsuleShape2D_riw1y")
-
-[node name="villager3" type="AnimatedSprite2D" parent="Villagers"]
-light_mask = 512
-visibility_layer = 512
-position = Vector2(1813, 487)
-sprite_frames = SubResource("SpriteFrames_f23px")
-autoplay = "default"
-frame = 3
-frame_progress = 0.151377
-metadata/_edit_lock_ = true
-
-[node name="actionable-2" parent="Villagers/villager3" instance=ExtResource("62_r7od1")]
-dialogue_resource = ExtResource("63_74lff")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/villager3/actionable-2"]
-visible = false
-position = Vector2(-12, 8)
-shape = SubResource("CapsuleShape2D_riw1y")
-
-[node name="villager4" type="AnimatedSprite2D" parent="Villagers"]
-light_mask = 512
-visibility_layer = 512
-position = Vector2(1864, 488)
-sprite_frames = SubResource("SpriteFrames_neax4")
-autoplay = "default"
-flip_h = true
-metadata/_edit_lock_ = true
-
-[node name="actionable-2" parent="Villagers/villager4" instance=ExtResource("62_r7od1")]
-dialogue_resource = ExtResource("63_74lff")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/villager4/actionable-2"]
-visible = false
-position = Vector2(-12, 8)
-shape = SubResource("CapsuleShape2D_riw1y")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Villagers"]
-position = Vector2(3312, 359.5)
-sprite_frames = SubResource("SpriteFrames_38fdt")
-autoplay = "default"
-frame_progress = 0.838564
-
-[node name="actionable-2" parent="Villagers/AnimatedSprite2D" instance=ExtResource("62_r7od1")]
-dialogue_resource = ExtResource("63_74lff")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/AnimatedSprite2D/actionable-2"]
-visible = false
-position = Vector2(-12, 8)
-shape = SubResource("CapsuleShape2D_riw1y")
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Villagers"]
-position = Vector2(3353, 359.5)
-sprite_frames = SubResource("SpriteFrames_38fdt")
-autoplay = "default"
-frame_progress = 0.170291
-flip_h = true
-
-[node name="actionable-2" parent="Villagers/AnimatedSprite2D2" instance=ExtResource("62_r7od1")]
-dialogue_resource = ExtResource("63_74lff")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/AnimatedSprite2D2/actionable-2"]
-visible = false
-position = Vector2(-12, 8)
-shape = SubResource("CapsuleShape2D_riw1y")
-
-[node name="HurtVillager" type="AnimatedSprite2D" parent="Villagers"]
-position = Vector2(2640, 425)
-sprite_frames = SubResource("SpriteFrames_4ey24")
-metadata/_edit_group_ = true
-
-[node name="hurt-villager" parent="Villagers/HurtVillager" instance=ExtResource("69_lb3tw")]
-dialogue_resource = ExtResource("70_s5d5k")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/HurtVillager/hurt-villager"]
-visible = false
-position = Vector2(1, 21)
-shape = SubResource("CircleShape2D_jvqmh")
+[node name="Healing" type="Sprite2D" parent="Buildings-Village"]
+z_index = -1
+position = Vector2(1517, 455)
+scale = Vector2(0.916667, 0.916667)
+texture = ExtResource("78_1n1a6")
 
 [node name="Animated-buildings" type="Node" parent="."]
 
@@ -4094,6 +4131,14 @@ animation = &"float"
 autoplay = "float"
 frame_progress = 0.726699
 
+[node name="speech_important3" type="AnimatedSprite2D" parent="SpeechBubbles"]
+position = Vector2(1528, 475)
+sprite_frames = SubResource("SpriteFrames_w5hfp")
+animation = &"float"
+autoplay = "float"
+frame_progress = 0.726699
+flip_h = true
+
 [node name="speech_important2" type="AnimatedSprite2D" parent="SpeechBubbles"]
 position = Vector2(2647, 416)
 sprite_frames = SubResource("SpriteFrames_w5hfp")
@@ -4108,13 +4153,6 @@ animation = &"float"
 autoplay = "float"
 frame_progress = 0.714847
 flip_h = true
-
-[node name="speech_bubble" type="AnimatedSprite2D" parent="SpeechBubbles"]
-position = Vector2(1535, 471)
-sprite_frames = SubResource("SpriteFrames_nvb5o")
-animation = &"float"
-autoplay = "float"
-frame_progress = 0.996478
 
 [node name="speech_bubble2" type="AnimatedSprite2D" parent="SpeechBubbles"]
 position = Vector2(1822, 471)
