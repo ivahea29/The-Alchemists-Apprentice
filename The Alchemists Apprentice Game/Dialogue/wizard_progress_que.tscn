@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfkn4o2namku"]
+
+[ext_resource type="Script" path="res://Dialogue/wizard_progress_que.gd" id="1_vvnle"]
+
+[node name="Wizard-Progress-Que" type="Area2D"]
+collision_layer = 32
+script = ExtResource("1_vvnle")

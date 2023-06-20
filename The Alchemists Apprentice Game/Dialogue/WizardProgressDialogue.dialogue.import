@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://debf53dltdqgh"
+path="res://.godot/imported/WizardProgressDialogue.dialogue-87ee3a768e608c21ee6671a8bfb98147.tres"
+
+[deps]
+
+source_file="res://Dialogue/WizardProgressDialogue.dialogue"
+dest_files=["res://.godot/imported/WizardProgressDialogue.dialogue-87ee3a768e608c21ee6671a8bfb98147.tres"]
+
+[params]
+
+defaults=true

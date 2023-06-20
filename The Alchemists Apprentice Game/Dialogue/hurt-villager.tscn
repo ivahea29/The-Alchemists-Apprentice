@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5838bp2c2exs"]
+
+[ext_resource type="Script" path="res://Dialogue/hurt-villager.gd" id="1_5cdm3"]
+
+[node name="hurt-villager" type="Area2D"]
+collision_layer = 32
+script = ExtResource("1_5cdm3")
