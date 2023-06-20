@@ -61,7 +61,6 @@ func _on_area_2d_body_entered(body):
 	if body.name == "PlayerV2":
 		if state != HURT:
 			state = ATTACK
-			GlobalScript._on_player_hit_enemy()
 	
 
 func _on_area_2d_body_exited(body):

@@ -87,3 +87,12 @@ func _unhandled_input(_event: InputEvent) -> void:
 		if actionables.size() > 0:
 			actionables[0].action()
 			return
+
+func _on_hurt_box_area_entered(area):
+	if area.name == "enemyArea":
+		GlobalScript._on_player_hit_enemy()
+		
+		if GlobalScript.playerHealth <= 0:
+			queue_free()
+			get_tree().reload_current_scene()
+			GlobalScript.resetPlayerHealth()

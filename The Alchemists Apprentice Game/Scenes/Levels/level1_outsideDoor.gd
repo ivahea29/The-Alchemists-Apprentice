@@ -10,7 +10,7 @@ func _input(event):
 	if event.is_action_pressed("interact"):
 		if get_overlapping_bodies().size() > 1:
 			var playerOutside = get_parent().get_node("PlayerV2")
-			playerOutside.position = Vector2(4361, 341)
+			playerOutside.position = Vector2(5616, 448)
 
 func _on_body_entered(body):
 	if body is CharacterBody2D:
