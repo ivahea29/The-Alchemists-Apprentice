@@ -4802,7 +4802,6 @@ volume_db = -14.991
 autoplay = true
 
 [connection signal="body_entered" from="waterFallzone" to="." method="_on_area_2d_body_entered"]
-[connection signal="resume_game" from="pause-menu" to="." method="_on_pausemenu_resume_game"]
 [connection signal="body_entered" from="outsideDoor" to="outsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="outsideDoor" to="outsideDoor" method="_on_body_exited"]
 [connection signal="body_entered" from="insideDoor" to="insideDoor" method="_on_body_entered"]
