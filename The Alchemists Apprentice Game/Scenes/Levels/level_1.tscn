@@ -1,4 +1,4 @@
-[gd_scene load_steps=234 format=3 uid="uid://d0knbsqqp346r"]
+[gd_scene load_steps=238 format=3 uid="uid://d0knbsqqp346r"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_0xk1k"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_b5oed"]
@@ -128,8 +128,12 @@
 [ext_resource type="Texture2D" uid="uid://bolapd01neycx" path="res://Assets/Characters/magic-assets-pack-pixel-art/1 Wizard/Wizard_read.png" id="126_iq1fi"]
 [ext_resource type="PackedScene" uid="uid://cfkn4o2namku" path="res://Dialogue/wizard_progress_que.tscn" id="127_uy8tn"]
 [ext_resource type="Resource" uid="uid://debf53dltdqgh" path="res://Dialogue/WizardProgressDialogue.dialogue" id="128_u8nu0"]
+[ext_resource type="AudioStream" uid="uid://41ojm3jgrup" path="res://Assets/Sounds/FX/run1.mp3" id="129_85v22"]
 [ext_resource type="AudioStream" uid="uid://dbdhup0pknlgi" path="res://Assets/Sounds/Music/fantasy-classical-themes-132199.mp3" id="129_jwl80"]
 [ext_resource type="PackedScene" uid="uid://dvj0cw2q7tuc8" path="res://Scenes/Menu/hud.tscn" id="130_w5fio"]
+[ext_resource type="PackedScene" uid="uid://b6eoa2xfgoe8m" path="res://Scenes/Items/red_gem.tscn" id="131_wxj48"]
+[ext_resource type="PackedScene" uid="uid://dvix3oit58tei" path="res://Scenes/Items/green_gem.tscn" id="132_kmagg"]
+[ext_resource type="PackedScene" uid="uid://c7wqpgwsuqclf" path="res://Scenes/Items/blue_gem.tscn" id="133_demux"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t5fgi"]
 texture = ExtResource("1_b5oed")
@@ -3877,12 +3881,30 @@ dialogue_resource = ExtResource("128_u8nu0")
 position = Vector2(9, 3)
 shape = SubResource("CircleShape2D_xfybf")
 
+[node name="WizardDialogueSound" type="AudioStreamPlayer" parent="ProgressWizard/Wizard-Progress-Que"]
+stream = ExtResource("129_85v22")
+autoplay = true
+
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("129_jwl80")
 volume_db = -20.613
 autoplay = true
 
 [node name="HUD" parent="." instance=ExtResource("130_w5fio")]
+
+[node name="Gems" type="Node" parent="."]
+
+[node name="redGem" parent="Gems" instance=ExtResource("131_wxj48")]
+position = Vector2(641, 239)
+
+[node name="green_gem" parent="Gems" instance=ExtResource("132_kmagg")]
+position = Vector2(1421, 463)
+
+[node name="blue_gem" parent="Gems" instance=ExtResource("133_demux")]
+position = Vector2(3093, 435)
+
+[node name="redGem2" parent="Gems" instance=ExtResource("131_wxj48")]
+position = Vector2(3469, 368)
 
 [connection signal="body_entered" from="outsideDoor" to="outsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="outsideDoor" to="outsideDoor" method="_on_body_exited"]
