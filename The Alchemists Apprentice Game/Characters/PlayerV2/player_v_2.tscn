@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://187t26ihbc8n"]
+[gd_scene load_steps=57 format=3 uid="uid://187t26ihbc8n"]
 
 [ext_resource type="Texture2D" uid="uid://ctb4oytl61nud" path="res://newAssets/woodcutter/woodcutter_attack_1/frame1.png" id="1_dk855"]
 [ext_resource type="Script" path="res://Characters/PlayerV2/player_v_2.gd" id="1_u7fbs"]
@@ -299,6 +299,9 @@ height = 40.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_y11np"]
 radius = 23.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6mw3"]
+size = Vector2(21, 40)
+
 [node name="PlayerV2" type="CharacterBody2D"]
 collision_mask = 17
 script = ExtResource("1_u7fbs")
@@ -312,7 +315,6 @@ animation = &"woodcutter_hurt"
 autoplay = "woodcutter_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, 11)
 shape = SubResource("CapsuleShape2D_tvgvw")
 
@@ -329,8 +331,14 @@ collision_layer = 0
 collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
-visible = false
 position = Vector2(-1, 9)
 shape = SubResource("CircleShape2D_y11np")
 
+[node name="hurtBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox"]
+position = Vector2(-1.5, 10)
+shape = SubResource("RectangleShape2D_m6mw3")
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="area_entered" from="hurtBox" to="." method="_on_hurt_box_area_entered"]
