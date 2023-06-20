@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=3 uid="uid://b8741lnhupdir"]
+[gd_scene load_steps=97 format=3 uid="uid://b8741lnhupdir"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_4.gd" id="1_fl5sd"]
 [ext_resource type="Texture2D" uid="uid://bngjkakkk0wql" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/2 Background/Background.png" id="1_iytm3"]
@@ -61,6 +61,7 @@
 [ext_resource type="AudioStream" uid="uid://f54wuwaf1avw" path="res://Assets/Sounds/Music/the-fog-of-war-150738.mp3" id="57_ycnob"]
 [ext_resource type="PackedScene" uid="uid://ysqn7lnw8rwy" path="res://Characters/Enemies/boss_enemy.tscn" id="58_wdyqc"]
 [ext_resource type="PackedScene" uid="uid://dvj0cw2q7tuc8" path="res://Scenes/Menu/hud.tscn" id="60_a87gk"]
+[ext_resource type="PackedScene" uid="uid://bn5whyv2qoxv6" path="res://Scenes/Menu/pause_menu.tscn" id="62_pv2xb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5paa8"]
 texture = ExtResource("2_v0hrc")
@@ -2277,6 +2278,7 @@ position = Vector2(2491, 243.5)
 texture = ExtResource("20_5unta")
 
 [node name="11" type="Sprite2D" parent="Decorations"]
+visible = false
 z_index = -3
 position = Vector2(2152, 371)
 texture = ExtResource("21_04han")
@@ -2780,3 +2782,8 @@ position = Vector2(6213, 751)
 max_distance = 800
 
 [node name="HUD" parent="." instance=ExtResource("60_a87gk")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pause-menu" parent="CanvasLayer" node_paths=PackedStringArray("game_manager") instance=ExtResource("62_pv2xb")]
+game_manager = NodePath("../..")
