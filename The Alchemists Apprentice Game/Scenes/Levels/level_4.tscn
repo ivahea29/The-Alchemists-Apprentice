@@ -1,6 +1,5 @@
-[gd_scene load_steps=97 format=3 uid="uid://b8741lnhupdir"]
+[gd_scene load_steps=96 format=3 uid="uid://b8741lnhupdir"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/level_4.gd" id="1_fl5sd"]
 [ext_resource type="Texture2D" uid="uid://bngjkakkk0wql" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/2 Background/Background.png" id="1_iytm3"]
 [ext_resource type="Texture2D" uid="uid://kugef1oxvoq8" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/1 Tiles/Tile_10.png" id="2_7vnxn"]
 [ext_resource type="PackedScene" uid="uid://187t26ihbc8n" path="res://Characters/PlayerV2/player_v_2.tscn" id="2_23g4c"]
@@ -1151,7 +1150,6 @@ fill_to = Vector2(0.522936, 0)
 size = Vector2(31, 167)
 
 [node name="level_4" type="Node2D"]
-script = ExtResource("1_fl5sd")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0.854902, 0.858824, 0.831373, 1)
@@ -2783,7 +2781,4 @@ max_distance = 800
 
 [node name="HUD" parent="." instance=ExtResource("60_a87gk")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="pause-menu" parent="CanvasLayer" node_paths=PackedStringArray("game_manager") instance=ExtResource("62_pv2xb")]
-game_manager = NodePath("../..")
+[node name="pause-menu" parent="." instance=ExtResource("62_pv2xb")]

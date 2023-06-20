@@ -1,84 +1,79 @@
-[gd_scene load_steps=5 format=3 uid="uid://bn5whyv2qoxv6"]
+[gd_scene load_steps=4 format=3 uid="uid://bn5whyv2qoxv6"]
 
-[ext_resource type="Script" path="res://Scenes/Menu/pause_menu.gd" id="1_d0ddv"]
-[ext_resource type="FontFile" uid="uid://c0ldfqt1w81w3" path="res://Assets/Hud/Font/Planes_ValMore.ttf" id="2_eherr"]
-[ext_resource type="Texture2D" uid="uid://dgx3vmb5hnipg" path="res://Assets/Hud/1 Frames/Portrait_frame.png" id="2_pw378"]
-[ext_resource type="Texture2D" uid="uid://bqnyqt4rphhhs" path="res://Assets/Hud/5 Logo/Logo.png" id="3_ucck5"]
+[ext_resource type="Script" path="res://Scenes/Menu/pause_menu_test.gd" id="1_jtmhn"]
+[ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="1_lgj7c"]
 
-[node name="pause-menu" type="Control"]
+[sub_resource type="FontVariation" id="FontVariation_a67j3"]
+base_font = ExtResource("1_lgj7c")
+
+[node name="pause-menu" type="CanvasLayer"]
+script = ExtResource("1_jtmhn")
+metadata/_edit_lock_ = true
+
+[node name="pausemenucontrol" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = -28.0
-offset_right = 6.0
-offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_d0ddv")
-metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="."]
+[node name="ColorRect" type="ColorRect" parent="pausemenucontrol"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.0352941)
+
+[node name="CenterContainer" type="CenterContainer" parent="pausemenucontrol"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="pausemenucontrol/CenterContainer"]
+custom_minimum_size = Vector2(400, 180)
 layout_mode = 2
-offset_left = 571.0
-offset_top = 339.0
-offset_right = 742.0
-offset_bottom = 393.0
-theme_override_fonts/font = ExtResource("2_eherr")
-theme_override_font_sizes/font_size = 50
-text = "Paused"
+
+[node name="MarginContainer" type="MarginContainer" parent="pausemenucontrol/CenterContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pausemenucontrol/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="pausemenucontrol/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_a67j3")
+theme_override_font_sizes/font_size = 120
+text = "PAUSED"
 horizontal_alignment = 1
+vertical_alignment = 2
 
-[node name="Panel" type="Panel" parent="."]
-self_modulate = Color(1, 1, 1, 0.470588)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -174.0
-offset_top = -43.0
-offset_right = 104.0
-offset_bottom = 183.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_lock_ = true
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -47.5
-offset_top = -53.5
-offset_right = 48.5
-offset_bottom = 47.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Resume" type="Button" parent="Panel/VBoxContainer2"]
+[node name="HSeparator" type="HSeparator" parent="pausemenucontrol/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Resume"
 
-[node name="Back-To-Menu" type="Button" parent="Panel/VBoxContainer2"]
+[node name="Resume-btn" type="Button" parent="pausemenucontrol/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Main Menu"
+theme_override_fonts/font = ExtResource("1_lgj7c")
+theme_override_font_sizes/font_size = 40
+text = "RESUME"
 
-[node name="Quit" type="Button" parent="Panel/VBoxContainer2"]
+[node name="Main-Menu-btn" type="Button" parent="pausemenucontrol/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Quit"
+theme_override_fonts/font = ExtResource("1_lgj7c")
+theme_override_font_sizes/font_size = 40
+text = "MAIN MENU"
 
-[node name="Frame" type="Sprite2D" parent="Panel/VBoxContainer2"]
-position = Vector2(45.875, 56.375)
-scale = Vector2(5.02232, 4.29018)
-texture = ExtResource("2_pw378")
+[node name="Quit-btn" type="Button" parent="pausemenucontrol/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_lgj7c")
+theme_override_font_sizes/font_size = 40
+text = "QUIT"
 
-[node name="Icon" type="Sprite2D" parent="Panel/VBoxContainer2"]
-z_index = -1
-position = Vector2(40.5, -124.5)
-texture = ExtResource("3_ucck5")
-metadata/_edit_lock_ = true
+[connection signal="pressed" from="pausemenucontrol/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Resume-btn" to="." method="_on_resumebtn_pressed"]
+[connection signal="pressed" from="pausemenucontrol/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Main-Menu-btn" to="." method="_on_main_menubtn_pressed"]
+[connection signal="pressed" from="pausemenucontrol/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Quit-btn" to="." method="_on_quitbtn_pressed"]
