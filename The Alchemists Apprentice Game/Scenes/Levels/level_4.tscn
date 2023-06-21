@@ -1,5 +1,6 @@
-[gd_scene load_steps=100 format=3 uid="uid://b8741lnhupdir"]
+[gd_scene load_steps=106 format=3 uid="uid://b8741lnhupdir"]
 
+[ext_resource type="Script" path="res://Scenes/Levels/level_4.gd" id="1_ijqq4"]
 [ext_resource type="Texture2D" uid="uid://bngjkakkk0wql" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/2 Background/Background.png" id="1_iytm3"]
 [ext_resource type="Texture2D" uid="uid://kugef1oxvoq8" path="res://Assets/Tilsets/mine-tileset-platformer-pixel-art/1 Tiles/Tile_10.png" id="2_7vnxn"]
 [ext_resource type="PackedScene" uid="uid://187t26ihbc8n" path="res://Characters/PlayerV2/player_v_2.tscn" id="2_23g4c"]
@@ -59,12 +60,16 @@
 [ext_resource type="Texture2D" uid="uid://cdbcuteyioryo" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/2 Objects/Torch1.png" id="57_0eti4"]
 [ext_resource type="AudioStream" uid="uid://o3h0kyxcwpkx" path="res://Assets/caves-of-dawn-10376.mp3" id="58_2mfac"]
 [ext_resource type="PackedScene" uid="uid://ysqn7lnw8rwy" path="res://Characters/Enemies/boss_enemy.tscn" id="58_wdyqc"]
+[ext_resource type="AudioStream" uid="uid://jbky0e1ts1cr" path="res://Assets/Sounds/FX/caveEnterGrowl.mp3" id="59_k6v1w"]
 [ext_resource type="PackedScene" uid="uid://dvj0cw2q7tuc8" path="res://Scenes/Menu/hud.tscn" id="60_a87gk"]
 [ext_resource type="PackedScene" uid="uid://bn5whyv2qoxv6" path="res://Scenes/Menu/pause_menu.tscn" id="62_pv2xb"]
 [ext_resource type="PackedScene" uid="uid://q17hscy5nvcb" path="res://Characters/Enemies/goblin_enemy.tscn" id="62_uq8de"]
 [ext_resource type="PackedScene" uid="uid://b6eoa2xfgoe8m" path="res://Scenes/Items/red_gem.tscn" id="63_hsqjn"]
 [ext_resource type="PackedScene" uid="uid://dvix3oit58tei" path="res://Scenes/Items/green_gem.tscn" id="64_crm53"]
 [ext_resource type="PackedScene" uid="uid://c7wqpgwsuqclf" path="res://Scenes/Items/blue_gem.tscn" id="65_pmm5g"]
+[ext_resource type="AudioStream" uid="uid://cixxf1xun3e73" path="res://Assets/Sounds/FX/lavaBubblingSound.mp3" id="66_qu2h6"]
+[ext_resource type="AudioStream" uid="uid://65h6nh5ajit8" path="res://Assets/Sounds/Music/bossFightMusic.mp3" id="69_2t8k2"]
+[ext_resource type="AudioStream" uid="uid://glp5o08cbm5q" path="res://Assets/Sounds/FX/bossAreaSpeech.mp3" id="69_rumme"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5paa8"]
 texture = ExtResource("2_v0hrc")
@@ -1153,7 +1158,11 @@ fill_to = Vector2(0.522936, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ijhw"]
 size = Vector2(31, 167)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ttc6"]
+size = Vector2(1644, 491)
+
 [node name="level_4" type="Node2D"]
+script = ExtResource("1_ijqq4")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0.854902, 0.858824, 0.831373, 1)
@@ -1167,7 +1176,7 @@ motion_mirroring = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(0.403922, 0.403922, 0.403922, 1)
-position = Vector2(575.805, 116.25)
+position = Vector2(577, 171)
 scale = Vector2(2.00068, 1.99846)
 texture = ExtResource("1_iytm3")
 
@@ -2772,7 +2781,12 @@ shape = SubResource("RectangleShape2D_7ijhw")
 
 [node name="Level4Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("58_2mfac")
-volume_db = -11.243
+volume_db = -13.0
+autoplay = true
+
+[node name="caveEnterGrowl" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("59_k6v1w")
+volume_db = -5.0
 autoplay = true
 
 [node name="Enemies" type="Node" parent="."]
@@ -2784,7 +2798,6 @@ max_distance = 800
 [node name="HUD" parent="." instance=ExtResource("60_a87gk")]
 
 [node name="pause-menu" parent="." instance=ExtResource("62_pv2xb")]
-visible = false
 
 [node name="Enemies2" type="Node" parent="."]
 
@@ -2812,9 +2825,6 @@ position = Vector2(3648, 488)
 [node name="goblinEnemy14" parent="Enemies2" instance=ExtResource("62_uq8de")]
 position = Vector2(4366, 360)
 
-[node name="goblinEnemy16" parent="Enemies2" instance=ExtResource("62_uq8de")]
-position = Vector2(4865, 583)
-
 [node name="goblinEnemy15" parent="Enemies2" instance=ExtResource("62_uq8de")]
 position = Vector2(4004, 393)
 
@@ -2834,3 +2844,31 @@ position = Vector2(2390, 237)
 
 [node name="redGem2" parent="Gems" instance=ExtResource("63_hsqjn")]
 position = Vector2(3605, 495)
+
+[node name="endLevelSound" type="Node" parent="."]
+
+[node name="lavaSound" type="AudioStreamPlayer2D" parent="endLevelSound"]
+position = Vector2(5748, 852)
+stream = ExtResource("66_qu2h6")
+volume_db = 10.0
+autoplay = true
+max_distance = 1000.0
+
+[node name="bossSceneArea2D" type="Area2D" parent="endLevelSound"]
+position = Vector2(4822, 589)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="endLevelSound/bossSceneArea2D"]
+visible = false
+position = Vector2(812, 55.5)
+shape = SubResource("RectangleShape2D_3ttc6")
+
+[node name="bossFightMusic" type="AudioStreamPlayer" parent="endLevelSound"]
+stream = ExtResource("69_2t8k2")
+volume_db = -10.0
+
+[node name="bossFightSpeech" type="AudioStreamPlayer" parent="endLevelSound"]
+stream = ExtResource("69_rumme")
+
+[connection signal="body_entered" from="endLevelSound/bossSceneArea2D" to="." method="_on_boss_scene_area_2d_body_entered"]
+[connection signal="body_exited" from="endLevelSound/bossSceneArea2D" to="." method="_on_boss_scene_area_2d_body_exited"]

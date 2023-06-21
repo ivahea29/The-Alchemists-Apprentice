@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://q17hscy5nvcb"]
+[gd_scene load_steps=22 format=3 uid="uid://q17hscy5nvcb"]
 
 [ext_resource type="Script" path="res://Characters/Enemies/goblin_enemy.gd" id="1_sgvpk"]
 [ext_resource type="Texture2D" uid="uid://ct00234ys18j8" path="res://newAssets/goblin/goblin_attack/frame1 (11).png" id="1_sleki"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://b4qcvhtnprcoc" path="res://newAssets/goblin/goblin_attack/frame4 (11).png" id="4_5hh54"]
 [ext_resource type="Texture2D" uid="uid://bqhcr2rvcl37p" path="res://newAssets/goblin/Goblin_melee_hurt.png" id="5_abg0s"]
 [ext_resource type="Texture2D" uid="uid://bfshh5hyqxowp" path="res://newAssets/goblin/Goblin_melee_walk.png" id="6_ak4dx"]
+[ext_resource type="AudioStream" uid="uid://dwhpdlsqhx4yo" path="res://Assets/Sounds/FX/goblinAttackFX.mp3" id="8_niwsl"]
+[ext_resource type="AudioStream" uid="uid://qo0so3x64jyk" path="res://Assets/Sounds/FX/goblinDeathSound.mp3" id="9_gssbg"]
+[ext_resource type="AudioStream" uid="uid://cwydv03axta2g" path="res://Assets/Sounds/FX/goblinLaughSound.mp3" id="10_e07kj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0w7d"]
 atlas = ExtResource("5_abg0s")
@@ -118,6 +121,20 @@ shape = SubResource("RectangleShape2D_ig16r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemyArea"]
 position = Vector2(-3.5, 4)
 shape = SubResource("RectangleShape2D_v8dn3")
+
+[node name="attackFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_niwsl")
+volume_db = -12.0
+
+[node name="deathFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_gssbg")
+volume_db = -5.0
+
+[node name="laughFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_e07kj")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.5
 
 [connection signal="area_entered" from="enemyArea" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="enemyArea" to="." method="_on_area_2d_body_entered"]

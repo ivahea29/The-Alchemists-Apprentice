@@ -42,6 +42,7 @@ func _physics_process(delta):
 				state = WALK
 				hurt_timer = 0
 			if bossHealth <= 0:
+				$deathFX.play()
 				state = DEATH
 		WALK:
 			anim.animation = "walk"
@@ -52,6 +53,8 @@ func _physics_process(delta):
 			move_and_slide()
 			update_distance(delta)
 			check_distance_reached()
+			if !$stompFX.playing:
+				$stompFX.play()
 		ATTACK:
 			anim.animation = "attack"
 			velocity.x = 0
@@ -75,6 +78,7 @@ func check_distance_reached():
 func _on_enemy_area_area_entered(area):
 	if area.name == "Projectile":
 		if state != HURT:
+			$hurtFX.play()
 			state = HURT
 			bossHealth -= 10
 			print("bossHealth - 10 :", bossHealth)
@@ -83,6 +87,7 @@ func _on_enemy_area_area_entered(area):
 func _on_enemy_area_body_entered(body):
 	if body.name == "PlayerV2":
 		if state != HURT:
+			$attackFX.play()
 			state = ATTACK
 
 

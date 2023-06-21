@@ -1,4 +1,4 @@
-[gd_scene load_steps=227 format=3 uid="uid://bcv36d55naeh3"]
+[gd_scene load_steps=229 format=3 uid="uid://bcv36d55naeh3"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_3.gd" id="1_le3i8"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_yr4vk"]
@@ -156,6 +156,7 @@
 [ext_resource type="Texture2D" uid="uid://c3ons1uefo217" path="res://Assets/Hud/healthSpeech.png" id="153_4f8iw"]
 [ext_resource type="Texture2D" uid="uid://d2mw8aufohbmo" path="res://Assets/Hud/speech_important.png" id="155_td24o"]
 [ext_resource type="Texture2D" uid="uid://dav0g3l1qgqxh" path="res://Assets/Hud/speech_important2.png" id="156_dv4ho"]
+[ext_resource type="PackedScene" uid="uid://bn5whyv2qoxv6" path="res://Scenes/Menu/pause_menu.tscn" id="157_qiku3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5agli"]
 texture = ExtResource("1_yr4vk")
@@ -2538,6 +2539,20 @@ size = Vector2(20, 155)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5vsy"]
 size = Vector2(31, 96)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_iqhfx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("155_td24o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_dv4ho")
+}],
+"loop": true,
+"name": &"float",
+"speed": 1.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3xnrx"]
 size = Vector2(20, 147)
 
@@ -4407,6 +4422,7 @@ texture = ExtResource("89_e1x6n")
 
 [node name="Birch3" type="Sprite2D" parent="trees-background"]
 modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -1
 position = Vector2(4369, 282)
 texture = ExtResource("55_jsk2n")
 
@@ -4435,6 +4451,7 @@ texture = ExtResource("91_p67r5")
 
 [node name="119" type="Sprite2D" parent="trees-background"]
 modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -1
 position = Vector2(4407, 368)
 texture = ExtResource("21_yokem")
 
@@ -5816,7 +5833,8 @@ texture = SubResource("GradientTexture2D_1n5e0")
 
 [node name="109" type="Sprite2D" parent="trees-background"]
 modulate = Color(0.588235, 0.588235, 0.588235, 1)
-position = Vector2(4698, 366)
+z_index = -1
+position = Vector2(4695, 361)
 texture = ExtResource("68_ur3mw")
 metadata/_edit_group_ = true
 
@@ -6035,26 +6053,6 @@ sprite_frames = SubResource("SpriteFrames_wvmbx")
 autoplay = "default"
 flip_h = true
 
-[node name="AnimatedSprite2D18" type="AnimatedSprite2D" parent="smoke"]
-modulate = Color(0.34902, 0.34902, 0.34902, 1)
-light_mask = 512
-visibility_layer = 512
-z_index = -1
-position = Vector2(4481, 241)
-sprite_frames = SubResource("SpriteFrames_wvmbx")
-autoplay = "default"
-flip_h = true
-
-[node name="AnimatedSprite2D19" type="AnimatedSprite2D" parent="smoke"]
-modulate = Color(0.34902, 0.34902, 0.34902, 1)
-light_mask = 512
-visibility_layer = 512
-z_index = -1
-position = Vector2(4557, 279)
-sprite_frames = SubResource("SpriteFrames_wvmbx")
-autoplay = "default"
-flip_h = true
-
 [node name="AnimatedSprite2D20" type="AnimatedSprite2D" parent="smoke"]
 modulate = Color(0.34902, 0.34902, 0.34902, 1)
 light_mask = 512
@@ -6088,15 +6086,6 @@ light_mask = 512
 visibility_layer = 512
 z_index = -1
 position = Vector2(4516, 269)
-sprite_frames = SubResource("SpriteFrames_wvmbx")
-autoplay = "default"
-
-[node name="AnimatedSprite2D24" type="AnimatedSprite2D" parent="smoke"]
-modulate = Color(0.34902, 0.34902, 0.34902, 1)
-light_mask = 512
-visibility_layer = 512
-z_index = -1
-position = Vector2(4529, 328)
 sprite_frames = SubResource("SpriteFrames_wvmbx")
 autoplay = "default"
 
@@ -7853,25 +7842,29 @@ position = Vector2(1874, 456)
 
 [node name="goblinEnemy3" parent="Enemies" instance=ExtResource("127_4jen0")]
 position = Vector2(4843, 361)
+max_distance = 20
 
 [node name="goblinEnemy5" parent="Enemies" instance=ExtResource("127_4jen0")]
 position = Vector2(4747, 361)
+max_distance = 70
 
 [node name="goblinEnemy4" parent="Enemies" instance=ExtResource("127_4jen0")]
 position = Vector2(4656, 360)
+max_distance = 65
 
 [node name="goblinEnemy6" parent="Enemies" instance=ExtResource("127_4jen0")]
 position = Vector2(4566, 361)
+max_distance = 50
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("132_eh0sh")
-volume_db = -17.801
+volume_db = -20.0
 autoplay = true
 
 [node name="endLevelCollision" type="Node" parent="."]
 
 [node name="ProgressWizard" type="AnimatedSprite2D" parent="endLevelCollision"]
-modulate = Color(1, 1, 1, 0.352941)
+modulate = Color(1, 1, 1, 0.615686)
 z_index = -2
 position = Vector2(6447, 520)
 scale = Vector2(0.99774, 1)
@@ -7907,6 +7900,13 @@ position = Vector2(6513, 493)
 position = Vector2(13.5, 5)
 shape = SubResource("RectangleShape2D_o5vsy")
 
+[node name="progressWizardBubble" type="AnimatedSprite2D" parent="endLevelCollision"]
+position = Vector2(6439, 498)
+sprite_frames = SubResource("SpriteFrames_iqhfx")
+animation = &"float"
+autoplay = "float"
+flip_h = true
+
 [node name="startLevelCollision" type="Node" parent="."]
 
 [node name="startLevelBlock" type="StaticBody2D" parent="startLevelCollision"]
@@ -7926,7 +7926,7 @@ position = Vector2(-12.5, -17)
 shape = SubResource("RectangleShape2D_2abr3")
 
 [node name="Hutman" type="AnimatedSprite2D" parent="."]
-light_mask = 32
+z_index = -1
 texture_filter = 1
 position = Vector2(6085, 506)
 scale = Vector2(1.0625, 1.625)
@@ -8027,8 +8027,6 @@ scale = Vector2(0.833347, 0.833347)
 texture = ExtResource("149_oumj2")
 
 [node name="HealthMan" type="AnimatedSprite2D" parent="Node"]
-light_mask = 512
-visibility_layer = 512
 z_index = -1
 position = Vector2(410, 393)
 sprite_frames = SubResource("SpriteFrames_xq6f5")
@@ -8056,6 +8054,8 @@ z_index = -1
 position = Vector2(468, 371)
 scale = Vector2(0.0744681, 0.0744681)
 texture = ExtResource("153_4f8iw")
+
+[node name="pause-menu" parent="." instance=ExtResource("157_qiku3")]
 
 [connection signal="body_entered" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_exited"]

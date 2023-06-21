@@ -13,7 +13,7 @@ var is_moving_left = true
 var distance_traveled = 0
 @export var max_distance = 100 #adjust to desired distance
 
-const SPEED = 50.0
+const SPEED = 40.0
 #const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -34,6 +34,7 @@ func _physics_process(delta):
 			hurt_timer += delta
 			if hurt_timer >= hurt_duration:
 				queue_free()
+				GlobalScript.enemies_killed += 1
 		WALK:
 			anim.animation = "walk"
 			if is_moving_left:
@@ -61,7 +62,8 @@ func _on_area_2d_body_entered(body):
 	if body.name == "PlayerV2":
 		if state != HURT:
 			state = ATTACK
-			GlobalScript._on_player_hit_enemy()
+			$attackFX.play()
+			GlobalScript._on_player_hit_enemy() #For double damage
 
 
 func _on_area_2d_body_exited(body):
@@ -73,6 +75,7 @@ func _on_area_2d_body_exited(body):
 func _on_area_2d_area_entered(area):
 	if area.name == "Projectile":
 		if state != HURT:
+			$deathFX.play()
 			$enemyArea.queue_free()
 			$CollisionShape2D.queue_free()
 			state = HURT

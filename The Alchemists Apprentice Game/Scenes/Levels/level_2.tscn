@@ -1,4 +1,4 @@
-[gd_scene load_steps=284 format=3 uid="uid://bh322s2qv6os7"]
+[gd_scene load_steps=286 format=3 uid="uid://bh322s2qv6os7"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_2.gd" id="1_0tfyh"]
 [ext_resource type="Texture2D" uid="uid://eodse3yb0k68" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_82c75"]
@@ -185,6 +185,7 @@
 [ext_resource type="Resource" uid="uid://debf53dltdqgh" path="res://Dialogue/WizardProgressDialogue.dialogue" id="181_axsb7"]
 [ext_resource type="PackedScene" uid="uid://c3ojhcwkh5cfi" path="res://Characters/Enemies/wolf_enemy.tscn" id="182_f3nyg"]
 [ext_resource type="AudioStream" uid="uid://cc5qpxhdqgdfr" path="res://Assets/Sounds/Music/celebration-of-the-battle-of-nein-150734.mp3" id="183_vcrrw"]
+[ext_resource type="AudioStream" uid="uid://d3bk223gf10x" path="res://Assets/Sounds/FX/birdAmbientSound.wav" id="186_p1a2l"]
 [ext_resource type="Texture2D" uid="uid://b07dnhrjcwbc4" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/Table.png" id="187_0wsc0"]
 [ext_resource type="Texture2D" uid="uid://c8m03yeda7d53" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/Machine.png" id="188_kt6k8"]
 [ext_resource type="Texture2D" uid="uid://cyvsl8mwxx7cd" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/Smoke2.png" id="189_lqvrx"]
@@ -196,6 +197,7 @@
 [ext_resource type="Texture2D" uid="uid://c3ons1uefo217" path="res://Assets/Hud/healthSpeech.png" id="194_wmo8v"]
 [ext_resource type="PackedScene" uid="uid://bf8didhk3y5hs" path="res://Dialogue/herb_guy.tscn" id="195_326ph"]
 [ext_resource type="Resource" uid="uid://c3jxrypk4wnvv" path="res://Dialogue/Herb-Man-Dialogue.dialogue" id="196_q7xie"]
+[ext_resource type="PackedScene" uid="uid://bn5whyv2qoxv6" path="res://Scenes/Menu/pause_menu.tscn" id="198_05kyg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73kei"]
 texture = ExtResource("1_82c75")
@@ -4970,9 +4972,14 @@ max_distance = 200
 [node name="wolfEnemy9" parent="Enemies" instance=ExtResource("182_f3nyg")]
 position = Vector2(6476, 425)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="levelMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("183_vcrrw")
 volume_db = -14.991
+autoplay = true
+
+[node name="ambientLevelSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("186_p1a2l")
+volume_db = -20.0
 autoplay = true
 
 [node name="healthPoint" type="Node" parent="."]
@@ -5068,6 +5075,8 @@ sprite_frames = SubResource("SpriteFrames_55c5i")
 animation = &"float"
 autoplay = "float"
 flip_h = true
+
+[node name="pause-menu" parent="." instance=ExtResource("198_05kyg")]
 
 [connection signal="body_entered" from="waterFallzone" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="outsideDoor" to="outsideDoor" method="_on_body_entered"]

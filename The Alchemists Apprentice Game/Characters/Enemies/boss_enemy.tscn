@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ysqn7lnw8rwy"]
+[gd_scene load_steps=31 format=3 uid="uid://ysqn7lnw8rwy"]
 
 [ext_resource type="Texture2D" uid="uid://cr3hjn5lfemig" path="res://newAssets/demon/demon_attack_2/frame1 (7).png" id="1_20r6y"]
 [ext_resource type="Script" path="res://Characters/Enemies/boss_enemy.gd" id="1_f41g3"]
@@ -17,6 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://08l04g4o4821" path="res://newAssets/demon/demon_walk/frame4 (9).png" id="13_8xx3v"]
 [ext_resource type="Texture2D" uid="uid://cratf56kno361" path="res://newAssets/demon/demon_walk/frame5 (9).png" id="14_vetpq"]
 [ext_resource type="Texture2D" uid="uid://877tmbq76gap" path="res://newAssets/demon/demon_walk/frame6 (9).png" id="15_4mfax"]
+[ext_resource type="AudioStream" uid="uid://na5pger5sbt8" path="res://Assets/Sounds/FX/demonAttackSound.mp3" id="18_46vtf"]
+[ext_resource type="AudioStream" uid="uid://ckglwfifxhbjj" path="res://Assets/Sounds/FX/demonStompingSound.mp3" id="19_hgu7c"]
+[ext_resource type="AudioStream" uid="uid://banl8eb27358k" path="res://Assets/Sounds/FX/demonHurtSound.mp3" id="20_q3rel"]
+[ext_resource type="AudioStream" uid="uid://dif1sbod3d0ya" path="res://Assets/Sounds/FX/demonDeathSound.wav" id="21_e0206"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vb5o7"]
 atlas = ExtResource("10_8vuw5")
@@ -71,7 +75,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -138,10 +142,8 @@ script = ExtResource("1_f41g3")
 position = Vector2(0, -55)
 scale = Vector2(2.70833, 2.70833)
 sprite_frames = SubResource("SpriteFrames_qei3c")
-animation = &"death"
+animation = &"attack"
 autoplay = "walk"
-frame = 3
-frame_progress = 0.603416
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 72.5)
@@ -152,6 +154,22 @@ shape = SubResource("RectangleShape2D_uh36t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemyArea"]
 position = Vector2(-52.5, 4.5)
 shape = SubResource("RectangleShape2D_jjcap")
+
+[node name="attackFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_46vtf")
+
+[node name="stompFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_hgu7c")
+volume_db = -5.0
+pitch_scale = 1.43
+max_distance = 1000.0
+
+[node name="hurtFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_q3rel")
+volume_db = -10.0
+
+[node name="deathFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_e0206")
 
 [connection signal="area_entered" from="enemyArea" to="." method="_on_enemy_area_area_entered"]
 [connection signal="body_entered" from="enemyArea" to="." method="_on_enemy_area_body_entered"]
