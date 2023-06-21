@@ -17,9 +17,9 @@ script = ExtResource("1_age8a")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 602.0
+offset_left = 596.0
 offset_top = 764.0
-offset_right = 808.0
+offset_right = 802.0
 offset_bottom = 804.0
 metadata/_edit_group_ = true
 
@@ -34,7 +34,7 @@ text = "Return to Menu"
 
 [node name="MenuLogo" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(699, 239)
+position = Vector2(683, 239)
 scale = Vector2(2.01887, 1.98177)
 texture = ExtResource("1_3riq5")
 
@@ -58,16 +58,20 @@ texture_filter = 1
 position = Vector2(629, 445)
 scale = Vector2(1.73983, 1.68137)
 texture = ExtResource("5_5cyl6")
-metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="Background"]
 texture_filter = 1
-offset_left = 278.906
-offset_top = 220.114
-offset_right = 525.906
-offset_bottom = 246.114
+anchors_preset = -1
+anchor_left = 0.123
+anchor_top = 0.041
+anchor_right = 0.123
+anchor_bottom = 0.041
+offset_left = 90.5611
+offset_top = 197.037
+offset_right = 337.561
+offset_bottom = 223.037
 theme_override_fonts/font = ExtResource("2_yp3tn")
-theme_override_font_sizes/font_size = 9
+theme_override_font_sizes/font_size = 14
 text = "The Alchemists Apprentice V 1.0"
 metadata/_edit_use_anchors_ = true
 
