@@ -1,4 +1,4 @@
-[gd_scene load_steps=298 format=3 uid="uid://bh322s2qv6os7"]
+[gd_scene load_steps=300 format=3 uid="uid://bh322s2qv6os7"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_2.gd" id="1_0tfyh"]
 [ext_resource type="Texture2D" uid="uid://eodse3yb0k68" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_82c75"]
@@ -190,8 +190,9 @@
 [ext_resource type="Texture2D" uid="uid://c8m03yeda7d53" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/Machine.png" id="188_kt6k8"]
 [ext_resource type="Texture2D" uid="uid://cyvsl8mwxx7cd" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/2 Objects/Smoke2.png" id="189_lqvrx"]
 [ext_resource type="Texture2D" uid="uid://byyqr4x17w8ev" path="res://Assets/Characters/magic-assets-pack-pixel-art/3 Objects/Healing.png" id="190_jw27u"]
+[ext_resource type="Script" path="res://Characters/NPC/healthManArea2D.gd" id="191_tfmo4"]
 [ext_resource type="Texture2D" uid="uid://k01x2rsecuib" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/1 Alchemist/Alchemist_idle.png" id="191_wkhik"]
-[ext_resource type="Script" path="res://Characters/NPC/HealthMan.gd" id="192_05nc4"]
+[ext_resource type="AudioStream" uid="uid://bjx8oyg1ecjsb" path="res://Assets/Sounds/FX/healthSound.mp3" id="193_aeli0"]
 [ext_resource type="Texture2D" uid="uid://bdqbtqusm2rlj" path="res://Assets/Hud/long_speech.png" id="193_hhnuv"]
 [ext_resource type="Texture2D" uid="uid://ootdvhpty876" path="res://Assets/Characters/villagers-sprite-sheets-pixel-art/1 Old_man/Old_man_idle.png" id="194_3onry"]
 [ext_resource type="Texture2D" uid="uid://c3ons1uefo217" path="res://Assets/Hud/healthSpeech.png" id="194_wmo8v"]
@@ -200,6 +201,7 @@
 [ext_resource type="PackedScene" uid="uid://bn5whyv2qoxv6" path="res://Scenes/Menu/pause_menu.tscn" id="198_05kyg"]
 [ext_resource type="Texture2D" uid="uid://bkh4s3r6potuv" path="res://Assets/Tilsets/weather-effects-pixel-art-assets-pack/3 Water/Water1.png" id="199_65v5q"]
 [ext_resource type="Texture2D" uid="uid://decc3vg1cu7ql" path="res://Assets/Tilsets/weather-effects-pixel-art-assets-pack/3 Water/Water3.png" id="200_38wlt"]
+[ext_resource type="AudioStream" uid="uid://dvqxx6oqolno5" path="res://Assets/Sounds/FX/calm-river-ambience-loop-125071.mp3" id="202_8eys5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73kei"]
 texture = ExtResource("1_82c75")
@@ -1645,7 +1647,7 @@ region = Rect2(192, 0, 48, 48)
 atlas = ExtResource("189_lqvrx")
 region = Rect2(240, 0, 48, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_jbfv5"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_w8nw4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -1671,6 +1673,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_4fnua"]
+radius = 18.1108
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_h682m"]
 atlas = ExtResource("191_wkhik")
 region = Rect2(0, 0, 48, 48)
@@ -1687,7 +1692,7 @@ region = Rect2(96, 0, 48, 48)
 atlas = ExtResource("191_wkhik")
 region = Rect2(144, 0, 48, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_fqr8a"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_8omxr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -1706,9 +1711,6 @@ animations = [{
 "name": &"healthMan",
 "speed": 3.0
 }]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_kwfcc"]
-radius = 18.1108
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5gufx"]
 atlas = ExtResource("194_3onry")
@@ -5060,70 +5062,73 @@ autoplay = true
 
 [node name="Table" type="Sprite2D" parent="healthPoint"]
 z_index = -1
-position = Vector2(2109, 437)
+position = Vector2(2134, 436)
 texture = ExtResource("187_0wsc0")
 
 [node name="Machine" type="Sprite2D" parent="healthPoint"]
 z_index = -1
-position = Vector2(2113, 427)
+position = Vector2(2138, 426)
 scale = Vector2(0.574075, 0.574075)
 texture = ExtResource("188_kt6k8")
 
 [node name="smoke" type="AnimatedSprite2D" parent="healthPoint"]
 z_index = -1
-position = Vector2(2101, 413)
+position = Vector2(2126, 412)
 scale = Vector2(0.520833, 0.520833)
-sprite_frames = SubResource("SpriteFrames_jbfv5")
+sprite_frames = SubResource("SpriteFrames_w8nw4")
 animation = &"smonk"
 autoplay = "smonk"
 
 [node name="Flagpole2" type="Sprite2D" parent="healthPoint"]
 z_index = -1
-position = Vector2(2074.5, 413.5)
+position = Vector2(2099.5, 412.5)
 scale = Vector2(1.14583, 1.47917)
 texture = ExtResource("54_6b5ck")
 
 [node name="Pointer" type="Sprite2D" parent="healthPoint"]
 z_index = -1
-position = Vector2(2101.5, 399)
+position = Vector2(2126.5, 398)
 scale = Vector2(0.9375, 0.9375)
 texture = ExtResource("100_5ham6")
 flip_h = true
 
 [node name="Healing" type="Sprite2D" parent="healthPoint"]
 z_index = -1
-position = Vector2(2103.5, 400)
+position = Vector2(2128.5, 399)
 scale = Vector2(0.833347, 0.833347)
 texture = ExtResource("190_jw27u")
 
-[node name="HealthMan" type="AnimatedSprite2D" parent="healthPoint"]
-light_mask = 512
-visibility_layer = 512
+[node name="healthManArea2D" type="Area2D" parent="healthPoint"]
 z_index = -1
-position = Vector2(2134, 425)
-sprite_frames = SubResource("SpriteFrames_fqr8a")
+position = Vector2(2155, 425)
+script = ExtResource("191_tfmo4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="healthPoint/healthManArea2D"]
+z_index = -1
+position = Vector2(9, 6.99997)
+shape = SubResource("CircleShape2D_4fnua")
+
+[node name="HealthMan" type="AnimatedSprite2D" parent="healthPoint/healthManArea2D"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_8omxr")
 animation = &"healthMan"
 autoplay = "healthMan"
 flip_h = true
-script = ExtResource("192_05nc4")
 
-[node name="Area2D" type="Area2D" parent="healthPoint/HealthMan"]
-z_index = -1
+[node name="healthSound" type="AudioStreamPlayer2D" parent="healthPoint/healthManArea2D/HealthMan"]
+position = Vector2(11, 1)
+stream = ExtResource("193_aeli0")
+volume_db = -5.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="healthPoint/HealthMan/Area2D"]
+[node name="LongSpeech2" type="Sprite2D" parent="healthPoint"]
 z_index = -1
-position = Vector2(10, 6)
-shape = SubResource("CircleShape2D_kwfcc")
-
-[node name="LongSpeech" type="Sprite2D" parent="healthPoint"]
-z_index = -1
-position = Vector2(2193.5, 407)
+position = Vector2(2218.5, 406)
 scale = Vector2(1.57812, 1.15625)
 texture = ExtResource("193_hhnuv")
 
-[node name="HealthSpeech" type="Sprite2D" parent="healthPoint"]
+[node name="HealthSpeech2" type="Sprite2D" parent="healthPoint"]
 z_index = -1
-position = Vector2(2188, 404)
+position = Vector2(2213, 403)
 scale = Vector2(0.0744681, 0.0744681)
 texture = ExtResource("194_wmo8v")
 
@@ -5151,6 +5156,14 @@ autoplay = "float"
 flip_h = true
 
 [node name="pause-menu" parent="." instance=ExtResource("198_05kyg")]
+
+[node name="waterSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(3614, 644)
+rotation = 3.14159
+stream = ExtResource("202_8eys5")
+volume_db = -10.0
+autoplay = true
+max_distance = 900.0
 
 [node name="water" type="Node" parent="."]
 

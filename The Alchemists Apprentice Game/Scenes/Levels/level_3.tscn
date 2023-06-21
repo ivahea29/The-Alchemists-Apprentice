@@ -1,4 +1,4 @@
-[gd_scene load_steps=231 format=3 uid="uid://bcv36d55naeh3"]
+[gd_scene load_steps=232 format=3 uid="uid://bcv36d55naeh3"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_3.gd" id="1_le3i8"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_yr4vk"]
@@ -151,9 +151,10 @@
 [ext_resource type="Texture2D" uid="uid://bvnxna3n8m7xm" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/4 Animated objects/Flagpole.png" id="148_lu045"]
 [ext_resource type="Texture2D" uid="uid://byyqr4x17w8ev" path="res://Assets/Characters/magic-assets-pack-pixel-art/3 Objects/Healing.png" id="149_oumj2"]
 [ext_resource type="Texture2D" uid="uid://k01x2rsecuib" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/1 Alchemist/Alchemist_idle.png" id="150_uskr1"]
-[ext_resource type="Script" path="res://Characters/NPC/HealthMan.gd" id="151_1rjwx"]
 [ext_resource type="Texture2D" uid="uid://bdqbtqusm2rlj" path="res://Assets/Hud/long_speech.png" id="152_ap12q"]
 [ext_resource type="Texture2D" uid="uid://c3ons1uefo217" path="res://Assets/Hud/healthSpeech.png" id="153_4f8iw"]
+[ext_resource type="Script" path="res://Characters/NPC/healthManArea2D.gd" id="153_i2hfy"]
+[ext_resource type="AudioStream" uid="uid://bjx8oyg1ecjsb" path="res://Assets/Sounds/FX/healthSound.mp3" id="155_obssy"]
 [ext_resource type="Texture2D" uid="uid://d2mw8aufohbmo" path="res://Assets/Hud/speech_important.png" id="155_td24o"]
 [ext_resource type="Texture2D" uid="uid://dav0g3l1qgqxh" path="res://Assets/Hud/speech_important2.png" id="156_dv4ho"]
 [ext_resource type="PackedScene" uid="uid://bn5whyv2qoxv6" path="res://Scenes/Menu/pause_menu.tscn" id="157_qiku3"]
@@ -2689,6 +2690,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_v1ods"]
+radius = 18.1108
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_h682m"]
 atlas = ExtResource("150_uskr1")
 region = Rect2(0, 0, 48, 48)
@@ -2724,9 +2728,6 @@ animations = [{
 "name": &"healthMan",
 "speed": 3.0
 }]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_v1ods"]
-radius = 18.1108
 
 [node name="level3" type="Node2D"]
 script = ExtResource("1_le3i8")
@@ -7990,20 +7991,20 @@ position = Vector2(1677, 434)
 [node name="redGem2" parent="Gems" instance=ExtResource("142_fkgjp")]
 position = Vector2(2535, 498)
 
-[node name="Node" type="Node" parent="."]
+[node name="healthman" type="Node" parent="."]
 
-[node name="Table" type="Sprite2D" parent="Node"]
+[node name="Table" type="Sprite2D" parent="healthman"]
 z_index = -1
 position = Vector2(389, 404)
 texture = ExtResource("145_gae07")
 
-[node name="Machine" type="Sprite2D" parent="Node"]
+[node name="Machine" type="Sprite2D" parent="healthman"]
 z_index = -1
 position = Vector2(393.001, 394)
 scale = Vector2(0.574075, 0.574075)
 texture = ExtResource("146_71fsx")
 
-[node name="smoke" type="AnimatedSprite2D" parent="Node"]
+[node name="smoke" type="AnimatedSprite2D" parent="healthman"]
 z_index = -1
 position = Vector2(381, 380)
 scale = Vector2(0.520833, 0.520833)
@@ -8011,49 +8012,54 @@ sprite_frames = SubResource("SpriteFrames_4syc8")
 animation = &"smonk"
 autoplay = "smonk"
 
-[node name="Flagpole2" type="Sprite2D" parent="Node"]
+[node name="Flagpole2" type="Sprite2D" parent="healthman"]
 z_index = -1
 position = Vector2(354.5, 380.5)
 scale = Vector2(1.14583, 1.47917)
 texture = ExtResource("148_lu045")
 
-[node name="Pointer" type="Sprite2D" parent="Node"]
+[node name="Pointer" type="Sprite2D" parent="healthman"]
 z_index = -1
 position = Vector2(381.5, 366)
 scale = Vector2(0.9375, 0.9375)
 texture = ExtResource("50_21clv")
 flip_h = true
 
-[node name="Healing" type="Sprite2D" parent="Node"]
+[node name="Healing" type="Sprite2D" parent="healthman"]
 z_index = -1
 position = Vector2(383.5, 367)
 scale = Vector2(0.833347, 0.833347)
 texture = ExtResource("149_oumj2")
 
-[node name="HealthMan" type="AnimatedSprite2D" parent="Node"]
+[node name="healthManArea2D" type="Area2D" parent="healthman"]
 z_index = -1
 position = Vector2(410, 393)
-sprite_frames = SubResource("SpriteFrames_xq6f5")
-animation = &"healthMan"
-autoplay = "healthMan"
-flip_h = true
-script = ExtResource("151_1rjwx")
+script = ExtResource("153_i2hfy")
 
-[node name="Area2D" type="Area2D" parent="Node/HealthMan"]
-z_index = -1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/HealthMan/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="healthman/healthManArea2D"]
 z_index = -1
 position = Vector2(9, 6.99997)
 shape = SubResource("CircleShape2D_v1ods")
 
-[node name="LongSpeech" type="Sprite2D" parent="Node"]
+[node name="HealthMan" type="AnimatedSprite2D" parent="healthman/healthManArea2D"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_xq6f5")
+animation = &"healthMan"
+autoplay = "healthMan"
+flip_h = true
+
+[node name="healthSound" type="AudioStreamPlayer2D" parent="healthman/healthManArea2D/HealthMan"]
+position = Vector2(11, 1)
+stream = ExtResource("155_obssy")
+volume_db = -5.0
+
+[node name="LongSpeech" type="Sprite2D" parent="healthman"]
 z_index = -1
 position = Vector2(473.5, 374)
 scale = Vector2(1.57812, 1.15625)
 texture = ExtResource("152_ap12q")
 
-[node name="HealthSpeech" type="Sprite2D" parent="Node"]
+[node name="HealthSpeech" type="Sprite2D" parent="healthman"]
 z_index = -1
 position = Vector2(468, 371)
 scale = Vector2(0.0744681, 0.0744681)

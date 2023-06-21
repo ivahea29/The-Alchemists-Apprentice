@@ -10,8 +10,4 @@ func _ready():
 func _process(delta):
 	pass
 	
-func _input(event):
-	if event.is_action_pressed("interact"):
-		if GlobalScript.num_gems >= 5:
-			GlobalScript.resetPlayerHealth()
-			GlobalScript.num_gems -= 5
+
