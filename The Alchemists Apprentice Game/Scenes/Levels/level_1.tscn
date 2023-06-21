@@ -2769,13 +2769,13 @@ texture = ExtResource("11_xydag")
 [node name="HealthMan" type="AnimatedSprite2D" parent="Villagers"]
 light_mask = 512
 visibility_layer = 512
+z_index = -1
 position = Vector2(1532, 488)
 sprite_frames = SubResource("SpriteFrames_41bjv")
 animation = &"healthMan"
 autoplay = "healthMan"
 flip_h = true
 script = ExtResource("61_72gkk")
-metadata/_edit_lock_ = true
 
 [node name="HealthmanDialogueArea2D" parent="Villagers/HealthMan" instance=ExtResource("33_tv1q7")]
 dialogue_resource = ExtResource("34_u3f3d")
@@ -2787,12 +2787,12 @@ shape = SubResource("CircleShape2D_rm26m")
 [node name="villager2" type="AnimatedSprite2D" parent="Villagers"]
 light_mask = 512
 visibility_layer = 512
+z_index = -1
 position = Vector2(2067, 488)
 sprite_frames = SubResource("SpriteFrames_vewtm")
 autoplay = "default"
 frame_progress = 0.817725
 flip_h = true
-metadata/_edit_lock_ = true
 
 [node name="actionable-2" parent="Villagers/villager2" instance=ExtResource("62_r7od1")]
 dialogue_resource = ExtResource("63_74lff")
@@ -2805,12 +2805,12 @@ shape = SubResource("CapsuleShape2D_riw1y")
 [node name="villager3" type="AnimatedSprite2D" parent="Villagers"]
 light_mask = 512
 visibility_layer = 512
+z_index = -1
 position = Vector2(1813, 487)
 sprite_frames = SubResource("SpriteFrames_f23px")
 autoplay = "default"
 frame = 3
 frame_progress = 0.151377
-metadata/_edit_lock_ = true
 
 [node name="actionable-2" parent="Villagers/villager3" instance=ExtResource("62_r7od1")]
 dialogue_resource = ExtResource("63_74lff")
@@ -2823,11 +2823,11 @@ shape = SubResource("CapsuleShape2D_riw1y")
 [node name="villager4" type="AnimatedSprite2D" parent="Villagers"]
 light_mask = 512
 visibility_layer = 512
+z_index = -1
 position = Vector2(1864, 488)
 sprite_frames = SubResource("SpriteFrames_neax4")
 autoplay = "default"
 flip_h = true
-metadata/_edit_lock_ = true
 
 [node name="actionable-2" parent="Villagers/villager4" instance=ExtResource("62_r7od1")]
 dialogue_resource = ExtResource("63_74lff")
@@ -2945,7 +2945,7 @@ texture = ExtResource("5_dypyk")
 [node name="House3" type="Sprite2D" parent="Buildings-Village"]
 light_mask = 512
 visibility_layer = 512
-z_index = -1
+z_index = -2
 position = Vector2(1848, 464)
 texture = ExtResource("6_uj8cj")
 
@@ -3770,7 +3770,9 @@ frame_progress = 0.771952
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Animated-buildings"]
 light_mask = 512
 visibility_layer = 512
-position = Vector2(1826, 492)
+z_index = 1
+position = Vector2(1826, 490)
+scale = Vector2(0.6875, 0.5625)
 sprite_frames = SubResource("SpriteFrames_8ov65")
 autoplay = "default"
 frame = 5
@@ -4269,6 +4271,7 @@ shape = SubResource("RectangleShape2D_bvyrc")
 
 [node name="wolfEnemy" parent="Enemies" instance=ExtResource("139_4ocjy")]
 position = Vector2(1232, 361)
+max_distance = 150
 
 [node name="pause-menu" parent="." instance=ExtResource("145_t57dj")]
 

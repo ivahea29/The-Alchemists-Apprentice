@@ -1745,7 +1745,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_guqp1"]
@@ -5000,19 +5000,26 @@ position = Vector2(9225, 401)
 [node name="Gems" type="Node" parent="."]
 
 [node name="redGem" parent="Gems" instance=ExtResource("176_ckp48")]
-position = Vector2(389, 483)
+z_index = 1
+position = Vector2(920, 493)
 
 [node name="green_gem" parent="Gems" instance=ExtResource("177_ga0dh")]
-position = Vector2(415, 481)
+position = Vector2(1482, 429)
 
 [node name="green_gem2" parent="Gems" instance=ExtResource("177_ga0dh")]
-position = Vector2(363, 480)
+position = Vector2(398, 495)
+
+[node name="green_gem3" parent="Gems" instance=ExtResource("177_ga0dh")]
+position = Vector2(6809, 490)
 
 [node name="blue_gem" parent="Gems" instance=ExtResource("178_kd31j")]
-position = Vector2(449, 482)
+position = Vector2(2617, 488)
+
+[node name="blue_gem2" parent="Gems" instance=ExtResource("178_kd31j")]
+position = Vector2(5408, 492)
 
 [node name="redGem2" parent="Gems" instance=ExtResource("176_ckp48")]
-position = Vector2(486, 486)
+position = Vector2(4186, 588)
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -5133,10 +5140,12 @@ scale = Vector2(0.0744681, 0.0744681)
 texture = ExtResource("194_wmo8v")
 
 [node name="Herb-Man" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(3065, 583)
 scale = Vector2(1.02083, 1.04167)
 sprite_frames = SubResource("SpriteFrames_miftv")
 autoplay = "default"
+frame_progress = 0.797731
 flip_h = true
 
 [node name="HerbGuy" parent="Herb-Man" instance=ExtResource("195_326ph")]
@@ -5149,6 +5158,7 @@ position = Vector2(10.7754, 8.64008)
 shape = SubResource("CircleShape2D_guqp1")
 
 [node name="speech_important3" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(3066, 570)
 sprite_frames = SubResource("SpriteFrames_55c5i")
 animation = &"float"
