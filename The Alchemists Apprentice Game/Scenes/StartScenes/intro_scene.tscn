@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://deojfnwuudteb"]
+
+[ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="1_r7eyn"]
+[ext_resource type="Script" path="res://Scenes/StartScenes/intro_scene.gd" id="1_t2xw2"]
+
+[node name="intro_scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t2xw2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1386.0
+offset_bottom = 868.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 296.0
+offset_right = 1184.0
+offset_bottom = 566.0
+theme_override_fonts/font = ExtResource("1_r7eyn")
+theme_override_font_sizes/font_size = 50
+text = "Dorian awakens to the sound of a struggle echoing from the alchemist's tower.
+
+He rushes outside to check the source of the commotion..."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

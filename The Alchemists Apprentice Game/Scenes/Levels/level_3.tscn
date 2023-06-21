@@ -1,4 +1,4 @@
-[gd_scene load_steps=229 format=3 uid="uid://bcv36d55naeh3"]
+[gd_scene load_steps=231 format=3 uid="uid://bcv36d55naeh3"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_3.gd" id="1_le3i8"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_yr4vk"]
@@ -157,6 +157,8 @@
 [ext_resource type="Texture2D" uid="uid://d2mw8aufohbmo" path="res://Assets/Hud/speech_important.png" id="155_td24o"]
 [ext_resource type="Texture2D" uid="uid://dav0g3l1qgqxh" path="res://Assets/Hud/speech_important2.png" id="156_dv4ho"]
 [ext_resource type="PackedScene" uid="uid://bn5whyv2qoxv6" path="res://Scenes/Menu/pause_menu.tscn" id="157_qiku3"]
+[ext_resource type="AudioStream" uid="uid://iinvlypgal75" path="res://Assets/Sounds/FX/fire-burning-loop-6135.mp3" id="158_f83di"]
+[ext_resource type="AudioStream" uid="uid://bn4cvftfxsks8" path="res://Assets/Sounds/Mysterious-Forest-Sounds-Fantasy-Nature-Ambience_e1_DQB2BD-E_00_02_00_00_12_00_part.mp3" id="159_qgkl2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5agli"]
 texture = ExtResource("1_yr4vk")
@@ -2735,27 +2737,27 @@ script = ExtResource("1_le3i8")
 texture_repeat = 2
 position = Vector2(400, 224)
 motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(976, 0)
+motion_mirroring = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(0.309804, 0.309804, 0.309804, 1)
 texture_repeat = 3
-position = Vector2(86.6, -52.6)
-scale = Vector2(1.7, 1.7)
+position = Vector2(176, -96.6)
+scale = Vector2(2, 1.9716)
 texture = ExtResource("2_skntm")
 
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(0.309804, 0.309804, 0.309804, 1)
 texture_repeat = 2
-position = Vector2(86.6, -52.6)
-scale = Vector2(1.7, 1.7)
+position = Vector2(176, -96.6)
+scale = Vector2(2, 1.9716)
 texture = ExtResource("3_jo85e")
 
 [node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(0.309804, 0.309804, 0.309804, 1)
 texture_repeat = 2
-position = Vector2(86.6, -52.6)
-scale = Vector2(1.7, 1.7)
+position = Vector2(176, -96.6)
+scale = Vector2(2, 1.9716)
 texture = ExtResource("4_skddh")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -3235,7 +3237,7 @@ texture = ExtResource("3_45qt5")
 [node name="dirtTile63" type="Sprite2D" parent="BackgroundTiles"]
 z_index = -5
 texture_filter = 1
-position = Vector2(2416, 497)
+position = Vector2(2416, 496)
 texture = ExtResource("3_45qt5")
 
 [node name="dirtTile64" type="Sprite2D" parent="BackgroundTiles"]
@@ -8058,6 +8060,18 @@ scale = Vector2(0.0744681, 0.0744681)
 texture = ExtResource("153_4f8iw")
 
 [node name="pause-menu" parent="." instance=ExtResource("157_qiku3")]
+
+[node name="fireSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(4621, 346)
+stream = ExtResource("158_f83di")
+volume_db = -15.0
+autoplay = true
+max_distance = 300.0
+
+[node name="ambientSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("159_qgkl2")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="body_entered" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="caveInsideDoor" to="caveInsideDoor" method="_on_body_exited"]

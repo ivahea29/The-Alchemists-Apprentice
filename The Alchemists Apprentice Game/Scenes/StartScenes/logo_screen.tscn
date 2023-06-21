@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx5kh3q3borh1"]
+
+[ext_resource type="Script" path="res://Scenes/StartScenes/logo_screen.gd" id="1_igptj"]
+[ext_resource type="Texture2D" uid="uid://bpfey66bhe2qx" path="res://Assets/Hud/LOGO.png" id="1_v85g6"]
+
+[node name="LogoScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_igptj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1381.0
+offset_bottom = 864.0
+color = Color(0, 0, 0, 1)
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(703, 424)
+texture = ExtResource("1_v85g6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

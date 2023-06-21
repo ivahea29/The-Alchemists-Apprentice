@@ -1,4 +1,4 @@
-[gd_scene load_steps=255 format=3 uid="uid://d0knbsqqp346r"]
+[gd_scene load_steps=256 format=3 uid="uid://d0knbsqqp346r"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_0xk1k"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_b5oed"]
@@ -145,6 +145,7 @@
 [ext_resource type="PackedScene" uid="uid://c7wqpgwsuqclf" path="res://Scenes/Items/blue_gem.tscn" id="133_demux"]
 [ext_resource type="PackedScene" uid="uid://c3ojhcwkh5cfi" path="res://Characters/Enemies/wolf_enemy.tscn" id="139_4ocjy"]
 [ext_resource type="PackedScene" uid="uid://bn5whyv2qoxv6" path="res://Scenes/Menu/pause_menu.tscn" id="145_t57dj"]
+[ext_resource type="AudioStream" uid="uid://d3bk223gf10x" path="res://Assets/Sounds/FX/birdAmbientSound.wav" id="146_gglpx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t5fgi"]
 texture = ExtResource("1_b5oed")
@@ -4270,6 +4271,11 @@ shape = SubResource("RectangleShape2D_bvyrc")
 position = Vector2(1232, 361)
 
 [node name="pause-menu" parent="." instance=ExtResource("145_t57dj")]
+
+[node name="ambientSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("146_gglpx")
+volume_db = -30.0
+autoplay = true
 
 [connection signal="body_entered" from="outsideDoor" to="outsideDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="outsideDoor" to="outsideDoor" method="_on_body_exited"]
