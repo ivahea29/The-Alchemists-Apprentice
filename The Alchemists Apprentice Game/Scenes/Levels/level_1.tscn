@@ -3336,7 +3336,7 @@ modulate = Color(0.647059, 0.647059, 0.647059, 1)
 light_mask = 512
 visibility_layer = 512
 z_index = -4
-position = Vector2(2471, 377)
+position = Vector2(2470, 377)
 texture = ExtResource("6_03o0w")
 
 [node name="Birch1" type="Sprite2D" parent="Buildings-Village"]
