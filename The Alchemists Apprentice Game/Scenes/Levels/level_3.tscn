@@ -4477,6 +4477,7 @@ texture = ExtResource("83_07mkf")
 
 [node name="JungleTree21" type="Sprite2D" parent="trees-background"]
 modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -1
 position = Vector2(4229, 304)
 texture = ExtResource("51_twafr")
 
@@ -4487,6 +4488,7 @@ texture = ExtResource("92_k7clv")
 
 [node name="JungleTree23" type="Sprite2D" parent="trees-background"]
 modulate = Color(0.588235, 0.588235, 0.588235, 1)
+z_index = -1
 position = Vector2(4083, 413)
 texture = ExtResource("10_dvstq")
 

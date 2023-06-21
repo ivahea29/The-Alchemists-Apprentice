@@ -1,15 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://bmocga3gd5h41"]
+[gd_scene load_steps=12 format=3 uid="uid://bmocga3gd5h41"]
 
 [ext_resource type="Texture2D" uid="uid://bqnyqt4rphhhs" path="res://Assets/Hud/5 Logo/Logo.png" id="1_xf7lc"]
 [ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="2_r0505"]
-[ext_resource type="Texture2D" uid="uid://ft8fe5rjqgbh" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/2 Background/desktop-wallpaper-firewatch-games-artist-digital-art-k-firewatch-digital-mountain-art.jpg" id="3_g2wuq"]
 [ext_resource type="Script" path="res://Scenes/Menu/ReturnToHome.gd" id="4_0w5yp"]
 [ext_resource type="Texture2D" uid="uid://chc7mx4jcfv1j" path="res://Assets/Hud/3 Icons/Icons_15.png" id="5_a0efx"]
-[ext_resource type="FontFile" uid="uid://c0ldfqt1w81w3" path="res://Assets/Hud/Font/Planes_ValMore.ttf" id="5_r2svk"]
 [ext_resource type="Texture2D" uid="uid://bqn6w08iefyol" path="res://Assets/Hud/3 Icons/Icons_14.png" id="6_0d007"]
 [ext_resource type="Texture2D" uid="uid://o57564g4s74" path="res://Assets/Hud/3 Icons/Icons_22.png" id="7_yk45k"]
 [ext_resource type="Texture2D" uid="uid://cbquu3vrj2f85" path="res://Assets/Hud/3 Icons/Icons_19.png" id="8_tfngs"]
 [ext_resource type="Texture2D" uid="uid://hdfufvsgn28r" path="res://Assets/Hud/3 Icons/Icons_38.png" id="9_e7k5d"]
+[ext_resource type="Texture2D" uid="uid://cccdcxf0dgw75" path="res://Assets/menuBackground.png" id="10_a6sqn"]
 [ext_resource type="AudioStream" uid="uid://22c2ywmnjkfp" path="res://Assets/Now-We-Ride.mp3" id="11_7koyn"]
 
 [sub_resource type="FontVariation" id="FontVariation_nkyr3"]
@@ -42,26 +41,6 @@ theme_override_font_sizes/font_size = 21
 text = "How To Play"
 metadata/_edit_use_anchors_ = true
 
-[node name="Background" type="Sprite2D" parent="."]
-z_index = -2
-texture_filter = 1
-position = Vector2(317.999, 250.75)
-scale = Vector2(2.49647, 2.57636)
-texture = ExtResource("3_g2wuq")
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="Label" type="Label" parent="Background"]
-texture_filter = 1
-offset_left = 278.906
-offset_top = 220.114
-offset_right = 525.906
-offset_bottom = 246.114
-theme_override_fonts/font = ExtResource("2_r0505")
-theme_override_font_sizes/font_size = 9
-text = "The Alchemists Apprentice V 1.0"
-metadata/_edit_use_anchors_ = true
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 594.0
@@ -76,130 +55,84 @@ size_flags_vertical = 8
 text = "Return to Menu"
 script = ExtResource("4_0w5yp")
 
-[node name="Back" type="Button" parent="."]
-layout_mode = 2
-offset_left = 908.0
-offset_top = 801.0
-offset_right = 1038.0
-offset_bottom = 832.0
-theme_override_fonts/font = ExtResource("5_r2svk")
-text = "Back"
-
 [node name="Node" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Node"]
-offset_left = 369.0
-offset_top = 442.0
-offset_right = 501.0
-offset_bottom = 481.0
+offset_left = 591.0
+offset_top = 424.0
+offset_right = 723.0
+offset_bottom = 463.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Controls"
 
-[node name="Label5" type="Label" parent="Node"]
-offset_left = 1145.0
-offset_top = 442.0
-offset_right = 1277.0
-offset_bottom = 481.0
-theme_override_fonts/font = ExtResource("2_r0505")
-theme_override_font_sizes/font_size = 35
-text = "Collect"
-
-[node name="Label8" type="Label" parent="Node"]
-offset_left = 1241.0
-offset_top = 522.0
-offset_right = 1373.0
-offset_bottom = 561.0
-theme_override_fonts/font = ExtResource("2_r0505")
-theme_override_font_sizes/font_size = 35
-text = "Recipies
-"
-
-[node name="Label9" type="Label" parent="Node"]
-offset_left = 1241.0
-offset_top = 602.0
-offset_right = 1373.0
-offset_bottom = 641.0
-theme_override_fonts/font = ExtResource("2_r0505")
-theme_override_font_sizes/font_size = 35
-text = "Potions"
-
-[node name="Label10" type="Label" parent="Node"]
-offset_left = 1241.0
-offset_top = 682.0
-offset_right = 1373.0
-offset_bottom = 721.0
-theme_override_fonts/font = ExtResource("2_r0505")
-theme_override_font_sizes/font_size = 35
-text = "Gems"
-
 [node name="Label2" type="Label" parent="Node"]
-offset_left = 112.0
-offset_top = 523.0
-offset_right = 454.0
-offset_bottom = 562.0
+offset_left = 269.0
+offset_top = 511.0
+offset_right = 611.0
+offset_bottom = 550.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Left - Left Arrow Key"
 
 [node name="Label3" type="Label" parent="Node"]
-offset_left = 112.0
-offset_top = 603.0
-offset_right = 498.0
-offset_bottom = 642.0
+offset_left = 269.0
+offset_top = 591.0
+offset_right = 655.0
+offset_bottom = 630.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Right - Right Arrow Key"
 
 [node name="Label4" type="Label" parent="Node"]
-offset_left = 112.0
-offset_top = 683.0
-offset_right = 460.0
-offset_bottom = 722.0
+offset_left = 269.0
+offset_top = 671.0
+offset_right = 617.0
+offset_bottom = 710.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Jump - Up Arrow Key"
 
 [node name="Label6" type="Label" parent="Node"]
-offset_left = 616.0
-offset_top = 523.0
-offset_right = 919.0
-offset_bottom = 562.0
+offset_left = 947.0
+offset_top = 509.0
+offset_right = 1250.0
+offset_bottom = 548.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Attack - Space Bar"
 
 [node name="Label7" type="Label" parent="Node"]
-offset_left = 616.0
-offset_top = 603.0
-offset_right = 870.0
-offset_bottom = 642.0
+offset_left = 947.0
+offset_top = 589.0
+offset_right = 1201.0
+offset_bottom = 628.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Interact - F Key"
 
 [node name="Sprite2D" type="Sprite2D" parent="Node"]
-position = Vector2(56, 619)
+position = Vector2(213, 607)
 scale = Vector2(3.91667, 2.08333)
 texture = ExtResource("5_a0efx")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Node"]
-position = Vector2(56, 539)
+position = Vector2(213, 527)
 scale = Vector2(3.91667, 2.08333)
 texture = ExtResource("6_0d007")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Node"]
-position = Vector2(56, 699)
+position = Vector2(213, 687)
 scale = Vector2(3.91667, 2.08333)
 texture = ExtResource("7_yk45k")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Node"]
-position = Vector2(552, 539)
+position = Vector2(883, 525)
 scale = Vector2(3.91667, 2.08333)
 texture = ExtResource("8_tfngs")
 
 [node name="Sprite2D5" type="Sprite2D" parent="Node"]
-position = Vector2(552, 619)
+position = Vector2(883, 605)
 scale = Vector2(3.91667, 2.08333)
 texture = ExtResource("9_e7k5d")
 
@@ -207,5 +140,24 @@ texture = ExtResource("9_e7k5d")
 stream = ExtResource("11_7koyn")
 autoplay = true
 
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.772549, 0.772549, 0.772549, 1)
+z_index = -2
+texture_filter = 1
+position = Vector2(629, 445)
+scale = Vector2(1.73983, 1.68137)
+texture = ExtResource("10_a6sqn")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Background"]
+texture_filter = 1
+offset_left = 278.906
+offset_top = 220.114
+offset_right = 525.906
+offset_bottom = 246.114
+theme_override_fonts/font = ExtResource("2_r0505")
+theme_override_font_sizes/font_size = 9
+text = "The Alchemists Apprentice V 1.0"
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="VBoxContainer/ReturnToHome" to="VBoxContainer/ReturnToHome" method="_on_pressed"]
-[connection signal="pressed" from="Back" to="VBoxContainer/ReturnToHome" method="_on_back_pressed"]

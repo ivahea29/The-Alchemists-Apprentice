@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bqnyqt4rphhhs" path="res://Assets/Hud/5 Logo/Logo.png" id="1_3riq5"]
 [ext_resource type="Script" path="res://Scenes/Menu/about_menu.gd" id="1_age8a"]
 [ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="2_yp3tn"]
-[ext_resource type="Texture2D" uid="uid://ft8fe5rjqgbh" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/2 Background/desktop-wallpaper-firewatch-games-artist-digital-art-k-firewatch-digital-mountain-art.jpg" id="3_rn16x"]
+[ext_resource type="Texture2D" uid="uid://cccdcxf0dgw75" path="res://Assets/menuBackground.png" id="5_5cyl6"]
 [ext_resource type="AudioStream" uid="uid://22c2ywmnjkfp" path="res://Assets/Now-We-Ride.mp3" id="5_gpmnw"]
 
 [node name="About_Menu" type="Control"]
@@ -47,14 +47,18 @@ theme_override_fonts/font = ExtResource("2_yp3tn")
 theme_override_font_sizes/font_size = 30
 text = "Authors"
 
+[node name="AudioBackground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_gpmnw")
+autoplay = true
+
 [node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.772549, 0.772549, 0.772549, 1)
 z_index = -2
 texture_filter = 1
-position = Vector2(340, 225)
-scale = Vector2(2.44588, 2.65272)
-texture = ExtResource("3_rn16x")
+position = Vector2(629, 445)
+scale = Vector2(1.73983, 1.68137)
+texture = ExtResource("5_5cyl6")
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="Background"]
 texture_filter = 1
@@ -65,9 +69,6 @@ offset_bottom = 246.114
 theme_override_fonts/font = ExtResource("2_yp3tn")
 theme_override_font_sizes/font_size = 9
 text = "The Alchemists Apprentice V 1.0"
-
-[node name="AudioBackground" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_gpmnw")
-autoplay = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Return_to_menu" to="." method="_on_return_to_menu_pressed"]

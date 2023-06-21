@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Menu/main_menu.gd" id="1_r0e7b"]
 [ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="2_clxkv"]
 [ext_resource type="Texture2D" uid="uid://bqnyqt4rphhhs" path="res://Assets/Hud/5 Logo/Logo.png" id="2_d0vfk"]
-[ext_resource type="Texture2D" uid="uid://ft8fe5rjqgbh" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/2 Background/desktop-wallpaper-firewatch-games-artist-digital-art-k-firewatch-digital-mountain-art.jpg" id="3_3erlk"]
+[ext_resource type="Texture2D" uid="uid://cccdcxf0dgw75" path="res://Assets/menuBackground.png" id="5_fwe4f"]
 [ext_resource type="AudioStream" uid="uid://22c2ywmnjkfp" path="res://Assets/Now-We-Ride.mp3" id="5_vjqnd"]
 
 [sub_resource type="FontVariation" id="FontVariation_0lbir"]
@@ -76,12 +76,17 @@ theme_override_fonts/font = SubResource("FontVariation_0lbir")
 theme_override_font_sizes/font_size = 21
 text = "The Alchemists Apprentice"
 
+[node name="AudioBackground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_vjqnd")
+autoplay = true
+
 [node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.772549, 0.772549, 0.772549, 1)
 z_index = -2
 texture_filter = 1
-position = Vector2(129, 191)
-scale = Vector2(2.94618, 2.81851)
-texture = ExtResource("3_3erlk")
+position = Vector2(629, 445)
+scale = Vector2(1.73983, 1.68137)
+texture = ExtResource("5_fwe4f")
 metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="Background"]
@@ -93,10 +98,7 @@ offset_bottom = 246.114
 theme_override_fonts/font = ExtResource("2_clxkv")
 theme_override_font_sizes/font_size = 9
 text = "The Alchemists Apprentice V 1.0"
-
-[node name="AudioBackground" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_vjqnd")
-autoplay = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/About the Game" to="." method="_on_how_to_play_pressed"]
