@@ -61,6 +61,7 @@ func check_distance_reached():
 func _on_area_2d_body_entered(body):
 	if body.name == "PlayerV2":
 		if state != HURT:
+			$barkFX.play()
 			state = ATTACK
 	
 
@@ -73,6 +74,9 @@ func _on_area_2d_body_exited(body):
 func _on_area_2d_area_entered(area):
 	if area.name == "Projectile":
 		if state != HURT:
+			$hurtFX.play()
 			$enemyArea.queue_free()
 			$CollisionShape2D.queue_free()
+			$Timer.wait_time = $hurtFX.stream.get_length()
+			$Timer.start()
 			state = HURT

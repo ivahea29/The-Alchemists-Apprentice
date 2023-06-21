@@ -1,9 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://c3ojhcwkh5cfi"]
+[gd_scene load_steps=22 format=3 uid="uid://c3ojhcwkh5cfi"]
 
 [ext_resource type="Texture2D" uid="uid://btl5mei6kupr3" path="res://newAssets/wolf/Wolf_walk.png" id="1_57m78"]
 [ext_resource type="Script" path="res://Characters/Enemies/wolf_enemy.gd" id="1_jv5cr"]
 [ext_resource type="Texture2D" uid="uid://de3lfnvko4wg8" path="res://newAssets/wolf/Wolf_attack.png" id="2_3fksd"]
 [ext_resource type="Texture2D" uid="uid://baiow3dmnb20p" path="res://newAssets/wolf/Wolf_hurt.png" id="3_cpg1k"]
+[ext_resource type="AudioStream" uid="uid://cot727mhpbbhh" path="res://Assets/Sounds/FX/dogBarkSound.mp3" id="5_dafpo"]
+[ext_resource type="AudioStream" uid="uid://c7iepcofff3j4" path="res://Assets/Sounds/FX/dogHurtSound.mp3" id="6_craj6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gkrpw"]
 atlas = ExtResource("2_3fksd")
@@ -132,6 +134,14 @@ shape = SubResource("RectangleShape2D_kotmm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemyArea"]
 position = Vector2(-3, 4.5)
 shape = SubResource("RectangleShape2D_hgeox")
+
+[node name="barkFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dafpo")
+
+[node name="hurtFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_craj6")
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="area_entered" from="enemyArea" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="enemyArea" to="." method="_on_area_2d_body_entered"]

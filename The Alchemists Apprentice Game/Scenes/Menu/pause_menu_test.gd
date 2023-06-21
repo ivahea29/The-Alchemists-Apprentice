@@ -3,12 +3,15 @@ extends CanvasLayer
 @onready var pausemenucontrol = $pausemenucontrol
 
 func _ready():
-	pass 
+	pausemenucontrol.visible = false
+	
 func _process(delta):
-
+	
 	if Input.is_action_just_pressed("ui_cancel"):
-		pausemenucontrol.visible = true
-		get_tree().paused = true
+		if(pausemenucontrol.visible == false):
+			pausemenucontrol.visible = true
+		elif(pausemenucontrol.visible == true):
+			pausemenucontrol.visible = false
 
 func _on_resumebtn_pressed():
 	pausemenucontrol.visible = false
