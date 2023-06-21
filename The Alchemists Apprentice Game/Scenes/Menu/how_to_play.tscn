@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3oquurb7fxhh"]
+[gd_scene load_steps=12 format=3 uid="uid://d3oquurb7fxhh"]
 
 [ext_resource type="Script" path="res://Scenes/Menu/how_to_play.gd" id="1_83lak"]
 [ext_resource type="Texture2D" uid="uid://bqnyqt4rphhhs" path="res://Assets/Hud/5 Logo/Logo.png" id="2_o5ime"]
 [ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="3_u6m0u"]
 [ext_resource type="Texture2D" uid="uid://cccdcxf0dgw75" path="res://Assets/menuBackground.png" id="4_ulmx7"]
 [ext_resource type="AudioStream" uid="uid://22c2ywmnjkfp" path="res://Assets/Now-We-Ride.mp3" id="5_k277e"]
+[ext_resource type="Texture2D" uid="uid://kw4vxa5ebik8" path="res://Assets/Hud/2 Bars/gem_emerald.png" id="6_4kryl"]
+[ext_resource type="Texture2D" uid="uid://dhkle314xl01o" path="res://Assets/Hud/2 Bars/gem_ruby.png" id="7_44yoa"]
+[ext_resource type="Texture2D" uid="uid://bwd0pdoipjony" path="res://Assets/Hud/2 Bars/gem_sapphire.png" id="8_jgq6w"]
+[ext_resource type="Texture2D" uid="uid://ca2hw1b00aqgf" path="res://Assets/Hud/2 Bars/scroll-removebg-preview 3.png" id="9_nt25o"]
+[ext_resource type="FontFile" uid="uid://c0ldfqt1w81w3" path="res://Assets/Hud/Font/Planes_ValMore.ttf" id="9_svmgn"]
 
 [sub_resource type="FontVariation" id="FontVariation_ieiwx"]
 base_font = ExtResource("3_u6m0u")
@@ -41,17 +46,19 @@ texture_filter = 1
 position = Vector2(678, 226)
 scale = Vector2(2.01887, 1.98177)
 texture = ExtResource("2_o5ime")
-metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="MenuLogo"]
+[node name="Label" type="Label" parent="."]
 texture_filter = 1
-offset_left = -73.8037
-offset_top = 19.6794
-offset_right = 203.196
-offset_bottom = 70.6794
+layout_mode = 1
+anchors_preset = -1
+offset_left = 573.0
+offset_top = 263.0
+offset_right = 804.0
+offset_bottom = 317.0
 theme_override_fonts/font = SubResource("FontVariation_ieiwx")
-theme_override_font_sizes/font_size = 21
-text = "The Story so far"
+theme_override_font_sizes/font_size = 50
+text = "Objectives"
 metadata/_edit_use_anchors_ = true
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -62,6 +69,7 @@ position = Vector2(629, 445)
 scale = Vector2(1.73983, 1.68137)
 texture = ExtResource("4_ulmx7")
 metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="Background"]
 texture_filter = 1
@@ -79,5 +87,56 @@ metadata/_edit_use_anchors_ = true
 [node name="AudioBackground" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_k277e")
 autoplay = true
+
+[node name="Gems" type="Node" parent="."]
+
+[node name="GemEmerald" type="Sprite2D" parent="Gems"]
+position = Vector2(334.442, 682.75)
+scale = Vector2(0.310078, 0.310078)
+texture = ExtResource("6_4kryl")
+metadata/_edit_group_ = true
+
+[node name="GemRuby" type="Sprite2D" parent="Gems"]
+position = Vector2(402.442, 687.75)
+scale = Vector2(0.378763, 0.378763)
+texture = ExtResource("7_44yoa")
+metadata/_edit_group_ = true
+
+[node name="GemSapphire" type="Sprite2D" parent="Gems"]
+position = Vector2(366.442, 634.75)
+scale = Vector2(0.269716, 0.269716)
+texture = ExtResource("8_jgq6w")
+metadata/_edit_group_ = true
+
+[node name="Label4" type="Label" parent="Gems"]
+offset_left = 491.442
+offset_top = 622.0
+offset_right = 1089.44
+offset_bottom = 730.0
+theme_override_fonts/font = ExtResource("9_svmgn")
+theme_override_font_sizes/font_size = 28
+text = "Each level has a different amount, 
+its wise to collect these as they are used 
+to purchase more health"
+metadata/_edit_use_anchors_ = true
+
+[node name="Scrolls" type="Node" parent="."]
+
+[node name="Scroll-removebg-preview3" type="Sprite2D" parent="Scrolls"]
+position = Vector2(366.442, 509)
+scale = Vector2(0.372093, 0.372093)
+texture = ExtResource("9_nt25o")
+
+[node name="Label3" type="Label" parent="Scrolls"]
+offset_left = 490.442
+offset_top = 452.0
+offset_right = 1099.44
+offset_bottom = 560.0
+theme_override_fonts/font = ExtResource("9_svmgn")
+theme_override_font_sizes/font_size = 28
+text = "One scroll per level will be needed to pass 
+on to the next area. You must find them 
+or you will not progress"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Return_to_menu" to="." method="_on_return_to_menu_pressed"]

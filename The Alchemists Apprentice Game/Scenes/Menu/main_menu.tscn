@@ -39,7 +39,8 @@ text = "Play"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_clxkv")
 theme_override_font_sizes/font_size = 30
-text = "About the Game"
+text = "Objectives
+"
 
 [node name="Controls" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
