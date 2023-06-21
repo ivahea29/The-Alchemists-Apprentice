@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=3 uid="uid://dv77xytbuoj3d"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/about_menu.gd" id="1_fq0e4"]
+[ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="2_3j3ot"]
+[ext_resource type="Texture2D" uid="uid://bqnyqt4rphhhs" path="res://Assets/Hud/5 Logo/Logo.png" id="3_h6e7a"]
+[ext_resource type="AudioStream" uid="uid://22c2ywmnjkfp" path="res://Assets/Now-We-Ride.mp3" id="4_bpbce"]
+[ext_resource type="Texture2D" uid="uid://cccdcxf0dgw75" path="res://Assets/menuBackground.png" id="5_ass4r"]
+
+[node name="Authors" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fq0e4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 764.0
+offset_right = 802.0
+offset_bottom = 804.0
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Return_to_menu" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3j3ot")
+theme_override_font_sizes/font_size = 30
+text = "Return to Menu"
+
+[node name="MenuLogo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(683, 239)
+scale = Vector2(2.01887, 1.98177)
+texture = ExtResource("3_h6e7a")
+
+[node name="Label" type="Label" parent="MenuLogo"]
+offset_left = -46.5608
+offset_top = 14.6334
+offset_right = 58.4392
+offset_bottom = 48.6334
+theme_override_fonts/font = ExtResource("2_3j3ot")
+theme_override_font_sizes/font_size = 30
+text = "Authors"
+
+[node name="AudioBackground" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bpbce")
+autoplay = true
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.772549, 0.772549, 0.772549, 1)
+z_index = -2
+texture_filter = 1
+position = Vector2(629, 445)
+scale = Vector2(1.73983, 1.68137)
+texture = ExtResource("5_ass4r")
+
+[node name="Label" type="Label" parent="Background"]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.123
+anchor_top = 0.041
+anchor_right = 0.123
+anchor_bottom = 0.041
+offset_left = 90.5611
+offset_top = 197.037
+offset_right = 337.561
+offset_bottom = 223.037
+theme_override_fonts/font = ExtResource("2_3j3ot")
+theme_override_font_sizes/font_size = 14
+text = "The Alchemists Apprentice V 1.0"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 424.0
+offset_right = 1345.0
+offset_bottom = 680.0
+theme_override_fonts/font = ExtResource("2_3j3ot")
+theme_override_font_sizes/font_size = 21
+text = "																					Produced by
+
+														Ivan Heaslip								    Georgia Robinson-Kearns
+																					@RHStudio
+
+																     Assets and Sprites Designed by 
+																					  CraftPix
+
+																	Created in Godot 4.0 Game Engine"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Return_to_menu" to="." method="_on_return_to_menu_pressed"]
