@@ -1,4 +1,4 @@
-[gd_scene load_steps=223 format=3 uid="uid://bcv36d55naeh3"]
+[gd_scene load_steps=227 format=3 uid="uid://bcv36d55naeh3"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_3.gd" id="1_le3i8"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_yr4vk"]
@@ -132,6 +132,7 @@
 [ext_resource type="PackedScene" uid="uid://cfkn4o2namku" path="res://Dialogue/wizard_progress_que.tscn" id="125_7rrjg"]
 [ext_resource type="Resource" uid="uid://debf53dltdqgh" path="res://Dialogue/WizardProgressDialogue.dialogue" id="126_14pmw"]
 [ext_resource type="PackedScene" uid="uid://q17hscy5nvcb" path="res://Characters/Enemies/goblin_enemy.tscn" id="127_4jen0"]
+[ext_resource type="AudioStream" uid="uid://bhxfxlhilttnj" path="res://Assets/let-the-mystery-unfold-122118.mp3" id="132_eh0sh"]
 [ext_resource type="Texture2D" uid="uid://dva6ueyc80ooo" path="res://Assets/Characters/underground-mine-character-spritesheets-pixel-art/6 Toadman_voodoo/voodoo_idle.png" id="133_687h6"]
 [ext_resource type="Texture2D" uid="uid://dwio1t6jraqxh" path="res://Assets/Characters/villagers-sprite-sheets-pixel-art/3 Man/Man_death.png" id="134_uawyf"]
 [ext_resource type="Texture2D" uid="uid://cl0pdwfggawla" path="res://Assets/Tilsets/house-builder-tileset-pixel-art/3 Animated objects/Fire.png" id="135_pbdql"]
@@ -153,6 +154,8 @@
 [ext_resource type="Script" path="res://Characters/NPC/HealthMan.gd" id="151_1rjwx"]
 [ext_resource type="Texture2D" uid="uid://bdqbtqusm2rlj" path="res://Assets/Hud/long_speech.png" id="152_ap12q"]
 [ext_resource type="Texture2D" uid="uid://c3ons1uefo217" path="res://Assets/Hud/healthSpeech.png" id="153_4f8iw"]
+[ext_resource type="Texture2D" uid="uid://d2mw8aufohbmo" path="res://Assets/Hud/speech_important.png" id="155_td24o"]
+[ext_resource type="Texture2D" uid="uid://dav0g3l1qgqxh" path="res://Assets/Hud/speech_important2.png" id="156_dv4ho"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5agli"]
 texture = ExtResource("1_yr4vk")
@@ -1023,15 +1026,6 @@ texture = ExtResource("1_yr4vk")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5agli")
 
-[sub_resource type="Gradient" id="Gradient_atsi7"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_1n5e0"]
-gradient = SubResource("Gradient_atsi7")
-fill = 1
-fill_from = Vector2(0.495413, 0.522936)
-fill_to = Vector2(0.880734, 0.169725)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_e75mt"]
 atlas = ExtResource("134_uawyf")
 region = Rect2(144, 0, 48, 48)
@@ -1095,6 +1089,29 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_atsi7"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1n5e0"]
+gradient = SubResource("Gradient_atsi7")
+fill = 1
+fill_from = Vector2(0.495413, 0.522936)
+fill_to = Vector2(0.880734, 0.169725)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ibxkg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("155_td24o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_dv4ho")
+}],
+"loop": true,
+"name": &"float",
+"speed": 1.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wrdvu"]
@@ -4283,6 +4300,76 @@ limit_right = 10136
 
 [node name="trees-background" type="Node" parent="."]
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4332, 392)
+sprite_frames = SubResource("SpriteFrames_ucmuu")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4592, 361)
+sprite_frames = SubResource("SpriteFrames_ucmuu")
+flip_h = true
+
+[node name="AnimatedSprite2D15" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4716, 361)
+sprite_frames = SubResource("SpriteFrames_ucmuu")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4758, 361)
+sprite_frames = SubResource("SpriteFrames_ucmuu")
+flip_h = true
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4517, 310)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4482, 282)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4558, 319)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4530, 369)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4452, 309)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
+frame_progress = 0.448943
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4661, 369)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4597, 284)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
+
+[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4645, 312)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
+
+[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4720, 303)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
+
+[node name="AnimatedSprite2D14" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(4778, 347)
+sprite_frames = SubResource("SpriteFrames_3ao1s")
+autoplay = "default"
+frame_progress = 0.180316
+
 [node name="112" type="Sprite2D" parent="trees-background"]
 modulate = Color(0.588235, 0.588235, 0.588235, 1)
 position = Vector2(4510, 369)
@@ -5827,75 +5914,11 @@ modulate = Color(0.588235, 0.588235, 0.588235, 1)
 position = Vector2(4452, 369)
 texture = ExtResource("88_10rq1")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4332, 392)
-sprite_frames = SubResource("SpriteFrames_ucmuu")
-
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4592, 361)
-sprite_frames = SubResource("SpriteFrames_ucmuu")
-flip_h = true
-
-[node name="AnimatedSprite2D15" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4716, 361)
-sprite_frames = SubResource("SpriteFrames_ucmuu")
-
-[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4758, 361)
-sprite_frames = SubResource("SpriteFrames_ucmuu")
-flip_h = true
-
-[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4517, 310)
-sprite_frames = SubResource("SpriteFrames_3ao1s")
-autoplay = "default"
-
-[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4482, 282)
-sprite_frames = SubResource("SpriteFrames_3ao1s")
-autoplay = "default"
-
-[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4558, 319)
-sprite_frames = SubResource("SpriteFrames_3ao1s")
-autoplay = "default"
-
-[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4530, 369)
-sprite_frames = SubResource("SpriteFrames_3ao1s")
-autoplay = "default"
-
-[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4452, 309)
-sprite_frames = SubResource("SpriteFrames_3ao1s")
-autoplay = "default"
-frame_progress = 0.448943
-
-[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4661, 369)
-sprite_frames = SubResource("SpriteFrames_3ao1s")
-autoplay = "default"
-
-[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4597, 284)
-sprite_frames = SubResource("SpriteFrames_3ao1s")
-autoplay = "default"
-
-[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4645, 312)
-sprite_frames = SubResource("SpriteFrames_3ao1s")
-autoplay = "default"
-
-[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4720, 303)
-sprite_frames = SubResource("SpriteFrames_3ao1s")
-autoplay = "default"
-
-[node name="AnimatedSprite2D14" type="AnimatedSprite2D" parent="trees-background"]
-position = Vector2(4778, 347)
-sprite_frames = SubResource("SpriteFrames_3ao1s")
-autoplay = "default"
-frame_progress = 0.180316
+[node name="speech_important3" type="AnimatedSprite2D" parent="trees-background"]
+position = Vector2(3961, 444)
+sprite_frames = SubResource("SpriteFrames_ibxkg")
+animation = &"float"
+autoplay = "float"
 
 [node name="Blood" type="Node" parent="."]
 
@@ -7841,6 +7864,7 @@ position = Vector2(4656, 360)
 position = Vector2(4566, 361)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("132_eh0sh")
 volume_db = -17.801
 autoplay = true
 

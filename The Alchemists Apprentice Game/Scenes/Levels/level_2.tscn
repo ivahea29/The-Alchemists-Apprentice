@@ -1,4 +1,4 @@
-[gd_scene load_steps=274 format=3 uid="uid://bh322s2qv6os7"]
+[gd_scene load_steps=284 format=3 uid="uid://bh322s2qv6os7"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_2.gd" id="1_0tfyh"]
 [ext_resource type="Texture2D" uid="uid://eodse3yb0k68" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_82c75"]
@@ -192,7 +192,10 @@
 [ext_resource type="Texture2D" uid="uid://k01x2rsecuib" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/1 Alchemist/Alchemist_idle.png" id="191_wkhik"]
 [ext_resource type="Script" path="res://Characters/NPC/HealthMan.gd" id="192_05nc4"]
 [ext_resource type="Texture2D" uid="uid://bdqbtqusm2rlj" path="res://Assets/Hud/long_speech.png" id="193_hhnuv"]
+[ext_resource type="Texture2D" uid="uid://ootdvhpty876" path="res://Assets/Characters/villagers-sprite-sheets-pixel-art/1 Old_man/Old_man_idle.png" id="194_3onry"]
 [ext_resource type="Texture2D" uid="uid://c3ons1uefo217" path="res://Assets/Hud/healthSpeech.png" id="194_wmo8v"]
+[ext_resource type="PackedScene" uid="uid://bf8didhk3y5hs" path="res://Dialogue/herb_guy.tscn" id="195_326ph"]
+[ext_resource type="Resource" uid="uid://c3jxrypk4wnvv" path="res://Dialogue/Herb-Man-Dialogue.dialogue" id="196_q7xie"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73kei"]
 texture = ExtResource("1_82c75")
@@ -1703,6 +1706,59 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_kwfcc"]
 radius = 18.1108
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gufx"]
+atlas = ExtResource("194_3onry")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gulyk"]
+atlas = ExtResource("194_3onry")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwtr1"]
+atlas = ExtResource("194_3onry")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0c2e"]
+atlas = ExtResource("194_3onry")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_miftv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gufx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gulyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwtr1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0c2e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_guqp1"]
+radius = 21.551
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_55c5i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("176_3kfvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_4rso5")
+}],
+"loop": true,
+"name": &"float",
+"speed": 1.0
+}]
+
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_0tfyh")
 
@@ -2468,11 +2524,6 @@ z_index = 1
 position = Vector2(3299, 592)
 texture = ExtResource("62_1b1fy")
 flip_h = true
-
-[node name="17" type="Sprite2D" parent="Misc"]
-z_index = 1
-position = Vector2(3077, 592)
-texture = ExtResource("63_nw4fp")
 
 [node name="19" type="Sprite2D" parent="Misc"]
 z_index = 1
@@ -4994,6 +5045,29 @@ z_index = -1
 position = Vector2(2188, 404)
 scale = Vector2(0.0744681, 0.0744681)
 texture = ExtResource("194_wmo8v")
+
+[node name="Herb-Man" type="AnimatedSprite2D" parent="."]
+position = Vector2(3065, 583)
+scale = Vector2(1.02083, 1.04167)
+sprite_frames = SubResource("SpriteFrames_miftv")
+autoplay = "default"
+flip_h = true
+
+[node name="HerbGuy" parent="Herb-Man" instance=ExtResource("195_326ph")]
+collision_layer = 32
+dialogue_resource = ExtResource("196_q7xie")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Herb-Man/HerbGuy"]
+visible = false
+position = Vector2(10.7754, 8.64008)
+shape = SubResource("CircleShape2D_guqp1")
+
+[node name="speech_important3" type="AnimatedSprite2D" parent="."]
+position = Vector2(3066, 570)
+sprite_frames = SubResource("SpriteFrames_55c5i")
+animation = &"float"
+autoplay = "float"
+flip_h = true
 
 [connection signal="body_entered" from="waterFallzone" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="outsideDoor" to="outsideDoor" method="_on_body_entered"]

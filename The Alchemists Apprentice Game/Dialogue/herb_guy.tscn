@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf8didhk3y5hs"]
+
+[ext_resource type="Script" path="res://Dialogue/herb_guy.gd" id="1_44jb7"]
+
+[node name="HerbGuy" type="Area2D"]
+script = ExtResource("1_44jb7")
