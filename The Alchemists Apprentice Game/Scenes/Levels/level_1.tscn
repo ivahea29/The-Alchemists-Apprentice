@@ -1,4 +1,4 @@
-[gd_scene load_steps=251 format=3 uid="uid://d0knbsqqp346r"]
+[gd_scene load_steps=254 format=3 uid="uid://d0knbsqqp346r"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_0xk1k"]
 [ext_resource type="Texture2D" uid="uid://dpyu73eqbba0t" path="res://Assets/Tilsets/free-swamp-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_b5oed"]
@@ -36,6 +36,8 @@
 [ext_resource type="Texture2D" uid="uid://dc58mgces5n7p" path="res://Assets/Tilsets/simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/5.png" id="31_4eibf"]
 [ext_resource type="Texture2D" uid="uid://k01x2rsecuib" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/1 Alchemist/Alchemist_idle.png" id="31_u7r2a"]
 [ext_resource type="Texture2D" uid="uid://ootdvhpty876" path="res://Assets/Characters/villagers-sprite-sheets-pixel-art/1 Old_man/Old_man_idle.png" id="33_i3fvp"]
+[ext_resource type="PackedScene" uid="uid://djoivenb874kr" path="res://Dialogue/healthman_dialogue_area_2d.tscn" id="33_tv1q7"]
+[ext_resource type="Resource" uid="uid://byf6slkjgtt1c" path="res://Dialogue/Healthmantalk.dialogue" id="34_u3f3d"]
 [ext_resource type="Texture2D" uid="uid://dxso5tntkn7a3" path="res://Assets/Characters/alchemy-game-assets-pixel-art-pack/3 Character animation/GraveRobber_read.png" id="35_0i6pj"]
 [ext_resource type="Texture2D" uid="uid://c5acpjps30ktj" path="res://Assets/Buildings/blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_Sieve.png" id="36_74v07"]
 [ext_resource type="Texture2D" uid="uid://dgw166vf7xm67" path="res://Assets/Buildings/blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_hammer.png" id="37_rkmep"]
@@ -1754,7 +1756,8 @@ animations = [{
 "speed": 3.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_riw1y"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_rm26m"]
+radius = 21.0238
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kcwba"]
 atlas = ExtResource("35_0i6pj")
@@ -1805,6 +1808,8 @@ animations = [{
 "name": &"default",
 "speed": 3.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_riw1y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w1sjc"]
 atlas = ExtResource("36_74v07")
@@ -2770,13 +2775,12 @@ flip_h = true
 script = ExtResource("61_72gkk")
 metadata/_edit_lock_ = true
 
-[node name="actionable-2" parent="Villagers/HealthMan" instance=ExtResource("62_r7od1")]
-dialogue_resource = ExtResource("63_74lff")
+[node name="HealthmanDialogueArea2D" parent="Villagers/HealthMan" instance=ExtResource("33_tv1q7")]
+dialogue_resource = ExtResource("34_u3f3d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/HealthMan/actionable-2"]
-visible = false
-position = Vector2(-12, 8)
-shape = SubResource("CapsuleShape2D_riw1y")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Villagers/HealthMan/HealthmanDialogueArea2D"]
+position = Vector2(10, 6)
+shape = SubResource("CircleShape2D_rm26m")
 
 [node name="villager2" type="AnimatedSprite2D" parent="Villagers"]
 light_mask = 512
@@ -2879,7 +2883,7 @@ light_mask = 512
 visibility_layer = 512
 z_index = -3
 texture_filter = 1
-position = Vector2(1542, 451)
+position = Vector2(1545, 451)
 texture = ExtResource("5_dypyk")
 
 [node name="House4" type="Sprite2D" parent="Buildings-Village"]
