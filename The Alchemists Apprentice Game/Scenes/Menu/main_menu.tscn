@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://c5sym7ya8f52l" path="res://Assets/Font/Pixellari.ttf" id="2_clxkv"]
 [ext_resource type="Texture2D" uid="uid://bqnyqt4rphhhs" path="res://Assets/Hud/5 Logo/Logo.png" id="2_d0vfk"]
 [ext_resource type="Texture2D" uid="uid://ft8fe5rjqgbh" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/2 Background/desktop-wallpaper-firewatch-games-artist-digital-art-k-firewatch-digital-mountain-art.jpg" id="3_3erlk"]
-[ext_resource type="AudioStream" uid="uid://bwg4mt2kruqgn" path="res://Assets/Sounds/Music/instrumental-background-loop-148930.mp3" id="5_k2j8b"]
+[ext_resource type="AudioStream" uid="uid://22c2ywmnjkfp" path="res://Assets/Now-We-Ride.mp3" id="5_vjqnd"]
 
 [sub_resource type="FontVariation" id="FontVariation_0lbir"]
 base_font = ExtResource("2_clxkv")
@@ -95,7 +95,7 @@ theme_override_font_sizes/font_size = 9
 text = "The Alchemists Apprentice V 1.0"
 
 [node name="AudioBackground" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_k2j8b")
+stream = ExtResource("5_vjqnd")
 autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]

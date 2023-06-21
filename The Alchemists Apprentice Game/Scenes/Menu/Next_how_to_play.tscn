@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://o57564g4s74" path="res://Assets/Hud/3 Icons/Icons_22.png" id="7_yk45k"]
 [ext_resource type="Texture2D" uid="uid://cbquu3vrj2f85" path="res://Assets/Hud/3 Icons/Icons_19.png" id="8_tfngs"]
 [ext_resource type="Texture2D" uid="uid://hdfufvsgn28r" path="res://Assets/Hud/3 Icons/Icons_38.png" id="9_e7k5d"]
-[ext_resource type="AudioStream" uid="uid://bwg4mt2kruqgn" path="res://Assets/Sounds/Music/instrumental-background-loop-148930.mp3" id="10_bgnji"]
+[ext_resource type="AudioStream" uid="uid://22c2ywmnjkfp" path="res://Assets/Now-We-Ride.mp3" id="11_7koyn"]
 
 [sub_resource type="FontVariation" id="FontVariation_nkyr3"]
 base_font = ExtResource("2_r0505")
@@ -26,11 +26,10 @@ metadata/_edit_lock_ = true
 
 [node name="MenuLogo" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(948, 264)
+position = Vector2(647, 223)
 scale = Vector2(2.01887, 1.98177)
 texture = ExtResource("1_xf7lc")
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="MenuLogo"]
 texture_filter = 1
@@ -46,8 +45,8 @@ metadata/_edit_use_anchors_ = true
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -2
 texture_filter = 1
-position = Vector2(964, 535.5)
-scale = Vector2(2.25882, 2.22385)
+position = Vector2(317.999, 250.75)
+scale = Vector2(2.49647, 2.57636)
 texture = ExtResource("3_g2wuq")
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
@@ -65,10 +64,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 914.0
-offset_top = 970.0
-offset_right = 1044.0
-offset_bottom = 1010.0
+offset_left = 594.0
+offset_top = 792.0
+offset_right = 724.0
+offset_bottom = 832.0
 metadata/_edit_group_ = true
 
 [node name="ReturnToHome" type="Button" parent="VBoxContainer"]
@@ -89,123 +88,123 @@ text = "Back"
 [node name="Node" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Node"]
-offset_left = 472.0
-offset_top = 464.0
-offset_right = 604.0
-offset_bottom = 503.0
+offset_left = 369.0
+offset_top = 442.0
+offset_right = 501.0
+offset_bottom = 481.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Controls"
 
 [node name="Label5" type="Label" parent="Node"]
-offset_left = 1248.0
-offset_top = 464.0
-offset_right = 1380.0
-offset_bottom = 503.0
+offset_left = 1145.0
+offset_top = 442.0
+offset_right = 1277.0
+offset_bottom = 481.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Collect"
 
 [node name="Label8" type="Label" parent="Node"]
-offset_left = 1344.0
-offset_top = 544.0
-offset_right = 1476.0
-offset_bottom = 583.0
+offset_left = 1241.0
+offset_top = 522.0
+offset_right = 1373.0
+offset_bottom = 561.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Recipies
 "
 
 [node name="Label9" type="Label" parent="Node"]
-offset_left = 1344.0
-offset_top = 624.0
-offset_right = 1476.0
-offset_bottom = 663.0
+offset_left = 1241.0
+offset_top = 602.0
+offset_right = 1373.0
+offset_bottom = 641.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Potions"
 
 [node name="Label10" type="Label" parent="Node"]
-offset_left = 1344.0
-offset_top = 704.0
-offset_right = 1476.0
-offset_bottom = 743.0
+offset_left = 1241.0
+offset_top = 682.0
+offset_right = 1373.0
+offset_bottom = 721.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Gems"
 
 [node name="Label2" type="Label" parent="Node"]
-offset_left = 215.0
-offset_top = 545.0
-offset_right = 557.0
-offset_bottom = 584.0
+offset_left = 112.0
+offset_top = 523.0
+offset_right = 454.0
+offset_bottom = 562.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Left - Left Arrow Key"
 
 [node name="Label3" type="Label" parent="Node"]
-offset_left = 215.0
-offset_top = 625.0
-offset_right = 347.0
-offset_bottom = 664.0
+offset_left = 112.0
+offset_top = 603.0
+offset_right = 498.0
+offset_bottom = 642.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Right - Right Arrow Key"
 
 [node name="Label4" type="Label" parent="Node"]
-offset_left = 215.0
-offset_top = 705.0
-offset_right = 347.0
-offset_bottom = 744.0
+offset_left = 112.0
+offset_top = 683.0
+offset_right = 460.0
+offset_bottom = 722.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Jump - Up Arrow Key"
 
 [node name="Label6" type="Label" parent="Node"]
-offset_left = 719.0
-offset_top = 545.0
-offset_right = 851.0
-offset_bottom = 584.0
+offset_left = 616.0
+offset_top = 523.0
+offset_right = 919.0
+offset_bottom = 562.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Attack - Space Bar"
 
 [node name="Label7" type="Label" parent="Node"]
-offset_left = 719.0
-offset_top = 625.0
-offset_right = 851.0
-offset_bottom = 664.0
+offset_left = 616.0
+offset_top = 603.0
+offset_right = 870.0
+offset_bottom = 642.0
 theme_override_fonts/font = ExtResource("2_r0505")
 theme_override_font_sizes/font_size = 35
 text = "Interact - F Key"
 
 [node name="Sprite2D" type="Sprite2D" parent="Node"]
-position = Vector2(159, 641)
+position = Vector2(56, 619)
 scale = Vector2(3.91667, 2.08333)
 texture = ExtResource("5_a0efx")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Node"]
-position = Vector2(159, 561)
+position = Vector2(56, 539)
 scale = Vector2(3.91667, 2.08333)
 texture = ExtResource("6_0d007")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Node"]
-position = Vector2(159, 721)
+position = Vector2(56, 699)
 scale = Vector2(3.91667, 2.08333)
 texture = ExtResource("7_yk45k")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Node"]
-position = Vector2(655, 561)
+position = Vector2(552, 539)
 scale = Vector2(3.91667, 2.08333)
 texture = ExtResource("8_tfngs")
 
 [node name="Sprite2D5" type="Sprite2D" parent="Node"]
-position = Vector2(655, 641)
+position = Vector2(552, 619)
 scale = Vector2(3.91667, 2.08333)
 texture = ExtResource("9_e7k5d")
 
 [node name="AudioBackground" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_bgnji")
+stream = ExtResource("11_7koyn")
 autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/ReturnToHome" to="VBoxContainer/ReturnToHome" method="_on_pressed"]

@@ -10,14 +10,6 @@ base_font = ExtResource("1_lgj7c")
 script = ExtResource("1_jtmhn")
 metadata/_edit_lock_ = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 1, 1, 0.0352941)
-
 [node name="pausemenucontrol" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -25,6 +17,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="pausemenucontrol"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.0352941)
 
 [node name="CenterContainer" type="CenterContainer" parent="pausemenucontrol"]
 layout_mode = 1
