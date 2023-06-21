@@ -2805,13 +2805,13 @@ max_distance = 800
 position = Vector2(4090, 386)
 
 [node name="goblinEnemy9" parent="Enemies2" instance=ExtResource("62_uq8de")]
-position = Vector2(882, 233)
+position = Vector2(901, 231)
 
 [node name="goblinEnemy11" parent="Enemies2" instance=ExtResource("62_uq8de")]
 position = Vector2(338, 168)
 
 [node name="goblinEnemy10" parent="Enemies2" instance=ExtResource("62_uq8de")]
-position = Vector2(977, 264)
+position = Vector2(1184, 264)
 
 [node name="goblinEnemy8" parent="Enemies2" instance=ExtResource("62_uq8de")]
 position = Vector2(2613, 233)

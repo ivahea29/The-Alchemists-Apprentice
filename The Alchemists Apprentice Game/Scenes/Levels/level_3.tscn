@@ -6112,10 +6112,10 @@ flip_h = true
 position = Vector2(8277, 62)
 
 [node name="ColorRect" type="ColorRect" parent="caveInterior/ParallaxBackground/ParallaxLayer"]
-offset_left = -21.0
+offset_left = -157.0
 offset_top = 51.0
 offset_right = 2023.0
-offset_bottom = 194.0
+offset_bottom = 218.0
 color = Color(0.117647, 0.0666667, 0.133333, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="caveInterior/ParallaxBackground/ParallaxLayer"]
@@ -6804,6 +6804,580 @@ rotation = -5.02655
 texture = ExtResource("114_q5cxc")
 flip_h = true
 
+[node name="272" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7992, 343.698)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="273" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7980, 439.698)
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="274" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7941, 531.698)
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="275" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7945, 443.698)
+rotation = -4.30922
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="276" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7986, 474.698)
+rotation = -4.30922
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="277" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7944, 340.698)
+rotation = -2.51327
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="278" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7956, 383.698)
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="279" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7920, 480.698)
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="280" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7987, 531.698)
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="281" type="Sprite2D" parent="caveInterior/Decor"]
+position = Vector2(8010, 405.698)
+rotation = -0.837758
+texture = ExtResource("113_1gvas")
+flip_h = true
+
+[node name="282" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7972, 415.698)
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="283" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7960, 477.698)
+rotation = -5.02655
+texture = ExtResource("114_q5cxc")
+flip_h = true
+
+[node name="284" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7992, 343.698)
+rotation = -0.125604
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="285" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7980, 439.698)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="286" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7941, 531.698)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="287" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7945, 443.698)
+rotation = -4.43482
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="288" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7986, 474.698)
+rotation = -4.43482
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="289" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7944, 340.698)
+rotation = -2.63887
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="290" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7956, 383.698)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="291" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7920, 480.698)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="292" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7987, 531.698)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="293" type="Sprite2D" parent="caveInterior/Decor"]
+position = Vector2(8010, 405.698)
+rotation = -0.963362
+texture = ExtResource("113_1gvas")
+flip_h = true
+
+[node name="294" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7972, 415.698)
+rotation = -0.125604
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="295" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7960, 477.698)
+rotation = -5.15215
+texture = ExtResource("114_q5cxc")
+flip_h = true
+
+[node name="296" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8019.76, 246.459)
+rotation = -0.125604
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="297" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8007.76, 342.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="298" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7968.76, 434.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="299" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7972.76, 346.459)
+rotation = -4.43482
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="300" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8013.76, 377.459)
+rotation = -4.43482
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="301" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7971.76, 243.459)
+rotation = -2.63887
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="302" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7983.76, 286.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="303" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7947.76, 383.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="304" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8014.76, 434.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="305" type="Sprite2D" parent="caveInterior/Decor"]
+position = Vector2(8037.76, 308.459)
+rotation = -0.963362
+texture = ExtResource("113_1gvas")
+flip_h = true
+
+[node name="306" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7999.76, 318.459)
+rotation = -0.125604
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="307" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7987.76, 380.459)
+rotation = -5.15215
+texture = ExtResource("114_q5cxc")
+flip_h = true
+
+[node name="308" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8115.76, 222.459)
+rotation = -0.125604
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="309" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8103.76, 318.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="310" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8064.76, 410.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="311" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8068.76, 322.459)
+rotation = -4.43482
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="312" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8109.76, 353.459)
+rotation = -4.43482
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="313" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8067.76, 219.459)
+rotation = -2.63887
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="314" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8079.76, 262.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="315" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8043.76, 359.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="316" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8110.76, 410.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="317" type="Sprite2D" parent="caveInterior/Decor"]
+position = Vector2(8133.76, 284.459)
+rotation = -0.963362
+texture = ExtResource("113_1gvas")
+flip_h = true
+
+[node name="318" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8095.76, 294.459)
+rotation = -0.125604
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="319" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8083.76, 356.459)
+rotation = -5.15215
+texture = ExtResource("114_q5cxc")
+flip_h = true
+
+[node name="320" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8195.76, 214.459)
+rotation = -0.125604
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="321" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8183.76, 310.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="322" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8144.76, 402.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="323" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8148.76, 314.459)
+rotation = -4.43482
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="324" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8189.76, 345.459)
+rotation = -4.43482
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="325" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8147.76, 211.459)
+rotation = -2.63887
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="326" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8159.76, 254.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="327" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8123.76, 351.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="328" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8190.76, 402.459)
+rotation = -0.125604
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="329" type="Sprite2D" parent="caveInterior/Decor"]
+position = Vector2(8213.76, 276.459)
+rotation = -0.963362
+texture = ExtResource("113_1gvas")
+flip_h = true
+
+[node name="330" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8175.76, 286.459)
+rotation = -0.125604
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="331" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8163.76, 348.459)
+rotation = -5.15215
+texture = ExtResource("114_q5cxc")
+flip_h = true
+
+[node name="332" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8195.76, 214.459)
+rotation = 0.589005
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="333" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8183.76, 310.459)
+rotation = 0.589005
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="334" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8144.76, 402.459)
+rotation = 0.589005
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="335" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8148.76, 314.459)
+rotation = -3.72022
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="336" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8189.76, 345.459)
+rotation = -3.72022
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="337" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8147.76, 211.459)
+rotation = -1.92427
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="338" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8159.76, 254.459)
+rotation = 0.589005
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="339" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8123.76, 351.459)
+rotation = 0.589005
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="340" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8190.76, 402.459)
+rotation = 0.589005
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="341" type="Sprite2D" parent="caveInterior/Decor"]
+position = Vector2(8213.76, 276.459)
+rotation = -0.248753
+texture = ExtResource("113_1gvas")
+flip_h = true
+
+[node name="342" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8175.76, 286.459)
+rotation = 0.589005
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="343" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8163.76, 348.459)
+rotation = -4.43755
+texture = ExtResource("114_q5cxc")
+flip_h = true
+
+[node name="344" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8044.38, 196.385)
+rotation = 0.589005
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="345" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8032.38, 292.385)
+rotation = 0.589005
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="346" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7993.38, 384.385)
+rotation = 0.589005
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="347" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(7997.38, 296.385)
+rotation = -3.72022
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="348" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8038.38, 327.385)
+rotation = -3.72022
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="349" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7996.38, 193.385)
+rotation = -1.92427
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="350" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8008.38, 236.385)
+rotation = 0.589005
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="351" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(7972.38, 333.385)
+rotation = 0.589005
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="352" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -1
+position = Vector2(8039.38, 384.385)
+rotation = 0.589005
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="353" type="Sprite2D" parent="caveInterior/Decor"]
+position = Vector2(8062.38, 258.385)
+rotation = -0.248753
+texture = ExtResource("113_1gvas")
+flip_h = true
+
+[node name="354" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8024.38, 268.385)
+rotation = 0.589005
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="355" type="Sprite2D" parent="caveInterior/Decor"]
+z_index = -2
+position = Vector2(8012.38, 330.385)
+rotation = -4.43755
+texture = ExtResource("114_q5cxc")
+flip_h = true
+
 [node name="53" type="Sprite2D" parent="caveInterior/Decor"]
 z_index = -5
 position = Vector2(8313, 452)
@@ -7395,6 +7969,510 @@ rotation = -2.09439
 texture = ExtResource("77_xv13a")
 flip_h = true
 
+[node name="202" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6815, 513.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="203" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6792, 487.245)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="204" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6802, 516.569)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="205" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6867, 515.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="206" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6803, 455.569)
+rotation = -1.57079
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="207" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6831, 496.569)
+rotation = -2.09439
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="208" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6833, 441.569)
+rotation = -2.09439
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="209" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6775, 401.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="210" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6752, 375.245)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="211" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6762, 404.569)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="212" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6827, 403.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="213" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6763, 343.569)
+rotation = -1.57079
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="214" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6791, 384.569)
+rotation = -2.09439
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="215" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6793, 329.569)
+rotation = -2.09439
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="216" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6759, 289.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="217" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6736, 263.245)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="218" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6746, 292.569)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="219" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6811, 291.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="220" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6747, 231.569)
+rotation = -1.57079
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="221" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6775, 272.569)
+rotation = -2.09439
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="222" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6777, 217.569)
+rotation = -2.09439
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="223" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6823, 401.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="224" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6800, 375.245)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="225" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6810, 404.569)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="226" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6875, 403.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="227" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6811, 343.569)
+rotation = -1.57079
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="228" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6839, 384.569)
+rotation = -2.09439
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="229" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6841, 329.569)
+rotation = -2.09439
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="230" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6863, 513.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="231" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6840, 487.245)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="232" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6850, 516.569)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="233" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6915, 515.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="234" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6851, 455.569)
+rotation = -1.57079
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="235" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6879, 496.569)
+rotation = -2.09439
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="236" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6881, 441.569)
+rotation = -2.09439
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="237" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6911, 513.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="238" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6888, 487.245)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="239" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6898, 516.569)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="240" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6963, 515.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="241" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6899, 455.569)
+rotation = -1.57079
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="242" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6927, 496.569)
+rotation = -2.09439
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="243" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6929, 441.569)
+rotation = -2.09439
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="244" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6863, 385.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="245" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6840, 359.245)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="246" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6850, 388.569)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="247" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6915, 387.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="248" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6851, 327.569)
+rotation = -1.57079
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="249" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6879, 368.569)
+rotation = -2.09439
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="250" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6881, 313.569)
+rotation = -2.09439
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="251" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6823, 329.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="252" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6800, 303.245)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="253" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6810, 332.569)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="254" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6875, 331.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="255" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6811, 271.569)
+rotation = -1.57079
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="256" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6839, 312.569)
+rotation = -2.09439
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="257" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6841, 257.569)
+rotation = -2.09439
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="258" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6783, 265.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="259" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6760, 239.245)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="260" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6770, 268.569)
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="261" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6835, 267.569)
+texture = ExtResource("110_l6lwy")
+
+[node name="262" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6771, 207.569)
+rotation = -1.57079
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="263" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6799, 248.569)
+rotation = -2.09439
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="264" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6801, 193.569)
+rotation = -2.09439
+texture = ExtResource("77_xv13a")
+flip_h = true
+
+[node name="265" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6749.19, 252.252)
+rotation = -1.79009
+texture = ExtResource("110_l6lwy")
+
+[node name="266" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6726.19, 225.928)
+rotation = -1.79009
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="267" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6736.19, 255.252)
+rotation = -1.79009
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="268" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6801.19, 254.252)
+rotation = -1.79009
+texture = ExtResource("110_l6lwy")
+
+[node name="269" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6737.19, 194.252)
+rotation = -3.36088
+texture = ExtResource("110_l6lwy")
+flip_h = true
+
+[node name="270" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6765.19, 235.252)
+rotation = -3.88448
+texture = ExtResource("111_d41q4")
+flip_h = true
+
+[node name="271" type="Sprite2D" parent="caveInterior/Decor"]
+modulate = Color(0.294118, 0.294118, 0.294118, 1)
+z_index = -2
+position = Vector2(6767.19, 180.252)
+rotation = -3.88448
+texture = ExtResource("77_xv13a")
+flip_h = true
+
 [node name="191" type="Sprite2D" parent="caveInterior/Decor"]
 modulate = Color(0.294118, 0.294118, 0.294118, 1)
 z_index = -2
@@ -7843,7 +8921,7 @@ position = Vector2(3174, 522)
 position = Vector2(2803, 457)
 
 [node name="goblinEnemy9" parent="Enemies" instance=ExtResource("127_4jen0")]
-position = Vector2(1874, 456)
+position = Vector2(1960, 456)
 
 [node name="goblinEnemy3" parent="Enemies" instance=ExtResource("127_4jen0")]
 position = Vector2(4843, 361)
@@ -7863,7 +8941,7 @@ max_distance = 50
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("132_eh0sh")
-volume_db = -20.0
+volume_db = -25.0
 autoplay = true
 
 [node name="endLevelCollision" type="Node" parent="."]
