@@ -1,4 +1,4 @@
-[gd_scene load_steps=286 format=3 uid="uid://bh322s2qv6os7"]
+[gd_scene load_steps=298 format=3 uid="uid://bh322s2qv6os7"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_2.gd" id="1_0tfyh"]
 [ext_resource type="Texture2D" uid="uid://eodse3yb0k68" path="res://Assets/Tilsets/ruins-game-tileset-pixel-art/1 Tiles/Tileset.png" id="1_82c75"]
@@ -198,6 +198,8 @@
 [ext_resource type="PackedScene" uid="uid://bf8didhk3y5hs" path="res://Dialogue/herb_guy.tscn" id="195_326ph"]
 [ext_resource type="Resource" uid="uid://c3jxrypk4wnvv" path="res://Dialogue/Herb-Man-Dialogue.dialogue" id="196_q7xie"]
 [ext_resource type="PackedScene" uid="uid://bn5whyv2qoxv6" path="res://Scenes/Menu/pause_menu.tscn" id="198_05kyg"]
+[ext_resource type="Texture2D" uid="uid://bkh4s3r6potuv" path="res://Assets/Tilsets/weather-effects-pixel-art-assets-pack/3 Water/Water1.png" id="199_65v5q"]
+[ext_resource type="Texture2D" uid="uid://decc3vg1cu7ql" path="res://Assets/Tilsets/weather-effects-pixel-art-assets-pack/3 Water/Water3.png" id="200_38wlt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73kei"]
 texture = ExtResource("1_82c75")
@@ -1759,6 +1761,78 @@ animations = [{
 "loop": true,
 "name": &"float",
 "speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l54s1"]
+atlas = ExtResource("199_65v5q")
+region = Rect2(0, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4b8q7"]
+atlas = ExtResource("199_65v5q")
+region = Rect2(24, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tebdo"]
+atlas = ExtResource("199_65v5q")
+region = Rect2(48, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxuyo"]
+atlas = ExtResource("199_65v5q")
+region = Rect2(72, 0, 24, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_poybo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l54s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4b8q7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tebdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxuyo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bospe"]
+atlas = ExtResource("200_38wlt")
+region = Rect2(0, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ul48f"]
+atlas = ExtResource("200_38wlt")
+region = Rect2(24, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfw08"]
+atlas = ExtResource("200_38wlt")
+region = Rect2(48, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hlf8"]
+atlas = ExtResource("200_38wlt")
+region = Rect2(72, 0, 24, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m61o3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bospe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ul48f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfw08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hlf8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
 }]
 
 [node name="Level2" type="Node2D"]
@@ -5077,6 +5151,160 @@ autoplay = "float"
 flip_h = true
 
 [node name="pause-menu" parent="." instance=ExtResource("198_05kyg")]
+
+[node name="water" type="Node" parent="."]
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="water"]
+z_index = 1
+position = Vector2(3425, 624)
+scale = Vector2(2.66668, 1)
+sprite_frames = SubResource("SpriteFrames_poybo")
+autoplay = "default"
+frame_progress = 0.234459
+
+[node name="AnimatedSprite2D19" type="AnimatedSprite2D" parent="water"]
+z_index = 1
+position = Vector2(3360, 624)
+scale = Vector2(2.66668, 1)
+sprite_frames = SubResource("SpriteFrames_poybo")
+autoplay = "default"
+frame_progress = 0.962786
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="water"]
+z_index = 1
+position = Vector2(3489, 624)
+scale = Vector2(2.66668, 1)
+sprite_frames = SubResource("SpriteFrames_poybo")
+autoplay = "default"
+frame_progress = 0.288439
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="water"]
+z_index = 1
+position = Vector2(3553, 624)
+scale = Vector2(2.66668, 1)
+sprite_frames = SubResource("SpriteFrames_poybo")
+autoplay = "default"
+frame_progress = 0.0453956
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="water"]
+z_index = 1
+position = Vector2(3619, 624)
+scale = Vector2(2.66668, 1)
+sprite_frames = SubResource("SpriteFrames_poybo")
+autoplay = "default"
+frame_progress = 0.918322
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="water"]
+z_index = 1
+position = Vector2(3683, 624)
+scale = Vector2(2.66668, 1)
+sprite_frames = SubResource("SpriteFrames_poybo")
+autoplay = "default"
+frame_progress = 0.895747
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="water"]
+z_index = 1
+position = Vector2(3747, 624)
+scale = Vector2(2.66668, 1)
+sprite_frames = SubResource("SpriteFrames_poybo")
+autoplay = "default"
+frame_progress = 0.772352
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="water"]
+z_index = 1
+position = Vector2(3810, 624)
+scale = Vector2(2.66668, 1)
+sprite_frames = SubResource("SpriteFrames_poybo")
+autoplay = "default"
+frame_progress = 0.25648
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="water"]
+z_index = 1
+position = Vector2(3872, 623)
+scale = Vector2(2.66668, 1)
+sprite_frames = SubResource("SpriteFrames_poybo")
+autoplay = "default"
+frame_progress = 0.287884
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="water"]
+z_index = 1
+position = Vector2(3872, 623)
+scale = Vector2(2.66668, 1)
+sprite_frames = SubResource("SpriteFrames_poybo")
+autoplay = "default"
+frame_progress = 0.0723381
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="water"]
+z_index = 3
+position = Vector2(3360, 656)
+scale = Vector2(2.70833, 1)
+sprite_frames = SubResource("SpriteFrames_m61o3")
+autoplay = "default"
+frame_progress = 0.679934
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="water"]
+z_index = 3
+position = Vector2(3425, 656)
+scale = Vector2(2.70833, 1)
+sprite_frames = SubResource("SpriteFrames_m61o3")
+autoplay = "default"
+frame_progress = 0.252023
+
+[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="water"]
+z_index = 3
+position = Vector2(3490, 656)
+scale = Vector2(2.70833, 1)
+sprite_frames = SubResource("SpriteFrames_m61o3")
+autoplay = "default"
+frame_progress = 0.252023
+
+[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="water"]
+z_index = 3
+position = Vector2(3555, 656)
+scale = Vector2(2.70833, 1)
+sprite_frames = SubResource("SpriteFrames_m61o3")
+autoplay = "default"
+frame_progress = 0.252023
+
+[node name="AnimatedSprite2D14" type="AnimatedSprite2D" parent="water"]
+z_index = 3
+position = Vector2(3620, 656)
+scale = Vector2(2.70833, 1)
+sprite_frames = SubResource("SpriteFrames_m61o3")
+autoplay = "default"
+frame_progress = 0.252023
+
+[node name="AnimatedSprite2D15" type="AnimatedSprite2D" parent="water"]
+z_index = 3
+position = Vector2(3685, 656)
+scale = Vector2(2.70833, 1)
+sprite_frames = SubResource("SpriteFrames_m61o3")
+autoplay = "default"
+frame_progress = 0.252023
+
+[node name="AnimatedSprite2D16" type="AnimatedSprite2D" parent="water"]
+z_index = 3
+position = Vector2(3750, 656)
+scale = Vector2(2.70833, 1)
+sprite_frames = SubResource("SpriteFrames_m61o3")
+autoplay = "default"
+frame_progress = 0.252023
+
+[node name="AnimatedSprite2D17" type="AnimatedSprite2D" parent="water"]
+z_index = 3
+position = Vector2(3815, 656)
+scale = Vector2(2.70833, 1)
+sprite_frames = SubResource("SpriteFrames_m61o3")
+autoplay = "default"
+frame_progress = 0.252023
+
+[node name="AnimatedSprite2D18" type="AnimatedSprite2D" parent="water"]
+z_index = 3
+position = Vector2(3871, 656)
+scale = Vector2(2.70833, 1)
+sprite_frames = SubResource("SpriteFrames_m61o3")
+autoplay = "default"
+frame_progress = 0.252023
 
 [connection signal="body_entered" from="waterFallzone" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="outsideDoor" to="outsideDoor" method="_on_body_entered"]
